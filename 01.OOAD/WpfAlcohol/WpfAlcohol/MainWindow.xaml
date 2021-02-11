@@ -5,18 +5,29 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfAlcohol"
         mc:Ignorable="d"
-        Title="WPFalcohol-gehlate" Height="450" Width="800">
-    <Grid Margin="0,0,-0.4,-94">
+        Title="WPFalcohol-gehlate" Height="550" Width="800">
+    <Grid Margin="0,0,-0.4,-86">
         <Label Content="alcohol-gehalte" HorizontalAlignment="Left" Margin="33,19,0,0" VerticalAlignment="Top" Height="38" Width="158" FontSize="20" FontWeight="Bold"/>
         <Image Source="img/bier.png"  HorizontalAlignment="Left" Height="68" Margin="90,84,0,0" VerticalAlignment="Top" Width="66"/>
         <Image HorizontalAlignment="Left" Source="img/wijn.png" Height="84" Margin="65,167,0,0" VerticalAlignment="Top" Width="91" RenderTransformOrigin="0.527,0.976"/>
         <Image Source="img/whiskey.jpg" HorizontalAlignment="Left" Height="61" Margin="99,295,0,0" VerticalAlignment="Top" Width="40" RenderTransformOrigin="0.575,0.131"/>
-        <Slider  HorizontalAlignment="Left" IsSnapToTickEnabled="True" Minimum="0" Maximum="5" Margin="191,114,0,0" VerticalAlignment="Top" Width="399"/>
-        <Slider HorizontalAlignment="Left" IsSnapToTickEnabled="True" Minimum="0" Maximum="5" Margin="191,233,0,0" VerticalAlignment="Top" Width="399"/>
-        <Slider HorizontalAlignment="Left" IsSnapToTickEnabled="True" Minimum="0" Maximum="5" Margin="191,330,0,0" VerticalAlignment="Top" Width="399"/>
-        <Label Content="glazen" HorizontalAlignment="Left" Margin="661,322,0,0" VerticalAlignment="Top" Width="58"/>
-        <Label Content="glazen" HorizontalAlignment="Left" Margin="661,225,0,0" VerticalAlignment="Top" Width="58"/>
-        <Label Content="glazen" HorizontalAlignment="Left" Margin="661,106,0,0" VerticalAlignment="Top" Width="58"/>
+        <Slider x:Name="sldbier" HorizontalAlignment="Left" IsSnapToTickEnabled="True" Minimum="0" Maximum="5" Margin="191,114,0,0" VerticalAlignment="Top" Width="399" ValueChanged="Slider_ValueChanged"/>
+        <Slider x:Name="sldwijn" HorizontalAlignment="Left" IsSnapToTickEnabled="True" Minimum="0" Maximum="5" Margin="191,233,0,0" VerticalAlignment="Top" Width="399" ValueChanged="sldwijn_ValueChanged"/>
+        <Slider x:Name="sldwhiskey" HorizontalAlignment="Left" IsSnapToTickEnabled="True" Minimum="0" Maximum="5" Margin="191,330,0,0" VerticalAlignment="Top" Width="399" ValueChanged="sldwhiskey_ValueChanged"/>
+        <Label x:Name="lblbier" Content="" HorizontalAlignment="Left" Margin="651,106,0,0" VerticalAlignment="Top" Width="58"/>
+        <Label x:Name="lblwijn" Content="" HorizontalAlignment="Left" Margin="651,225,0,0" VerticalAlignment="Top" Width="58"/>
+        <Label x:Name="lblwhiskey" Content="" HorizontalAlignment="Left" Margin="651,322,0,0" VerticalAlignment="Top" Width="58"/>
+        <Rectangle x:Name="rectangleOef" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="50" Margin="255,429,0,0" Stroke="Black" VerticalAlignment="Top" Width="75" RenderTransformOrigin="-0.247,0.45">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform X="34.362"/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Label Content="alcohol-gehalte:" HorizontalAlignment="Left" Margin="33,439,0,0" VerticalAlignment="Top" Height="32" Width="123" FontSize="14"/>
 
     </Grid>
 </Window>

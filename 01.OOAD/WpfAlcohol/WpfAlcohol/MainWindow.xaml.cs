@@ -24,5 +24,60 @@ namespace WpfAlcohol
         {
             InitializeComponent();
         }
+
+        private void Slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+
+            if (sldbier.Value == 1 )
+            {
+                lblbier.Content = sldbier.Value + " glas";
+            }
+            else
+            {
+                lblbier.Content = sldbier.Value + " glazen";
+            }
+            Kleurrectangle();
+        }
+
+        private void sldwijn_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            if (sldwijn.Value == 1)
+            {
+                lblwijn.Content = sldwijn.Value + " glas";
+            }
+            else
+            {
+                lblwijn.Content = sldwijn.Value + " glazen";
+            }
+            Kleurrectangle();
+        }
+
+        private void sldwhiskey_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            if (sldwhiskey.Value == 1)
+            {
+                lblwhiskey.Content = sldwhiskey.Value + " glas";
+            }
+            else
+            {
+                lblwhiskey.Content = sldwhiskey.Value + " glazen";
+            }
+            Kleurrectangle();
+        }
+    
+
+        private void Kleurrectangle()
+        {
+            rectangleOef.Width = (sldbier.Value * 10) + (sldwijn.Value * 10) + (sldwhiskey.Value * 10);
+            rectangleOef.Fill = new SolidColorBrush(Color.FromRgb(rectangleOef.Width, 0, 0));
+        }
+    
+    
+    
+    
+    
+    
+    
+    
     }
 }
