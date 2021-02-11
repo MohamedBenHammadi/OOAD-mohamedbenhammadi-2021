@@ -1,0 +1,7 @@
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\01.OOAD\ConsoleBankautomaat\ConsoleBankautomaat\bin\Debug\ConsoleBankautomaat.exe.config
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\01.OOAD\ConsoleBankautomaat\ConsoleBankautomaat\bin\Debug\ConsoleBankautomaat.exe
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\01.OOAD\ConsoleBankautomaat\ConsoleBankautomaat\bin\Debug\ConsoleBankautomaat.pdb
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\01.OOAD\ConsoleBankautomaat\ConsoleBankautomaat\obj\Debug\ConsoleBankautomaat.csprojAssemblyReference.cache
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\01.OOAD\ConsoleBankautomaat\ConsoleBankautomaat\obj\Debug\ConsoleBankautomaat.csproj.CoreCompileInputs.cache
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\01.OOAD\ConsoleBankautomaat\ConsoleBankautomaat\obj\Debug\ConsoleBankautomaat.exe
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\01.OOAD\ConsoleBankautomaat\ConsoleBankautomaat\obj\Debug\ConsoleBankautomaat.pdb

@@ -1,0 +1,18 @@
+﻿<Window x:Class="WpfChat.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfChat"
+        mc:Ignorable="d"
+        Title="02.wpf.chat" Height="450" Width="800">
+    <Grid Background="AliceBlue" >
+        <Label x:Name="lblNaam" Content="Naam: " HorizontalAlignment="Left" Margin="27,73,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblBericht" Content="Bericht: " HorizontalAlignment="Left" Margin="27,119,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.892,2.177"/>
+        <TextBox x:Name="txtNaam" HorizontalAlignment="Left" Height="23" Margin="90,76,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="341"/>
+        <TextBox x:Name="txtBericht" HorizontalAlignment="Left" Height="98" Margin="90,119,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="341"/>
+        <Button Content="VERZENDEN" HorizontalAlignment="Left" Margin="309,246,0,0" VerticalAlignment="Top" Width="122" Height="30" Click="Button_Click"/>
+        <TextBlock x:Name="chatBlock" HorizontalAlignment="Left" Background="White" Margin="475,63,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="319"  Width="296" Padding="15"><Run Text=""/></TextBlock>
+
+    </Grid>
+</Window>

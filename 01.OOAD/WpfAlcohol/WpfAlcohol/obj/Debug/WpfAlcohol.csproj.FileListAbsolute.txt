@@ -1,0 +1,15 @@
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\01.OOAD\WpfAlcohol\WpfAlcohol\bin\Debug\WpfAlcohol.exe.config
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\01.OOAD\WpfAlcohol\WpfAlcohol\bin\Debug\WpfAlcohol.exe
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\01.OOAD\WpfAlcohol\WpfAlcohol\bin\Debug\WpfAlcohol.pdb
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\01.OOAD\WpfAlcohol\WpfAlcohol\obj\Debug\WpfAlcohol.csprojAssemblyReference.cache
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\01.OOAD\WpfAlcohol\WpfAlcohol\obj\Debug\MainWindow.g.cs
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\01.OOAD\WpfAlcohol\WpfAlcohol\obj\Debug\App.g.cs
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\01.OOAD\WpfAlcohol\WpfAlcohol\obj\Debug\WpfAlcohol_MarkupCompile.cache
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\01.OOAD\WpfAlcohol\WpfAlcohol\obj\Debug\WpfAlcohol_MarkupCompile.lref
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\01.OOAD\WpfAlcohol\WpfAlcohol\obj\Debug\MainWindow.baml
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\01.OOAD\WpfAlcohol\WpfAlcohol\obj\Debug\WpfAlcohol.g.resources
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\01.OOAD\WpfAlcohol\WpfAlcohol\obj\Debug\WpfAlcohol.Properties.Resources.resources
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\01.OOAD\WpfAlcohol\WpfAlcohol\obj\Debug\WpfAlcohol.csproj.GenerateResource.cache
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\01.OOAD\WpfAlcohol\WpfAlcohol\obj\Debug\WpfAlcohol.csproj.CoreCompileInputs.cache
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\01.OOAD\WpfAlcohol\WpfAlcohol\obj\Debug\WpfAlcohol.exe
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\01.OOAD\WpfAlcohol\WpfAlcohol\obj\Debug\WpfAlcohol.pdb
