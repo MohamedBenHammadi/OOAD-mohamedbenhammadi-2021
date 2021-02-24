@@ -1,0 +1,6 @@
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\02.OOAD.SlnObjectenStrings\ConsoleAsciiArt\ConsoleKlinkers\bin\Debug\ConsoleKlinkers.exe.config
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\02.OOAD.SlnObjectenStrings\ConsoleAsciiArt\ConsoleKlinkers\bin\Debug\ConsoleKlinkers.exe
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\02.OOAD.SlnObjectenStrings\ConsoleAsciiArt\ConsoleKlinkers\bin\Debug\ConsoleKlinkers.pdb
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\02.OOAD.SlnObjectenStrings\ConsoleAsciiArt\ConsoleKlinkers\obj\Debug\ConsoleKlinkers.csproj.CoreCompileInputs.cache
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\02.OOAD.SlnObjectenStrings\ConsoleAsciiArt\ConsoleKlinkers\obj\Debug\ConsoleKlinkers.exe
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\02.OOAD.SlnObjectenStrings\ConsoleAsciiArt\ConsoleKlinkers\obj\Debug\ConsoleKlinkers.pdb

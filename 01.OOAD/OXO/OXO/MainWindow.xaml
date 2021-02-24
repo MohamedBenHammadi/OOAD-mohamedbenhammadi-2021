@@ -5,13 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OXO"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="OXO" Height="300" Width="400">
     <Grid>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="73,80,0,0" VerticalAlignment="Top" Width="55" Height="50"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="73,144,0,0" VerticalAlignment="Top" Width="55" Height="50"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="73,80,0,0" VerticalAlignment="Top" Width="55" Height="50"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="73,208,0,0" VerticalAlignment="Top" Width="55" Height="50"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="144,208,0,0" VerticalAlignment="Top" Width="55" Height="50"/>
+        <Button x:Name="BTN1" Content="" HorizontalAlignment="Left" Margin="73,80,0,0" VerticalAlignment="Top" Width="55" Height="50" />
+        <Button x:Name="BTN2" Content="" HorizontalAlignment="Left" Margin="73,144,0,0" VerticalAlignment="Top" Width="55" Height="50"/>
+        <Button x:Name="BTN3"  Content="" HorizontalAlignment="Left" Margin="73,208,0,0" VerticalAlignment="Top" Width="55" Height="50"/>
+        <Button x:Name="BTN4" Content="" HorizontalAlignment="Left" Margin="144,208,0,0" VerticalAlignment="Top" Width="55" Height="50" Click="Button_Click"/>
+        <Button x:Name="BTN5"  Content="" HorizontalAlignment="Left" Margin="144,144,0,0" VerticalAlignment="Top" Width="55" Height="50" Click="Button_Click"/>
+        <Button x:Name="BTN6" Content="" HorizontalAlignment="Left" Margin="144,80,0,0" VerticalAlignment="Top" Width="55" Height="50" Click="Button_Click"/>
+        <Button x:Name="BTN7" Content="" HorizontalAlignment="Left" Margin="221,80,0,0" VerticalAlignment="Top" Width="55" Height="50" Click="Button_Click"/>
+        <Button  x:Name="BTN8" Content="" HorizontalAlignment="Left" Margin="221,144,0,0" VerticalAlignment="Top" Width="55" Height="50" Click="Button_Click"/>
+        <Button x:Name="BTN9" Content="" HorizontalAlignment="Left" Margin="221,208,0,0" VerticalAlignment="Top" Width="55" Height="50" Click="Button_Click"/>
+        <Label x:Name ="lblWinnaar" Content="" HorizontalAlignment="Left" Margin="73,30,0,0" VerticalAlignment="Top" Width="199"/>
 
     </Grid>
 </Window>

@@ -15,9 +15,40 @@ namespace ConsoleBankautomaat
             Console.WriteLine("====================");
 
             Console.WriteLine();
-            int saldo = 500;
- 
+            int saldo = 500, pinCode = 1234, invoerPinCode, aantalPogingen = 4;
             string invoer;
+
+
+            do
+            {
+                Console.Write("Geef uw pincode: ");
+                invoerPinCode = Convert.ToInt32(Console.ReadLine());
+                aantalPogingen--;
+
+
+                if (pinCode != invoerPinCode)
+                {
+                    Console.WriteLine("Foute Pincode, u hebt nog {0} pogingen", aantalPogingen);
+
+                    if (aantalPogingen == 1)
+                    {
+                        Console.WriteLine("OPGELET er blijf maar EEN poging over anders zal uw kaart geblokkeert worden en uw programma zal automatisch uitgelogd worden.");
+
+                    }
+                    else if (aantalPogingen == 0)
+                    {
+                        Environment.Exit(0);
+                    }
+
+                }
+                else
+                {
+                    Console.WriteLine("U bent ingelogd.");
+
+                }
+            }
+            while (aantalPogingen != 0);
+
 
             do
             {
@@ -27,7 +58,7 @@ namespace ConsoleBankautomaat
                 Console.Write("je keuze: ");
                 invoer = Console.ReadLine();
 
-                if (invoer == "a")
+                if (invoer.ToLower() == "a")
                 {
 
 
@@ -35,7 +66,7 @@ namespace ConsoleBankautomaat
                     int afhaling = Convert.ToInt32(Console.ReadLine());
 
 
-                
+
                     if (saldo < afhaling)
                     {
                         Console.WriteLine("Uw afhaling is niet geaccepteerd omdat u maar {0} euro hebt ", saldo.ToString());
@@ -51,14 +82,14 @@ namespace ConsoleBankautomaat
                         Console.WriteLine("afhaling ok - het nieuwe saldo is {0} euro ", saldo.ToString());
                     }
                 }
-                else if (invoer == "b")
+                else if (invoer.ToLower() == "b")
                 {
                     Console.Write("welk bedrag wil je storten: ");
                     int storting = Convert.ToInt32(Console.ReadLine());
                     saldo = saldo + storting;
                     Console.WriteLine("storting ok - het nieuwe saldo is {0} euro ", saldo.ToString());
                 }
-                else if(invoer == "c")
+                else if (invoer.ToLower() == "c")
                 {
                     Console.WriteLine("Bedankt en tot ziens.");
                 }
@@ -66,9 +97,9 @@ namespace ConsoleBankautomaat
                 {
                     Console.WriteLine("ongeldinge keuze");
                 }
-            } while (invoer != "c");
+            } while (invoer.ToLower() != "c");
 
-           
+
 
             Console.ReadLine();
         }

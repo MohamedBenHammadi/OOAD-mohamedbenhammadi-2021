@@ -17,17 +17,7 @@
         <Label x:Name="lblbier" Content="" HorizontalAlignment="Left" Margin="651,106,0,0" VerticalAlignment="Top" Width="58"/>
         <Label x:Name="lblwijn" Content="" HorizontalAlignment="Left" Margin="651,225,0,0" VerticalAlignment="Top" Width="58"/>
         <Label x:Name="lblwhiskey" Content="" HorizontalAlignment="Left" Margin="651,322,0,0" VerticalAlignment="Top" Width="58"/>
-        <Rectangle x:Name="rectangleOef" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="50" Margin="255,429,0,0" Stroke="Black" VerticalAlignment="Top" Width="75" RenderTransformOrigin="-0.247,0.45">
-            <Rectangle.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform ScaleX="-1"/>
-                    <SkewTransform/>
-                    <RotateTransform/>
-                    <TranslateTransform X="34.362"/>
-                </TransformGroup>
-            </Rectangle.RenderTransform>
-        </Rectangle>
         <Label Content="alcohol-gehalte:" HorizontalAlignment="Left" Margin="33,439,0,0" VerticalAlignment="Top" Height="32" Width="123" FontSize="14"/>
-
+        <Rectangle x:Name="rectangleOef" HorizontalAlignment="Left" Height="25" Margin="184,443,0,0" Stroke="Black" VerticalAlignment="Top" Width="0"/>
     </Grid>
 </Window>

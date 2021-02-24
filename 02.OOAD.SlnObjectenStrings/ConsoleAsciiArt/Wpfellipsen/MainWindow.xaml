@@ -1,0 +1,27 @@
+﻿<Window x:Class="Wpfellipsen.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Wpfellipsen"
+        mc:Ignorable="d"
+        Title="Wpfellipsen" Height="450" Width="800">
+    <Grid>
+        <Canvas x:Name="canvas1"  HorizontalAlignment="Left" Height="227" Margin="32,183,0,0" VerticalAlignment="Top" Width="709"/>
+        <Button x:Name="btnTekenen"  Content="TEKENEN" HorizontalAlignment="Left" Margin="619,28,0,0" VerticalAlignment="Top"
+         Width="138" Height="30" FontWeight="Bold" Click="btnTekenen_Click"/>
+        <Label Content="aantal crikels" HorizontalAlignment="Left" Margin="42,32,0,0" VerticalAlignment="Top"/>
+        <Label Content="minimum radius" HorizontalAlignment="Left" Margin="24,73,0,0" VerticalAlignment="Top"/>
+        <Label Content="maximum radius" HorizontalAlignment="Left" Margin="24,115,0,0" VerticalAlignment="Top"/>
+        <Slider x:Name="Aantalcirkelssld" HorizontalAlignment="Left" Minimum="0" Maximum="50" IsSnapToTickEnabled="True" Margin="138,40,0,0" VerticalAlignment="Top" Width="404"/>
+        <Slider x:Name="sldMinimumRadius" Maximum="200" HorizontalAlignment="Left" IsSnapToTickEnabled="True" Margin="138,81,0,0" VerticalAlignment="Top" Width="404"/>
+        <Slider x:Name="sldMaxradius" Maximum="100" HorizontalAlignment="Left" IsSnapToTickEnabled="True" Margin="138,123,0,0" VerticalAlignment="Top" Width="404"/>
+        <Label x:Name="lblaantalcirkels" Content="" HorizontalAlignment="Left" Margin="547,28,0,0" VerticalAlignment="Top" Width="16"/>
+        <Label x:Name="lblMinradius" Content="" HorizontalAlignment="Left" Margin="547,73,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblMaxradius" Content="" HorizontalAlignment="Left" Margin="542,111,0,0" VerticalAlignment="Top"/>
+        <Label HorizontalAlignment="Left" Margin="587,123,0,0" VerticalAlignment="Top">
+            <Label />
+        </Label>
+        <Label Name="lblfoutmelding" Content="" Width="416" HorizontalAlignment="Center" FontStyle="Italic" FontSize="11" FontWeight="Bold" Margin="368,142,9.6,233"/>
+    </Grid>
+</Window>

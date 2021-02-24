@@ -1,0 +1,7 @@
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\02.OOAD.SlnObjectenStrings\ConsoleAsciiArt\ConsoleAsciiArt\bin\Debug\ConsoleAsciiArt.exe.config
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\02.OOAD.SlnObjectenStrings\ConsoleAsciiArt\ConsoleAsciiArt\bin\Debug\ConsoleAsciiArt.exe
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\02.OOAD.SlnObjectenStrings\ConsoleAsciiArt\ConsoleAsciiArt\bin\Debug\ConsoleAsciiArt.pdb
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\02.OOAD.SlnObjectenStrings\ConsoleAsciiArt\ConsoleAsciiArt\obj\Debug\ConsoleAsciiArt.csprojAssemblyReference.cache
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\02.OOAD.SlnObjectenStrings\ConsoleAsciiArt\ConsoleAsciiArt\obj\Debug\ConsoleAsciiArt.csproj.CoreCompileInputs.cache
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\02.OOAD.SlnObjectenStrings\ConsoleAsciiArt\ConsoleAsciiArt\obj\Debug\ConsoleAsciiArt.exe
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\02.OOAD.SlnObjectenStrings\ConsoleAsciiArt\ConsoleAsciiArt\obj\Debug\ConsoleAsciiArt.pdb

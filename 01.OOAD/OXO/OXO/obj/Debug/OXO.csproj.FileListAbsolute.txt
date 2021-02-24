@@ -1,0 +1,15 @@
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\01.OOAD\OXO\OXO\bin\Debug\OXO.exe.config
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\01.OOAD\OXO\OXO\bin\Debug\OXO.exe
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\01.OOAD\OXO\OXO\bin\Debug\OXO.pdb
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\01.OOAD\OXO\OXO\obj\Debug\OXO.csprojAssemblyReference.cache
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\01.OOAD\OXO\OXO\obj\Debug\MainWindow.g.cs
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\01.OOAD\OXO\OXO\obj\Debug\App.g.cs
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\01.OOAD\OXO\OXO\obj\Debug\OXO_MarkupCompile.cache
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\01.OOAD\OXO\OXO\obj\Debug\OXO_MarkupCompile.lref
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\01.OOAD\OXO\OXO\obj\Debug\MainWindow.baml
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\01.OOAD\OXO\OXO\obj\Debug\OXO.g.resources
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\01.OOAD\OXO\OXO\obj\Debug\OXO.Properties.Resources.resources
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\01.OOAD\OXO\OXO\obj\Debug\OXO.csproj.GenerateResource.cache
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\01.OOAD\OXO\OXO\obj\Debug\OXO.csproj.CoreCompileInputs.cache
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\01.OOAD\OXO\OXO\obj\Debug\OXO.exe
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\01.OOAD\OXO\OXO\obj\Debug\OXO.pdb

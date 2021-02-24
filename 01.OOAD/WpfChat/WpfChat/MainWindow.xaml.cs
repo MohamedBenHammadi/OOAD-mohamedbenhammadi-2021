@@ -27,6 +27,10 @@ namespace WpfChat
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            string [] Vuilewoorden = { "homo", "hoer", "fuck", "nique"  };
+
+            chatBlock.Text.ToCharArray();  
+
             if (chatBlock.Text == "")
             {
                 chatBlock.Text +=  txtNaam.Text + " says" + Environment.NewLine + txtBericht.Text.Replace("fuck", "***") + Environment.NewLine;

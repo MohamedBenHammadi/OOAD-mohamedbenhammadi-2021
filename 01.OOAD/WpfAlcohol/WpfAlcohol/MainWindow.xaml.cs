@@ -25,8 +25,12 @@ namespace WpfAlcohol
             InitializeComponent();
         }
 
+   
         private void Slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
+            double aantalGlazen;
+
+            aantalGlazen = sldbier.Value + sldwhiskey.Value + sldwijn.Value;
 
             if (sldbier.Value == 1 )
             {
@@ -36,11 +40,15 @@ namespace WpfAlcohol
             {
                 lblbier.Content = sldbier.Value + " glazen";
             }
-            Kleurrectangle();
+            Kleurrectangle(aantalGlazen);
         }
 
         private void sldwijn_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
+            double aantalGlazen;
+
+            aantalGlazen = sldbier.Value + sldwhiskey.Value + sldwijn.Value;
+
             if (sldwijn.Value == 1)
             {
                 lblwijn.Content = sldwijn.Value + " glas";
@@ -49,11 +57,15 @@ namespace WpfAlcohol
             {
                 lblwijn.Content = sldwijn.Value + " glazen";
             }
-            Kleurrectangle();
+            Kleurrectangle(aantalGlazen);
         }
 
         private void sldwhiskey_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
+            double aantalGlazen;
+
+            aantalGlazen = sldbier.Value + sldwhiskey.Value + sldwijn.Value;
+
             if (sldwhiskey.Value == 1)
             {
                 lblwhiskey.Content = sldwhiskey.Value + " glas";
@@ -62,14 +74,23 @@ namespace WpfAlcohol
             {
                 lblwhiskey.Content = sldwhiskey.Value + " glazen";
             }
-            Kleurrectangle();
+            Kleurrectangle(aantalGlazen);
         }
     
 
-        private void Kleurrectangle()
+        private void Kleurrectangle(double glazen)
         {
-            rectangleOef.Width = (sldbier.Value * 10) + (sldwijn.Value * 10) + (sldwhiskey.Value * 10);
-            rectangleOef.Fill = new SolidColorBrush(Color.FromRgb(rectangleOef.Width, 0, 0));
+            int breedte = 20;
+            int hoogte = 20;
+
+            double R = 17 * glazen;
+            double G = 255 - (17 * glazen);
+
+            rectangleOef.Fill = new SolidColorBrush(Color.FromRgb( Convert.ToByte(R), Convert.ToByte(G), 0));
+            rectangleOef.Width = breedte * glazen;
+            rectangleOef.Height = hoogte;
+           
+
         }
     
     

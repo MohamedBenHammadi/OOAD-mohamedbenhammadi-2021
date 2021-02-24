@@ -1,0 +1,6 @@
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\02.OOAD.SlnObjectenStrings\ConsoleAsciiArt\ConsoleKarakter\bin\Debug\ConsoleKarakter.exe.config
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\02.OOAD.SlnObjectenStrings\ConsoleAsciiArt\ConsoleKarakter\bin\Debug\ConsoleKarakter.exe
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\02.OOAD.SlnObjectenStrings\ConsoleAsciiArt\ConsoleKarakter\bin\Debug\ConsoleKarakter.pdb
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\02.OOAD.SlnObjectenStrings\ConsoleAsciiArt\ConsoleKarakter\obj\Debug\ConsoleKarakter.csproj.CoreCompileInputs.cache
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\02.OOAD.SlnObjectenStrings\ConsoleAsciiArt\ConsoleKarakter\obj\Debug\ConsoleKarakter.exe
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\02.OOAD.SlnObjectenStrings\ConsoleAsciiArt\ConsoleKarakter\obj\Debug\ConsoleKarakter.pdb
