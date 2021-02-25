@@ -1,0 +1,18 @@
+﻿<Window x:Class="Wpftimer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Wpftimer"
+        mc:Ignorable="d"
+        Title="Timer" Height="450" Width="800">
+    <Grid>
+        <Button x:Name="btnStart" Content="START" HorizontalAlignment="Left" Margin="39,99,0,0" VerticalAlignment="Top" Width="121" Height="36" Click="Button_Click"/>
+        <Button x:Name="btnStop" Content="STOP" IsEnabled="False" HorizontalAlignment="Left" Margin="39,197,0,0" VerticalAlignment="Top" Width="121" Height="46" Click="btnStop_Click"/>
+        <Button x:Name="btnReset" Content="RESET" IsEnabled="False" HorizontalAlignment="Left" Margin="39,308,0,0" VerticalAlignment="Top" Width="121" Height="48" Click="btnReset_Click"/>
+        <Label x:Name="lblTijd" Content="" HorizontalAlignment="Left" Margin="513,179,0,0" VerticalAlignment="Top" Height="183" Width="196"/>
+        <Rectangle x:Name="Rctminuten" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="100" Margin="413,262,0,0" Stroke="Black" VerticalAlignment="Top" Width="10"/>
+        <Rectangle x:Name="RctSeconden" Fill="#FFF4F4F5" HorizontalAlignment="Stretch" Height="10" Margin="283,262,0,0" Stroke="Black" VerticalAlignment="Top" Width="1230"/>
+
+    </Grid>
+</Window>
