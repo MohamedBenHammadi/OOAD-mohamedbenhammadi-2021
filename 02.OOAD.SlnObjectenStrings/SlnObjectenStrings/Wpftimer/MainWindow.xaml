@@ -5,14 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Wpftimer"
         mc:Ignorable="d"
-        Title="Timer" Height="450" Width="800">
-    <Grid>
-        <Button x:Name="btnStart" Content="START" HorizontalAlignment="Left" Margin="39,99,0,0" VerticalAlignment="Top" Width="121" Height="36" Click="Button_Click"/>
-        <Button x:Name="btnStop" Content="STOP" IsEnabled="False" HorizontalAlignment="Left" Margin="39,197,0,0" VerticalAlignment="Top" Width="121" Height="46" Click="btnStop_Click"/>
-        <Button x:Name="btnReset" Content="RESET" IsEnabled="False" HorizontalAlignment="Left" Margin="39,308,0,0" VerticalAlignment="Top" Width="121" Height="48" Click="btnReset_Click"/>
-        <Label x:Name="lblTijd" Content="" HorizontalAlignment="Left" Margin="513,179,0,0" VerticalAlignment="Top" Height="183" Width="196"/>
-        <Rectangle x:Name="Rctminuten" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="100" Margin="413,262,0,0" Stroke="Black" VerticalAlignment="Top" Width="10"/>
-        <Rectangle x:Name="RctSeconden" Fill="#FFF4F4F5" HorizontalAlignment="Stretch" Height="10" Margin="283,262,0,0" Stroke="Black" VerticalAlignment="Top" Width="1230"/>
-
+        Title="Timer" Height="400" Width="600">
+    <Grid x:Name="GrdTimer" Margin="0,0,-0.4,0.4">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="367*"/>
+            <ColumnDefinition Width="227*"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="btnStart" Content="START" HorizontalAlignment="Left" Margin="129,27,0,0" VerticalAlignment="Top" Width="94" Height="81" Click="Button_Click"/>
+        <Button x:Name="btnStop" Content="STOP" IsEnabled="False" HorizontalAlignment="Left" Margin="129,145,0,0" VerticalAlignment="Top" Width="94" Height="85" Click="btnStop_Click"/>
+        <Button x:Name="btnReset" Content="RESET" IsEnabled="False" HorizontalAlignment="Left" Margin="129,265,0,0" VerticalAlignment="Top" Width="94" Height="81" Click="btnReset_Click"/>
+        <Label x:Name="lblTijd" Content="" HorizontalAlignment="Left" Margin="280,135,0,0" VerticalAlignment="Top" Height="130" Width="285" FontSize="24" Grid.ColumnSpan="2"/>
     </Grid>
 </Window>

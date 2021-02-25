@@ -22,6 +22,6 @@
         <Label HorizontalAlignment="Left" Margin="587,123,0,0" VerticalAlignment="Top">
             <Label />
         </Label>
-        <Label Name="lblfoutmelding" Content="" Width="416" HorizontalAlignment="Center" FontStyle="Italic" FontSize="11" FontWeight="Bold" Margin="368,142,9.6,233" />
+        <Label Name="lblfoutmelding"   Foreground="Red" Content="" Width="416" HorizontalAlignment="Center" FontStyle="Italic" FontSize="11" FontWeight="Bold" Margin="368,142,9.6,233" />
     </Grid>
 </Window>

@@ -39,6 +39,30 @@ namespace Wpftimer
 
             lblTijd.Content = TimeSpan.FromSeconds(minuuten);
             minuuten--;
+            if (minuuten < 300)
+            {
+                GrdTimer.Background = Brushes.Green;
+            }
+            else if (minuuten < 200)
+            {
+                GrdTimer.Background = Brushes.LightGreen;
+            }
+            else if (minuuten < 150)
+            {
+                GrdTimer.Background = Brushes.LightYellow;
+            }
+            else if (minuuten < 150)
+            {
+                GrdTimer.Background = Brushes.Yellow;
+            }
+            else if (minuuten < 75)
+            {
+                GrdTimer.Background = Brushes.Red;
+            }
+            else 
+            {
+                GrdTimer.Background = Brushes.DarkRed;
+            }
 
         }
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -46,10 +70,14 @@ namespace Wpftimer
             btnReset.IsEnabled = true;
             btnStop.IsEnabled = true;
             timer.Start();
+
+         
+
         }
 
         private void btnStop_Click(object sender, RoutedEventArgs e)
         {
+            btnStop.IsEnabled = false;
             timer.Stop();
         }
 
@@ -58,6 +86,8 @@ namespace Wpftimer
 
             minuuten = 300;
             lblTijd.Content = TimeSpan.FromSeconds(minuuten);
+            btnReset.IsEnabled = false;
+            btnStop.IsEnabled = false;
         }
     }
 }
