@@ -1,0 +1,15 @@
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\02.OOAD.SlnObjectenStrings\SlnObjectenStrings\WpfPunten\bin\Debug\WpfPunten.exe.config
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\02.OOAD.SlnObjectenStrings\SlnObjectenStrings\WpfPunten\bin\Debug\WpfPunten.exe
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\02.OOAD.SlnObjectenStrings\SlnObjectenStrings\WpfPunten\bin\Debug\WpfPunten.pdb
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\02.OOAD.SlnObjectenStrings\SlnObjectenStrings\WpfPunten\obj\Debug\WpfPunten.csprojAssemblyReference.cache
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\02.OOAD.SlnObjectenStrings\SlnObjectenStrings\WpfPunten\obj\Debug\MainWindow.g.cs
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\02.OOAD.SlnObjectenStrings\SlnObjectenStrings\WpfPunten\obj\Debug\App.g.cs
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\02.OOAD.SlnObjectenStrings\SlnObjectenStrings\WpfPunten\obj\Debug\WpfPunten_MarkupCompile.cache
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\02.OOAD.SlnObjectenStrings\SlnObjectenStrings\WpfPunten\obj\Debug\WpfPunten_MarkupCompile.lref
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\02.OOAD.SlnObjectenStrings\SlnObjectenStrings\WpfPunten\obj\Debug\MainWindow.baml
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\02.OOAD.SlnObjectenStrings\SlnObjectenStrings\WpfPunten\obj\Debug\WpfPunten.g.resources
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\02.OOAD.SlnObjectenStrings\SlnObjectenStrings\WpfPunten\obj\Debug\WpfPunten.Properties.Resources.resources
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\02.OOAD.SlnObjectenStrings\SlnObjectenStrings\WpfPunten\obj\Debug\WpfPunten.csproj.GenerateResource.cache
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\02.OOAD.SlnObjectenStrings\SlnObjectenStrings\WpfPunten\obj\Debug\WpfPunten.csproj.CoreCompileInputs.cache
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\02.OOAD.SlnObjectenStrings\SlnObjectenStrings\WpfPunten\obj\Debug\WpfPunten.exe
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\02.OOAD.SlnObjectenStrings\SlnObjectenStrings\WpfPunten\obj\Debug\WpfPunten.pdb

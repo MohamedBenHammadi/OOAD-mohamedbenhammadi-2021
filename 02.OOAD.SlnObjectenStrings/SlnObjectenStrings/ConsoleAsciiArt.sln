@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wpfellipsen", "Wpfellipsen\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wpftimer", "Wpftimer\Wpftimer.csproj", "{873069FD-B0BB-4A87-AD58-7F8C1C3836C2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfPunten", "WpfPunten\WpfPunten.csproj", "{908272E2-0AE3-4692-BCDA-5594A7EAB169}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{873069FD-B0BB-4A87-AD58-7F8C1C3836C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{873069FD-B0BB-4A87-AD58-7F8C1C3836C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{873069FD-B0BB-4A87-AD58-7F8C1C3836C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{908272E2-0AE3-4692-BCDA-5594A7EAB169}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{908272E2-0AE3-4692-BCDA-5594A7EAB169}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{908272E2-0AE3-4692-BCDA-5594A7EAB169}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{908272E2-0AE3-4692-BCDA-5594A7EAB169}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

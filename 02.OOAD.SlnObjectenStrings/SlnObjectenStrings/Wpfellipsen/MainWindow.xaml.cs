@@ -47,7 +47,7 @@ namespace Wpfellipsen
         private void GenereerCirkel(object sender, EventArgs e)
         {
 
-
+            int tour = 0;
             if (sldMinimumRadius.Value > sldMaxradius.Value)
             {
                 lblfoutmelding.Content = "De minimum straal mag niet groter zijn dan de maximum straal";
@@ -62,11 +62,16 @@ namespace Wpfellipsen
                     newEllipse.Width = sldMaxradius.Value;
                     newEllipse.Height = sldMinimumRadius.Value;
                     newEllipse.Fill = new SolidColorBrush(Color.FromRgb(Convert.ToByte(random.Next(1, 256)), Convert.ToByte(random.Next(1, 256)), Convert.ToByte(random.Next(1, 256))));
-                    double xPos = random.Next(100);
-                    double yPos = random.Next(50);
+                    double xPos = random.Next(0, Convert.ToInt32(canvas1.Width));
+                    double yPos = random.Next(0, Convert.ToInt32( canvas1.Height));
                     newEllipse.SetValue(Canvas.LeftProperty, xPos);
                     newEllipse.SetValue(Canvas.TopProperty, yPos);
                     canvas1.Children.Add(newEllipse);
+                    tour++;
+                }
+
+                if(tour > Aantalcirkelssld.Value)
+                {
                     timer.Stop();
                 }
                 lblfoutmelding.Content = " ";
