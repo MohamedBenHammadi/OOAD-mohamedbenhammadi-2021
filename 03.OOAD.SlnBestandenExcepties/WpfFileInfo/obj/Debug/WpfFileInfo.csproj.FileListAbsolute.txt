@@ -1,0 +1,15 @@
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\03.OOAD.SlnBestandenExcepties\WpfFileInfo\bin\Debug\WpfFileInfo.exe.config
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\03.OOAD.SlnBestandenExcepties\WpfFileInfo\bin\Debug\WpfFileInfo.exe
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\03.OOAD.SlnBestandenExcepties\WpfFileInfo\bin\Debug\WpfFileInfo.pdb
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\03.OOAD.SlnBestandenExcepties\WpfFileInfo\obj\Debug\MainWindow.g.cs
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\03.OOAD.SlnBestandenExcepties\WpfFileInfo\obj\Debug\App.g.cs
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\03.OOAD.SlnBestandenExcepties\WpfFileInfo\obj\Debug\WpfFileInfo_MarkupCompile.cache
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\03.OOAD.SlnBestandenExcepties\WpfFileInfo\obj\Debug\WpfFileInfo_MarkupCompile.lref
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\03.OOAD.SlnBestandenExcepties\WpfFileInfo\obj\Debug\MainWindow.baml
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\03.OOAD.SlnBestandenExcepties\WpfFileInfo\obj\Debug\WpfFileInfo.g.resources
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\03.OOAD.SlnBestandenExcepties\WpfFileInfo\obj\Debug\WpfFileInfo.Properties.Resources.resources
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\03.OOAD.SlnBestandenExcepties\WpfFileInfo\obj\Debug\WpfFileInfo.csproj.GenerateResource.cache
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\03.OOAD.SlnBestandenExcepties\WpfFileInfo\obj\Debug\WpfFileInfo.csproj.CoreCompileInputs.cache
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\03.OOAD.SlnBestandenExcepties\WpfFileInfo\obj\Debug\WpfFileInfo.exe
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\03.OOAD.SlnBestandenExcepties\WpfFileInfo\obj\Debug\WpfFileInfo.pdb
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\03.OOAD.SlnBestandenExcepties\WpfFileInfo\obj\Debug\WpfFileInfo.csprojAssemblyReference.cache

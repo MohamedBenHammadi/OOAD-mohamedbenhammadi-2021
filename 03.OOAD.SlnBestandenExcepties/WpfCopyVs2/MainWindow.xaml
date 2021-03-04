@@ -1,0 +1,17 @@
+﻿<Window x:Class="WpfCopyVs2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfCopyVs2"
+        mc:Ignorable="d"
+        Title="WpfCopyVs2" Height="250" Width="500">
+    <Grid>
+        <Label Content="File in:" HorizontalAlignment="Left" Margin="22,62,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txbFileIn" HorizontalAlignment="Left" Height="23" Margin="80,65,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="320" TextChanged="txbFileIn_TextChanged"/>
+        <Button x:Name="btnGo" Content="GO!" HorizontalAlignment="Left" Margin="316,117,0,0" VerticalAlignment="Top" Width="84" Click="btnGo_Click" Height="42"/>
+        <Label x:Name="lblBericht" Content="" HorizontalAlignment="Left" Margin="52,117,0,0" VerticalAlignment="Top" Width="203"/>
+        <Button x:Name="btnKies" Content="kies..." HorizontalAlignment="Left" Margin="416,65,0,0" VerticalAlignment="Top" Width="68" Height="20" Click="Button_Click"/>
+
+    </Grid>
+</Window>

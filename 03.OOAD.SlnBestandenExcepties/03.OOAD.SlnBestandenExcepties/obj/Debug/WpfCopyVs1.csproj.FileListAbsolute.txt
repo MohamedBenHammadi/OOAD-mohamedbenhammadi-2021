@@ -1,0 +1,15 @@
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\03.OOAD.SlnBestandenExcepties\03.OOAD.SlnBestandenExcepties\bin\Debug\03.OOAD.SlnBestandenExcepties.exe.config
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\03.OOAD.SlnBestandenExcepties\03.OOAD.SlnBestandenExcepties\bin\Debug\03.OOAD.SlnBestandenExcepties.exe
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\03.OOAD.SlnBestandenExcepties\03.OOAD.SlnBestandenExcepties\bin\Debug\03.OOAD.SlnBestandenExcepties.pdb
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\03.OOAD.SlnBestandenExcepties\03.OOAD.SlnBestandenExcepties\obj\Debug\WpfCopyVs1.csprojAssemblyReference.cache
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\03.OOAD.SlnBestandenExcepties\03.OOAD.SlnBestandenExcepties\obj\Debug\MainWindow.g.cs
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\03.OOAD.SlnBestandenExcepties\03.OOAD.SlnBestandenExcepties\obj\Debug\App.g.cs
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\03.OOAD.SlnBestandenExcepties\03.OOAD.SlnBestandenExcepties\obj\Debug\03.OOAD.SlnBestandenExcepties_MarkupCompile.cache
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\03.OOAD.SlnBestandenExcepties\03.OOAD.SlnBestandenExcepties\obj\Debug\03.OOAD.SlnBestandenExcepties_MarkupCompile.lref
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\03.OOAD.SlnBestandenExcepties\03.OOAD.SlnBestandenExcepties\obj\Debug\MainWindow.baml
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\03.OOAD.SlnBestandenExcepties\03.OOAD.SlnBestandenExcepties\obj\Debug\03.OOAD.SlnBestandenExcepties.g.resources
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\03.OOAD.SlnBestandenExcepties\03.OOAD.SlnBestandenExcepties\obj\Debug\_03.OOAD.SlnBestandenExcepties.Properties.Resources.resources
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\03.OOAD.SlnBestandenExcepties\03.OOAD.SlnBestandenExcepties\obj\Debug\WpfCopyVs1.csproj.GenerateResource.cache
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\03.OOAD.SlnBestandenExcepties\03.OOAD.SlnBestandenExcepties\obj\Debug\WpfCopyVs1.csproj.CoreCompileInputs.cache
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\03.OOAD.SlnBestandenExcepties\03.OOAD.SlnBestandenExcepties\obj\Debug\03.OOAD.SlnBestandenExcepties.exe
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\03.OOAD.SlnBestandenExcepties\03.OOAD.SlnBestandenExcepties\obj\Debug\03.OOAD.SlnBestandenExcepties.pdb
