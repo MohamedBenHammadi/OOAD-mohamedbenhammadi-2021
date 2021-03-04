@@ -7,5 +7,5 @@
 * WpfCopyVs2: heb ik alles gedaan 
 * WpfFileInfo: heb ik alles gedaan behlave de uitdaging
 * ConsoleCsv: had ik een probleem met het genereren van punten
-* WpfCompare zal ik voor volgende week deon omdat het een oefening tussen [] is.
+* WpfCompare zal ik voor volgende week doen omdat het een oefening tussen [] is.
 
