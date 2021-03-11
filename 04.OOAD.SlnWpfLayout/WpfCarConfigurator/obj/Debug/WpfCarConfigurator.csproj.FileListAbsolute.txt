@@ -1,0 +1,15 @@
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\04.OOAD.SlnWpfLayout\WpfCarConfigurator\bin\Debug\WpfCarConfigurator.exe.config
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\04.OOAD.SlnWpfLayout\WpfCarConfigurator\bin\Debug\WpfCarConfigurator.exe
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\04.OOAD.SlnWpfLayout\WpfCarConfigurator\bin\Debug\WpfCarConfigurator.pdb
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\04.OOAD.SlnWpfLayout\WpfCarConfigurator\obj\Debug\WpfCarConfigurator.csprojAssemblyReference.cache
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\04.OOAD.SlnWpfLayout\WpfCarConfigurator\obj\Debug\MainWindow.g.cs
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\04.OOAD.SlnWpfLayout\WpfCarConfigurator\obj\Debug\App.g.cs
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\04.OOAD.SlnWpfLayout\WpfCarConfigurator\obj\Debug\WpfCarConfigurator_MarkupCompile.cache
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\04.OOAD.SlnWpfLayout\WpfCarConfigurator\obj\Debug\WpfCarConfigurator_MarkupCompile.lref
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\04.OOAD.SlnWpfLayout\WpfCarConfigurator\obj\Debug\MainWindow.baml
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\04.OOAD.SlnWpfLayout\WpfCarConfigurator\obj\Debug\WpfCarConfigurator.g.resources
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\04.OOAD.SlnWpfLayout\WpfCarConfigurator\obj\Debug\WpfCarConfigurator.Properties.Resources.resources
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\04.OOAD.SlnWpfLayout\WpfCarConfigurator\obj\Debug\WpfCarConfigurator.csproj.GenerateResource.cache
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\04.OOAD.SlnWpfLayout\WpfCarConfigurator\obj\Debug\WpfCarConfigurator.csproj.CoreCompileInputs.cache
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\04.OOAD.SlnWpfLayout\WpfCarConfigurator\obj\Debug\WpfCarConfigurator.exe
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\04.OOAD.SlnWpfLayout\WpfCarConfigurator\obj\Debug\WpfCarConfigurator.pdb

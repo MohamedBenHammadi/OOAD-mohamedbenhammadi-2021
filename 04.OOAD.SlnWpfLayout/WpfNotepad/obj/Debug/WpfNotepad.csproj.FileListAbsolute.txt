@@ -1,0 +1,17 @@
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\04.OOAD.SlnWpfLayout\WpfNotepad\bin\Debug\WpfNotepad.exe.config
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\04.OOAD.SlnWpfLayout\WpfNotepad\bin\Debug\WpfNotepad.exe
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\04.OOAD.SlnWpfLayout\WpfNotepad\bin\Debug\WpfNotepad.pdb
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\04.OOAD.SlnWpfLayout\WpfNotepad\obj\Debug\MainWindow.g.cs
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\04.OOAD.SlnWpfLayout\WpfNotepad\obj\Debug\App.g.cs
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\04.OOAD.SlnWpfLayout\WpfNotepad\obj\Debug\WpfNotepad_MarkupCompile.cache
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\04.OOAD.SlnWpfLayout\WpfNotepad\obj\Debug\WpfNotepad_MarkupCompile.lref
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\04.OOAD.SlnWpfLayout\WpfNotepad\obj\Debug\MainWindow.baml
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\04.OOAD.SlnWpfLayout\WpfNotepad\obj\Debug\WpfNotepad.g.resources
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\04.OOAD.SlnWpfLayout\WpfNotepad\obj\Debug\WpfNotepad.Properties.Resources.resources
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\04.OOAD.SlnWpfLayout\WpfNotepad\obj\Debug\WpfNotepad.csproj.GenerateResource.cache
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\04.OOAD.SlnWpfLayout\WpfNotepad\obj\Debug\WpfNotepad.csproj.CoreCompileInputs.cache
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\04.OOAD.SlnWpfLayout\WpfNotepad\obj\Debug\WpfNotepad.exe
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\04.OOAD.SlnWpfLayout\WpfNotepad\obj\Debug\WpfNotepad.pdb
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\04.OOAD.SlnWpfLayout\WpfNotepad\obj\Debug\WpfNotepad.csprojAssemblyReference.cache
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\04.OOAD.SlnWpfLayout\WpfNotepad\obj\Debug\AboutWindow.g.cs
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\04.OOAD.SlnWpfLayout\WpfNotepad\obj\Debug\AboutWindow.baml
