@@ -42,13 +42,14 @@ namespace WpfFileInfo
                 char[] leestekens = new char[] { '.', ',', ' ' };
                 int aantalWoorden;
                 int textLengte = 0;
-                int aantalLeestekens = chosenFileName.Count(leesteken => leestekens.Contains(leesteken));
                 leestekens = chosenFileName.ToCharArray();
 
                 for (int i = 0; i < chosenFileName.Length; i++)
                 {
                     textLengte++;
                 }
+
+                int aantalLeestekens = chosenFileName.Count(leesteken => leestekens.Contains(leesteken));
                 aantalWoorden = textLengte - aantalLeestekens;
 
                 lblInfo.Content = "De text bevat " + Convert.ToString(aantalWoorden) + "woorden" + Environment.NewLine;
