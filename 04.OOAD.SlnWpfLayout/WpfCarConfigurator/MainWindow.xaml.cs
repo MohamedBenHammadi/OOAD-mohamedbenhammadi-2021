@@ -29,34 +29,12 @@ namespace WpfCarConfigurator
 
         private void checkbox_Checked(object sender, RoutedEventArgs e)
         {
-            if (chkdVelgen.IsChecked == true)
-            {
-                imgVelgen.Opacity = 1;
+            imgAudio.Opacity = chkdBose.IsChecked.Value ? 1 : 0.3;
+            imgMatjes.Opacity = chkdMatjes.IsChecked.Value ? 1 : 0.3;
+            imgVelgen.Opacity = chkdVelgen.IsChecked.Value ? 1 : 0.3;
 
-            }
-            else
-            {
-                imgVelgen.Opacity = 0.3;
-            }
 
-            if (chkdBose.IsChecked == true)
-            {
-                imgAudio.Opacity = 1;
-
-            }
-            else
-            {
-                imgAudio.Opacity = 0.3;
-            }
-            if (chkdMatjes.IsChecked == true)
-            {
-                imgMatjes.Opacity = 1;
-
-            }
-            else
-            {
-                imgMatjes.Opacity = 0.3;
-            }
+            
             BerekenPrijs();
         }
 
@@ -126,44 +104,24 @@ namespace WpfCarConfigurator
         {
             int totaal = 0;
 
-            if (cmbV8.IsSelected == true)
-            {
-                totaal += 85000;
-            }
-            else if (cmbConvertible.IsSelected == true)
-            {
-                totaal += 72000;
-            }
-            else if (cmbMuslsanne.IsSelected == true)
-            {
-                totaal += 65300;
-            }
+            totaal += cmbAuto.SelectedIndex == 0 ? 85000 : 0;
+            totaal += cmbAuto.SelectedIndex == 1 ? 72000 : 0;
+            totaal += cmbAuto.SelectedIndex == 2 ? 65300 : 0;
 
-            if (rdbRood.IsChecked == true)
-            {
-                totaal += 700;
-            }
-            else if (rdbGroen.IsChecked == true)
-            {
-                totaal += 250;
-            }
+            totaal += rdbGroen.IsChecked == true ? 250 : 0;
+            totaal += rdbRood.IsChecked == true ? 700 : 0;
 
-            if (chkdVelgen.IsChecked == true)
-            {
-                totaal += 300;
-            }
 
-            else if (chkdBose.IsChecked == true)
-            {
-                totaal += 1250;
-            }
+            totaal += chkdBose.IsChecked == true ? 1250 : 0;
+            totaal += chkdMatjes.IsChecked == true ? 450 : 0;
+            totaal += chkdVelgen.IsChecked== true ? 300 : 0;
 
-            else if (chkdMatjes.IsChecked == true)
-            {
-                totaal += 450;
-            }
+
+          
             lblTotaal.Content = "€" + Convert.ToString(totaal) ;
 
         }
+
+        
     }
 }

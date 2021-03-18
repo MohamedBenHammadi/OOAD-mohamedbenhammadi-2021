@@ -18,7 +18,7 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <StackPanel Grid.Column="1" Orientation="Vertical">
-            <ComboBox HorizontalAlignment="Center" VerticalAlignment="Top" Width="229"  Grid.Column="1" Margin="0,10,0,0">
+            <ComboBox x:Name="cmbAuto" HorizontalAlignment="Center" VerticalAlignment="Top" Width="229"  Grid.Column="1" Margin="0,10,0,0" >
                 <ComboBoxItem x:Name="cmbV8" Content=" Continental V8 (85000 euro)" ></ComboBoxItem>
                 <ComboBoxItem x:Name="cmbConvertible" Content="Convertible (72000 euro)" ></ComboBoxItem>
                 <ComboBoxItem x:Name="cmbMuslsanne" Content="mulsanne (653000euro)"></ComboBoxItem>
