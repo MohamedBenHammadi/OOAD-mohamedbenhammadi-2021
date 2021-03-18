@@ -3,6 +3,6 @@
 ## Kleine samenvatting van mijn taken
 
 
-* WpfCarConfigurator: ik heb deze oefening volledig gemaakt.
-* WpfNotepad: ik heb deel 1a en 1b gemaakt.
+* WpfCarConfigurator: heb ik niks veranderdt
+* WpfNotepad: heb ik alles proberen te maken ik heb ook geprobeerd om de uitbreiding te maken maar ik kon niet meer verder met het opslaan en open van bestanden op het nieuwe tablad die er gecreerd werd.
 

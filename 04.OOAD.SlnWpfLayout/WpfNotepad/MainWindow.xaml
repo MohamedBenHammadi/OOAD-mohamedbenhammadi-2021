@@ -10,45 +10,33 @@
         <DockPanel>
             <Menu DockPanel.Dock="Top">
                 <MenuItem Header="_File">
-                    <MenuItem Command="New" />
-                    <MenuItem Command="Open" />
-                    <MenuItem Command="Save"  IsEnabled="False" />
-                    <MenuItem  Header="Save Ass.."  IsEnabled="False" />
+                    <MenuItem Header="New" Click="New_Click" />
+                    <MenuItem x:Name="mnuOpen" Header="Open" Click="Open_Click" IsEnabled="False" />
+                    <MenuItem x:Name="mnuSave" Header="Save" Click= "Save_Click" IsEnabled="False"   />
+                    <MenuItem x:Name="mnuSaveAs" Header="Save As.."   Click="SaveAs_Click" IsEnabled="False" />
                     <Separator />
-                    <MenuItem Header="Exit" />
+                    <MenuItem Header="Exit" Click="Exit_Click" />
                 </MenuItem>
                 <MenuItem Header="_Edit">
-                    <MenuItem Command="Cut" IsEnabled="False" />
-                    <MenuItem Command="Copy"  IsEnabled="False" />
-                    <MenuItem Command="Paste"  IsEnabled="False" />
+                    <MenuItem x:Name="mnuCut"  Command="Cut" IsEnabled="False" />
+                    <MenuItem x:Name="mnuCopy" Command="Copy"  IsEnabled="False"  />
+                    <MenuItem x:Name="mnuPaste" Command="Paste"  IsEnabled="False" />
                 </MenuItem>
-
                 <MenuItem Header="Help" >
                     <MenuItem Header ="About" Click="about_click" />
                 </MenuItem>
             </Menu>
             <StatusBar DockPanel.Dock="Bottom">
                 <StatusBarItem x:Name="stbAantalTekens" Content="#chars: "></StatusBarItem>
-                
             </StatusBar>
-            <TabControl SelectedIndex="2" DockPanel.Dock="Top" Height="379" Width="780"   >
-                <TabItem Header="Untitled" >
-                    <TextBox x:Name="txtText" Text="" VerticalScrollBarVisibility="Visible" TextWrapping="Wrap" TextChanged="txtText_TextChanged" />
-
+            <TabControl x:Name="tabControl" SelectedIndex="2" DockPanel.Dock="Top" Height="379" Width="780"   >
+                <TabItem x:Name="tbHeader" Header="Untitled" >
+                    <TextBox x:Name="txtText" Text="" VerticalScrollBarVisibility="Visible" AcceptsReturn="True" TextWrapping="Wrap"  SelectionChanged="txtText_SelectionChanged"  />
+               
+  
                 </TabItem>
-
+              
             </TabControl>
-
-
-           
-
-
-
-
-
-
-
-
         </DockPanel>
     </Grid>
 </Window>
