@@ -63,8 +63,6 @@ namespace WpfNotepad
 
         private void Save_Click(object sender, RoutedEventArgs e)
         {
-
-
             if (txtText.Text == "")
             {
                 SaveFileDialog dialog = new SaveFileDialog();
