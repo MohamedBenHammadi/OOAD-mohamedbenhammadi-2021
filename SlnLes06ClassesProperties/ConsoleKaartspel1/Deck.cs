@@ -8,19 +8,12 @@ namespace ConsoleKaartspel1
 {
     class Deck
     {
-       
 
         public List<Kaart> Kaarten { get; set; } = new List<Kaart>();
 
-
-
         //constructor
-
-
         public Deck()
         {
-
-
             for (int i = 0; i < 14; i++)
             {
                 Kaart C = new Kaart(i, 'C');
@@ -52,8 +45,7 @@ namespace ConsoleKaartspel1
             }
         }
 
-
-
+        //methode
         public Kaart NeemKaart()
         {
             Random r = new Random();
@@ -63,9 +55,6 @@ namespace ConsoleKaartspel1
             return neemKaart;
 
         }
-
-
-
 
     }
 }

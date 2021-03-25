@@ -16,15 +16,10 @@ namespace ConsoleKaartspel1
             get { return _nummer; }
             set
             {
-                if (value < 1 || value > 13)
-                {
-                    throw new ArgumentOutOfRangeException(
-                       $"nummer moet tussen 1 en 13 liggen");
-                }
-                _nummer = value;
+                _nummer = value > 0 || value < 14 ? _nummer = value :
+                throw new Exception("Het waarde moet tussen 1 en 13 zijn.");
             }
         }
-
         public char Kleur
         {
             get { return _kleur; }
@@ -47,12 +42,9 @@ namespace ConsoleKaartspel1
         //constructor
         public Kaart(int nummer, char kleur)
         {
-          
             _nummer = nummer;
             _kleur = kleur;
             
         }
-
-
     }
 }
