@@ -18,9 +18,9 @@
                     <MenuItem Header="Exit" Click="Exit_Click" />
                 </MenuItem>
                 <MenuItem Header="_Edit">
-                    <MenuItem x:Name="mnuCut"  Command="Cut" IsEnabled="False" />
-                    <MenuItem x:Name="mnuCopy" Command="Copy"  IsEnabled="False"  />
-                    <MenuItem x:Name="mnuPaste" Command="Paste"  IsEnabled="False" />
+                    <MenuItem x:Name="mnuCut"  Header="Cut" IsEnabled="False" Click="mnuCut_Click" />
+                    <MenuItem x:Name="mnuCopy" Header="Copy"  IsEnabled="False" Click="mnuCopy_Click"  />
+                    <MenuItem x:Name="mnuPaste" Header="Paste"  IsEnabled="False" Click="mnuPaste_Click" />
                 </MenuItem>
                 <MenuItem Header="Help" >
                     <MenuItem Header ="About" Click="about_click" />

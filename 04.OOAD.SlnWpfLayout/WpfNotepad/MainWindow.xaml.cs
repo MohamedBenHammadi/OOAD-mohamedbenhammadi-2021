@@ -163,15 +163,25 @@ namespace WpfNotepad
             textbox2.AcceptsReturn = true;
             textbox2.VerticalScrollBarVisibility = ScrollBarVisibility.Visible;
             textbox2.TextWrapping = TextWrapping.Wrap;
+            textbox2.TextChanged += new TextChangedEventHandler(txtText_SelectionChanged);
             int tekens2 = Convert.ToInt32(textbox2.Text.Length);
             stbAantalTekens.Content = $"#chars: {tekens2}";
-
         }
 
-       
+        private void mnuCut_Click(object sender, RoutedEventArgs e)
+        {
+            txtText.Cut();
+        }
 
+        private void mnuCopy_Click(object sender, RoutedEventArgs e)
+        {
+            txtText.Copy();
+            mnuPaste.IsEnabled = true;
+        }
 
-
-
+        private void mnuPaste_Click(object sender, RoutedEventArgs e)
+        {
+            txtText.Paste();
+        }
     }
     }

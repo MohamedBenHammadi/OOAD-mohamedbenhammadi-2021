@@ -1,0 +1,15 @@
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\SlnLes06ClassesProperties\WpfKaartspel\bin\Debug\WpfKaartspel.exe.config
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\SlnLes06ClassesProperties\WpfKaartspel\bin\Debug\WpfKaartspel.exe
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\SlnLes06ClassesProperties\WpfKaartspel\bin\Debug\WpfKaartspel.pdb
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\SlnLes06ClassesProperties\WpfKaartspel\obj\Debug\WpfKaartspel.csprojAssemblyReference.cache
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\SlnLes06ClassesProperties\WpfKaartspel\obj\Debug\MainWindow.g.cs
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\SlnLes06ClassesProperties\WpfKaartspel\obj\Debug\App.g.cs
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\SlnLes06ClassesProperties\WpfKaartspel\obj\Debug\WpfKaartspel_MarkupCompile.cache
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\SlnLes06ClassesProperties\WpfKaartspel\obj\Debug\WpfKaartspel_MarkupCompile.lref
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\SlnLes06ClassesProperties\WpfKaartspel\obj\Debug\MainWindow.baml
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\SlnLes06ClassesProperties\WpfKaartspel\obj\Debug\WpfKaartspel.g.resources
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\SlnLes06ClassesProperties\WpfKaartspel\obj\Debug\WpfKaartspel.Properties.Resources.resources
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\SlnLes06ClassesProperties\WpfKaartspel\obj\Debug\WpfKaartspel.csproj.GenerateResource.cache
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\SlnLes06ClassesProperties\WpfKaartspel\obj\Debug\WpfKaartspel.csproj.CoreCompileInputs.cache
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\SlnLes06ClassesProperties\WpfKaartspel\obj\Debug\WpfKaartspel.exe
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\SlnLes06ClassesProperties\WpfKaartspel\obj\Debug\WpfKaartspel.pdb

@@ -1,0 +1,7 @@
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\SlnLes06ClassesProperties\ConsoleKaartspel1\bin\Debug\ConsoleKaartspel1.exe.config
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\SlnLes06ClassesProperties\ConsoleKaartspel1\bin\Debug\ConsoleKaartspel1.exe
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\SlnLes06ClassesProperties\ConsoleKaartspel1\bin\Debug\ConsoleKaartspel1.pdb
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\SlnLes06ClassesProperties\ConsoleKaartspel1\obj\Debug\ConsoleKaartspel1.csprojAssemblyReference.cache
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\SlnLes06ClassesProperties\ConsoleKaartspel1\obj\Debug\ConsoleKaartspel1.csproj.CoreCompileInputs.cache
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\SlnLes06ClassesProperties\ConsoleKaartspel1\obj\Debug\ConsoleKaartspel1.exe
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\SlnLes06ClassesProperties\ConsoleKaartspel1\obj\Debug\ConsoleKaartspel1.pdb
