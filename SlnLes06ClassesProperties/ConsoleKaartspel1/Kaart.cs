@@ -11,6 +11,7 @@ namespace ConsoleKaartspel1
         private int _nummer;
         private char _kleur;
 
+        //propreties
         public int Nummer
         {
             get { return _nummer; }
@@ -38,7 +39,6 @@ namespace ConsoleKaartspel1
                
             }
         }
-
         //constructor
         public Kaart(int nummer, char kleur)
         {
