@@ -8,10 +8,14 @@ namespace ConsoleKaartspel1
 {
     class Speler
     {
+       static Random random = new Random();
+
         //propreties
         public List<Kaart> Kaarten { get; set; } = new List<Kaart>();
         public string Naam { get; }
-        public bool HeeftNogKaarten { get; set; }
+
+        public bool HeeftNogKaarten {get { return Kaarten.Count > 0; } }
+        
     
         //constructor
 
@@ -30,10 +34,9 @@ namespace ConsoleKaartspel1
 
         public Kaart LegKaart()
         {
-            Random random = new Random();
-            int willekeurigeKaart = random.Next(0,Kaarten.Count);
-            Kaart legKaart = Kaarten[willekeurigeKaart];
-            HeeftNogKaarten = Kaarten.Count > 1 ? false : true;
+            int kaartPositie = random.Next(0,Kaarten.Count);
+            Kaart legKaart = Kaarten[kaartPositie];
+            Kaarten.RemoveAt(kaartPositie);
             return legKaart;
         }
 

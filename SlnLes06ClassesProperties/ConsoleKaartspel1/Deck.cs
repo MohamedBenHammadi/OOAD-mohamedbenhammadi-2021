@@ -8,7 +8,7 @@ namespace ConsoleKaartspel1
 {
     class Deck
     {
-
+       static Random r = new Random();
         public List<Kaart> Kaarten { get; set; } = new List<Kaart>();
 
         //constructor
@@ -48,7 +48,7 @@ namespace ConsoleKaartspel1
         //methode
         public Kaart NeemKaart()
         {
-            Random r = new Random();
+        
             int kaart = r.Next(0,Kaarten.Count);
             Kaarten.RemoveAt(kaart);
             Kaart neemKaart = Kaarten[kaart];

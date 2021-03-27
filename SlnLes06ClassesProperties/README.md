@@ -2,7 +2,5 @@
 
 ## Kleine samenvatting van mijn taken
 
-
-
-* Voor deze oefening heb ik "normaal" alles goed gedaan, maar wanneer ik het programma start, krijg ik direct gelijkspel. Dit is mijn enigste probleem.
+* Ik heb mijn oefening cosolekaarspel1 verbterd (mijn methode LegKaart heb ik aangepast en de random als static gedeclareerd). Nu werkt het programma.
 

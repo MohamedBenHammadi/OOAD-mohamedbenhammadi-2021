@@ -24,7 +24,7 @@ namespace ConsoleKaartspel1
             // speel spel
             double puntenHans = 0;
             double puntenRogier = 0;
-            while (spelerHans.HeeftNogKaarten && spelerRogier.HeeftNogKaarten)
+            while (spelerHans.HeeftNogKaarten  && spelerRogier.HeeftNogKaarten )
             {
                 Kaart kaart1 = spelerHans.LegKaart();
                 Kaart kaart2 = spelerRogier.LegKaart();
