@@ -1,0 +1,15 @@
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\SlnLes07StaticEnum\WpfEscapeGame\bin\Debug\WpfEscapeGame.exe.config
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\SlnLes07StaticEnum\WpfEscapeGame\bin\Debug\WpfEscapeGame.exe
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\SlnLes07StaticEnum\WpfEscapeGame\bin\Debug\WpfEscapeGame.pdb
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\SlnLes07StaticEnum\WpfEscapeGame\obj\Debug\WpfEscapeGame.csprojAssemblyReference.cache
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\SlnLes07StaticEnum\WpfEscapeGame\obj\Debug\MainWindow.g.cs
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\SlnLes07StaticEnum\WpfEscapeGame\obj\Debug\App.g.cs
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\SlnLes07StaticEnum\WpfEscapeGame\obj\Debug\WpfEscapeGame_MarkupCompile.cache
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\SlnLes07StaticEnum\WpfEscapeGame\obj\Debug\WpfEscapeGame_MarkupCompile.lref
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\SlnLes07StaticEnum\WpfEscapeGame\obj\Debug\MainWindow.baml
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\SlnLes07StaticEnum\WpfEscapeGame\obj\Debug\WpfEscapeGame.g.resources
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\SlnLes07StaticEnum\WpfEscapeGame\obj\Debug\WpfEscapeGame.Properties.Resources.resources
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\SlnLes07StaticEnum\WpfEscapeGame\obj\Debug\WpfEscapeGame.csproj.GenerateResource.cache
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\SlnLes07StaticEnum\WpfEscapeGame\obj\Debug\WpfEscapeGame.csproj.CoreCompileInputs.cache
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\SlnLes07StaticEnum\WpfEscapeGame\obj\Debug\WpfEscapeGame.exe
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\SlnLes07StaticEnum\WpfEscapeGame\obj\Debug\WpfEscapeGame.pdb

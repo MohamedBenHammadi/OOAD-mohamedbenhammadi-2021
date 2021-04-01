@@ -1,0 +1,7 @@
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\SlnLes07StaticEnum\ConsoleKassaTicket\bin\Debug\ConsoleKassaTicket.exe.config
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\SlnLes07StaticEnum\ConsoleKassaTicket\bin\Debug\ConsoleKassaTicket.exe
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\SlnLes07StaticEnum\ConsoleKassaTicket\bin\Debug\ConsoleKassaTicket.pdb
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\SlnLes07StaticEnum\ConsoleKassaTicket\obj\Debug\ConsoleKassaTicket.csprojAssemblyReference.cache
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\SlnLes07StaticEnum\ConsoleKassaTicket\obj\Debug\ConsoleKassaTicket.csproj.CoreCompileInputs.cache
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\SlnLes07StaticEnum\ConsoleKassaTicket\obj\Debug\ConsoleKassaTicket.exe
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\SlnLes07StaticEnum\ConsoleKassaTicket\obj\Debug\ConsoleKassaTicket.pdb
