@@ -11,7 +11,7 @@ namespace WpfEscapeGame
     
         public bool IsPortable { get; set; } = true;
        
-        public Item Key { get; set; }
+       
        
 
         public Item(string name, string description) : base(name, description)
