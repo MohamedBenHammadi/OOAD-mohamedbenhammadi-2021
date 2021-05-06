@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfEscapeGame"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="600" Width="800">
     <Grid>
         <TextBlock x:Name="txtRoomDesc" Padding="10,10,10,10" HorizontalAlignment="Left" Height="63" Margin="24,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="743" FontSize="16" Background="#FFF9F5F5"/>
         <Label x:Name="lblMessage" Padding="10,10,10,10" Content="" HorizontalAlignment="Left" Height="45" Margin="24,85,0,0" VerticalAlignment="Top" Width="743" Background="#FFF9F5F5" FontSize="16" Foreground="#FF000099"/>
@@ -17,5 +17,12 @@
         <Label Content="Picked up items" HorizontalAlignment="Left" Height="26" Margin="528,150,0,0" VerticalAlignment="Top" Width="112"/>
         <ListBox x:Name="lstMyItems" HorizontalAlignment="Left" Height="155" Margin="528,176,0,0" VerticalAlignment="Top" Width="239"  SelectionChanged="LstItems_SelectionChanged"/>
         <Button x:Name="btnDrop" Content="DROP" HorizontalAlignment="Left" Height="35" Margin="313,296,0,0" VerticalAlignment="Top" Width="161" IsEnabled="False" Click="btnDrop_Click"/>
+        <Label Content="Room doors" HorizontalAlignment="Left" Height="26" Margin="24,388,0,0" VerticalAlignment="Top" Width="112"/>
+        <ListBox  x:Name="lstRoomDoors" HorizontalAlignment="Left" Height="126" Margin="24,419,0,0" VerticalAlignment="Top" Width="234" SelectionChanged="LstItems_SelectionChanged"/>
+        <Button x:Name="btnEnter" Content="&lt;- ENTER" HorizontalAlignment="Left" Height="35" Margin="313,479,0,0" VerticalAlignment="Top" Width="161" IsEnabled="False" Click="btnEnter_Click"/>
+        <Button x:Name="btnOpenWith" Content="&lt;- OPEN WITH-&gt;" HorizontalAlignment="Left" Height="35" Margin="313,429,0,0" VerticalAlignment="Top" Width="161" IsEnabled="False" Click="btnOpenWith_Click" />
+        <Image Name="imagesRoom" HorizontalAlignment="Left" Height="169" Margin="528,376,0,0" VerticalAlignment="Top" Width="239"/>
+
+
     </Grid>
 </Window>

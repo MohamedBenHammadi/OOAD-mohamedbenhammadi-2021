@@ -55,6 +55,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Actor.cs" />
+    <Compile Include="Door.cs" />
+    <Compile Include="LockalableItem.cs" />
     <Compile Include="RandomMessageGenerator.cs" />
     <Compile Include="Room.cs" />
     <Page Include="MainWindow.xaml">
@@ -96,6 +99,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\ss-computer.png" />
+    <Resource Include="img\ss-living.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\ss-bedroom.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

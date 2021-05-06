@@ -21,17 +21,30 @@ namespace WpfEscapeGame
     public partial class MainWindow : Window
     {
         Room currentRoom; // will become useful in later versions
-       
+
         public MainWindow()
         {
             InitializeComponent();
-
-
 
             // define room
             Room room1 = new Room(
             "bedroom",
             "I seem to be in a medium sized bedroom. There is a locker to the left, a nice rug on the floor, and a bed to the right. ");
+            Room LivingRoom = new Room(
+           " living room",
+           "I seem to be in a medium sized sofa. we can chill on the sofa. ");
+            Room ComputerRoom = new Room(
+           "computer room",
+           "wow what a computer, lets play warzone ");
+
+
+            // define door
+
+            Door computerDoor = new Door("green door", "you have acces to the living room");
+            Door livingDoom1 = new Door("linig door 1", "door to computer room");
+            Door livingDoom2 = new Door("living door 2 ", "you can stop the game");
+            Door bedRoomDoor = new Door("blue door", "you can go to the living roo");
+
             // define items
             Item key1 = new Item(
             "small silver key",
@@ -50,8 +63,12 @@ namespace WpfEscapeGame
             "Just a bed. I am not tired right now. "
             );
             bed.HiddenItem = key1;
-            Item stoel = new Item("stoel","iets waar je kan erop zitten", false);
+            Item stoel = new Item("stoel", "iets waar je kan erop zitten", false);
             Item poster = new Item("poster", "een grote foto");
+            Item sofa = new Item("sofa", "iets waar je erop kan chillen");
+            Item plant = new Item("plant", "een decor object");
+            Item bureau = new Item("bureau", "meubleachtige object");
+            Item Kader = new Item("Kader", "iets waar je kan een foto op hangen ");
 
 
 
@@ -65,6 +82,15 @@ namespace WpfEscapeGame
             room1.Items.Add(locker);
             room1.Items.Add(stoel);
             room1.Items.Add(poster);
+            room1.Door.Add(computerDoor);
+
+            LivingRoom.Items.Add(sofa);
+            LivingRoom.Items.Add(plant);
+
+            ComputerRoom.Items.Add(bureau);
+            ComputerRoom.Items.Add(Kader);
+
+
             // start game
             currentRoom = room1;
             lblMessage.Content = "I am awake, but cannot remember who I am!? Must have been a hell of a party last night... ";
@@ -78,10 +104,19 @@ namespace WpfEscapeGame
         private void UpdateUI()
         {
             lstRoomItems.Items.Clear();
+            lstRoomDoors.Items.Clear();
             foreach (Item itm in currentRoom.Items)
             {
                 lstRoomItems.Items.Add(itm);
             }
+            foreach (Door drs in currentRoom.Door)
+            {
+                lstRoomDoors.Items.Add(drs);
+            }
+
+            string room = currentRoom.Name;
+            imagesRoom.Source = new BitmapImage(new Uri($"img/{room}.png", UriKind.Relative));
+
         }
 
         private void LstItems_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -89,7 +124,7 @@ namespace WpfEscapeGame
             btnCheck.IsEnabled = lstRoomItems.SelectedValue != null; // room item selected
             btnPickUp.IsEnabled = lstRoomItems.SelectedValue != null; // room item selected
             btnUseOn.IsEnabled = lstRoomItems.SelectedValue != null && lstMyItems.SelectedValue != null; // room item //and picked up item selected
-            btnDrop.IsEnabled = lstMyItems.SelectedValuePath != null;       
+            btnDrop.IsEnabled = lstMyItems.SelectedValuePath != null;
         }
 
         private void BtnCheck_Click(object sender, RoutedEventArgs e)
@@ -162,6 +197,26 @@ namespace WpfEscapeGame
             lstRoomItems.Items.Add(dropItem);
             lstMyItems.Items.Remove(dropItem);
             currentRoom.Items.Remove(dropItem);
+        }
+
+        private void btnOpenWith_Click(object sender, RoutedEventArgs e)
+        {
+            Item key = (Item)lstMyItems.SelectedItem;
+            Door door = (Door)lstRoomDoors.SelectedItem;
+            if (door.Key != key)
+            {
+                lblMessage.Content = RandomMessageGenerator.GetRandomMessage(RandomMessageGenerator.MessageType.type1);
+                return;
+            }
+            door.IsLocked = false;
+            door.Key = null;
+            lstMyItems.Items.Remove(key);
+            lblMessage.Content = $"I just unlocked the {door.Name}!";
+            btnEnter.IsEnabled = true;
+        }
+
+        private void btnEnter_Click(object sender, RoutedEventArgs e)
+        {
         }
     }
 }
