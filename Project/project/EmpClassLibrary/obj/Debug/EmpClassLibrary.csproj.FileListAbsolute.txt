@@ -1,0 +1,7 @@
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\Project\project\EmpClassLibrary\bin\Debug\EmpClassLibrary.dll
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\Project\project\EmpClassLibrary\bin\Debug\EmpClassLibrary.pdb
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\Project\project\EmpClassLibrary\obj\Debug\EmpClassLibrary.csprojAssemblyReference.cache
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\Project\project\EmpClassLibrary\obj\Debug\EmpClassLibrary.csproj.CoreCompileInputs.cache
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\Project\project\EmpClassLibrary\obj\Debug\EmpClassLibrary.dll
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\Project\project\EmpClassLibrary\obj\Debug\EmpClassLibrary.pdb
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\Project\project\EmpClassLibrary\bin\Debug\EmpClassLibrary.dll.config

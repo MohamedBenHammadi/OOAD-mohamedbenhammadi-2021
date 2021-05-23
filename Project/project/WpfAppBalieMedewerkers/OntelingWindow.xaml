@@ -1,0 +1,65 @@
+﻿<Window x:Class="WpfAppBalieMedewerkers.OntelingWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAppBalieMedewerkers"
+        mc:Ignorable="d"
+        Title="OntelingWindow" Height="500" Width="1200">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="90"></ColumnDefinition>
+            <ColumnDefinition Width="120"></ColumnDefinition>
+            <ColumnDefinition Width="350"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"></RowDefinition>
+            <RowDefinition  Height="350"></RowDefinition>
+            <RowDefinition  Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" Width="200" >
+            <Label x:Name="lblId" Content="" HorizontalAlignment="Left" />
+            <Label x:Name="lblDatumUit" Content="" HorizontalAlignment="Left" />
+            <Label x:Name="lblDatumIN" Content="" HorizontalAlignment="Left" />
+            <Label x:Name="lblWerkelijkeDatum" Content="" HorizontalAlignment="Left" />
+            <Label x:Name="lblBoeteBedrag" Content="" HorizontalAlignment="Left" />
+            <Label x:Name="lblBoeteVoldaan" Content="" HorizontalAlignment="Left" />
+            <Label x:Name="lblExemplaarId" Content="" HorizontalAlignment="Left" />
+            <Label x:Name="lblLidnummer" Content="" HorizontalAlignment="Left" />
+        </StackPanel>
+
+
+
+        <StackPanel Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" Width="90"  >
+            <Label Content="id:" HorizontalAlignment="Left" />
+            <Label Content="Datum uit:" HorizontalAlignment="Left"/>
+            <Label Content="Uiterste datum in:" HorizontalAlignment="Left"/>
+            <Label Content="Werkelijke datum in:" HorizontalAlignment="Left" FontSize="10"/>
+            <Label Content="Boete Bedrag:" HorizontalAlignment="Left"/>
+            <Label Content="Boete voldaan op:" HorizontalAlignment="Left"/>
+            <Label Content="exemplaar_id:" HorizontalAlignment="Left"/>
+            <Label Content="Lid_nummer:" HorizontalAlignment="Left"/>
+        </StackPanel>
+
+        <Frame x:Name="MainToevoegen"  NavigationUIVisibility="Hidden" Grid.Row="1" Grid.Column="3"  ></Frame>
+
+
+        <StackPanel Grid.Column="3" Height="40" HorizontalAlignment="Center" Orientation="Horizontal" VerticalAlignment="Center">
+            <Button x:Name="btnTerugbrengen" Content="Onteling terug brengen" Margin="10,10,0,0" Click="btnTerugbrengen_Click"/>
+            <Button Content="Lidkaart vernieuwen" Margin="10,10,0,0"  />
+        </StackPanel>
+
+        <WrapPanel Grid.Row="1" Grid.Column="2">
+
+        </WrapPanel>
+        
+        <Label x:Name="lblActie" Content="" Grid.Column="3" HorizontalAlignment="Left" Margin="0,15" VerticalAlignment="Top" Width="124" Height="38" FontSize="14" FontWeight="Bold"/>
+        <Label Content="Lijst van Onteleningen" Grid.Column="2" HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="20" FontWeight="Bold"/>
+        <Label Content="Onteling info" HorizontalAlignment="Center"  VerticalAlignment="Center" Grid.ColumnSpan="2" Width="138" FontSize="20" FontWeight="Bold"/>
+        <Button x:Name="btnExit" Content="Terug naar home" Grid.Column="2"  Grid.Row="2" Height="20" Width="100" Click="btnExit_Click_1"/>
+
+    </Grid>
+</Window>

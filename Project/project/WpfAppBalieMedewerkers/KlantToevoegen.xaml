@@ -1,0 +1,65 @@
+﻿<Page x:Class="WpfAppBalieMedewerkers.KlantToevoegen"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfAppBalieMedewerkers"
+      mc:Ignorable="d" 
+      d:DesignHeight="350" d:DesignWidth="600"
+      Title="KlantToevoegen">
+
+    <Grid Background="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="80"></ColumnDefinition>
+            <ColumnDefinition Width="300"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left" Margin="0,10" Height="100" Width="80">
+            <Label Content="lidnummer:"/>
+            <Label Content="Voornaam:"/>
+            <Label Content="Achternaam:"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="0" Grid.Row="1" Margin="0,10" HorizontalAlignment="Left" Height="100" Width="80">
+            <Label Content="Geboortedatum:" FontSize="10"/>
+            <Label Content="Straat:"/>
+            <Label Margin="0,10" Content="nummer:"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="0" Grid.Row="2" HorizontalAlignment="Left" Height="120" Width="80">
+            <Label Content="Postcode:"/>
+            <Label Margin="0,5" Content="Gemeente:"/>
+            <Label Margin="0,5" Content="Vervaldatum:"/>
+            <Label  Content="Gsm:"/>
+        </StackPanel>
+
+        <StackPanel  Grid.Column="1" Grid.Row="0" Margin="0,10"  HorizontalAlignment="Left" Height="90" Width="300">
+            <TextBox x:Name="txtLidnummer" Height="23" HorizontalAlignment="Left" Width="100" TextWrapping="Wrap" Text=""/>
+            <TextBox x:Name="txtVoornaamInvoer" Height="23" HorizontalAlignment="Left" Width="200"  Margin="0,5" TextWrapping="Wrap" Text=""/>
+            <TextBox x:Name="txtAchternaaminvoer"  HorizontalAlignment="Left" Width="200"  Height="23"    TextWrapping="Wrap" Text=""/>
+        </StackPanel>
+
+
+        <StackPanel Grid.Column="1" Grid.Row="1"   HorizontalAlignment="Left" Height="90" Width="300">
+            <TextBox x:Name="txtGeboorteDatum"  Width="100" Margin="0,5" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap"  Text=""/>
+            <TextBox x:Name="txtStraatInvoer" Margin="0"  Height="23"  HorizontalAlignment="Left" Width="200"   TextWrapping="Wrap" Text=""/>
+            <TextBox x:Name="txtNummer" Margin="0,10"  Height="23"  HorizontalAlignment="Left" Width="100"   TextWrapping="Wrap" Text=""/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" Grid.Row="2"  HorizontalAlignment="Left" Height="120" Width="300">
+            <TextBox x:Name="txtpostcode" Margin="0,0,0,10"   HorizontalAlignment="Left" Height="23" Width="100" TextWrapping="Wrap" Text=""/>
+            <TextBox x:Name="txtGemeente"  Height="23" Width="100" HorizontalAlignment="Left" TextWrapping="Wrap" Text=""/>
+            <DatePicker x:Name="txtVervalDatum" Margin="0,9" Height="23" TextWrapping="Wrap" Width="100" HorizontalAlignment="Left" Text=""/>
+            <TextBox x:Name="txtGsmInvoer"  Height="23" TextWrapping="Wrap" Width="100" HorizontalAlignment="Left" Text=""/>
+        </StackPanel>
+        <Button x:Name="btnVoegKlantToe" Content="Voeg Klant toe" Grid.Column="2" HorizontalAlignment="Center"  Grid.Row="2" VerticalAlignment="Bottom" Margin="0,0,0,10" Width="90"/>
+
+    </Grid>
+</Page>

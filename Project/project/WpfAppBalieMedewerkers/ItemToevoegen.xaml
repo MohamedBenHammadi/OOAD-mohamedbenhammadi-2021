@@ -1,0 +1,69 @@
+﻿<Page x:Class="WpfAppBalieMedewerkers.ItemToevoegen"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfAppBalieMedewerkers"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="590"
+      Title="ItemToevoegen">
+
+    <Grid Background="White">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="80"></ColumnDefinition>
+            <ColumnDefinition Width="300"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+
+
+        <StackPanel Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left" Margin="0,10" Height="100" Width="80">
+            <Label Content="id"/>
+            <Label Content="titel"/>
+            <Label Content="beschrijving"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="0" Grid.Row="1" Margin="0,10" HorizontalAlignment="Left" Height="100" Width="80">
+            <Label Content="coverfoto"/>
+            <Label Margin="0,20" Content="uitgeverij"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="0" Grid.Row="2" HorizontalAlignment="Left" Height="100" Width="80">
+            <Label Content="leeftijd van"/>
+            <Label Margin="0,5" Content="leeftijd tot"/>
+            <Label Margin="0,5" Content="taal"/>
+        </StackPanel>
+
+        <StackPanel  Grid.Column="1" Grid.Row="0" Margin="0,10"  HorizontalAlignment="Left" Height="90" Width="300">
+            <TextBox x:Name="txtIdInvoer" Height="23" HorizontalAlignment="Left" Width="100" TextWrapping="Wrap" Text=""/>
+            <TextBox x:Name="txtTitelInvoer" Height="23" HorizontalAlignment="Left" Width="100"  Margin="0,5" TextWrapping="Wrap" Text=""/>
+            <TextBox x:Name="txtBeschrijvingInvoer"  HorizontalAlignment="Left" Width="100"  Height="23"    TextWrapping="Wrap" Text=""/>
+        </StackPanel>
+
+
+        <StackPanel Grid.Column="1" Grid.Row="1"   HorizontalAlignment="Left" Height="90" Width="300">
+            <TextBox x:Name="txtFotoInvoer"  Margin="0,10,0,0" Width="200" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" IsEnabled="False" Text=""/>
+            <Button Content="Kies hier je foto"   Width="100" Margin="0,5" Height="18" FontSize="10" Click="Button_Click"/>
+            <TextBox x:Name="txtUitgeverijInvoer"  Height="23"  HorizontalAlignment="Left" Width="100"   TextWrapping="Wrap" Text=""/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" Grid.Row="2"   HorizontalAlignment="Left" Height="90" Width="300">
+            <TextBox x:Name="txtLeeftijdVanInvoer"  HorizontalAlignment="Left" Height="23" Width="100" TextWrapping="Wrap" Text=""/>
+            <TextBox x:Name="txtLeeftijdTotInvoer" Margin="0,5" Height="23" Width="100" HorizontalAlignment="Left" TextWrapping="Wrap" Text=""/>
+            <TextBox x:Name="txtTaalInvoer" Margin="0,5" Height="23" TextWrapping="Wrap" Width="100" HorizontalAlignment="Left" Text=""/>
+        </StackPanel>
+        <Button x:Name="brnVoegToe" Content="Voeg Item toe" Grid.Column="2" HorizontalAlignment="Center"  Grid.Row="2" VerticalAlignment="Bottom" Margin="0,0,0,10" Width="90" Click="brnVoegToe_Click"/>
+
+
+
+
+
+    </Grid>
+</Page>

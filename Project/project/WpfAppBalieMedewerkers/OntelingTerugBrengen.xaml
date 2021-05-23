@@ -1,0 +1,61 @@
+﻿<Page x:Class="WpfAppBalieMedewerkers.OntelingTerugBrengen"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfAppBalieMedewerkers"
+      mc:Ignorable="d" 
+      d:DesignHeight="350" d:DesignWidth="650"
+      Title="OntelingTerugBrengen">
+
+    <Grid Background="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="90"></ColumnDefinition>
+            <ColumnDefinition Width="300"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+
+
+        <StackPanel Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left" Margin="0,10" Height="100" Width="90">
+            <Label Content="id"/>
+            <Label Content="datum uit"/>
+            <Label Content="uiterste datum in"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="0" Grid.Row="1" Margin="0,10" HorizontalAlignment="Left" Height="100" Width="90">
+            <Label Content="Werkelijke datum in" FontSize="10"/>
+            <Label Margin="0,20" Content="boete bedrag"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="0" Grid.Row="2" HorizontalAlignment="Left" Height="100" Width="90">
+            <Label Content="boete voldaan op:" FontSize="10"/>
+            <Label Margin="0,5" Content="exemplaar_id"/>
+            <Label Margin="0,5" Content="lid_nummer"/>
+        </StackPanel>
+
+        <StackPanel  Grid.Column="1" Grid.Row="0" Margin="0,10"  HorizontalAlignment="Left" Height="90" Width="300">
+            <TextBox x:Name="txtidInvoer" Height="23" HorizontalAlignment="Left" Width="100" TextWrapping="Wrap" Text=""/>
+            <TextBox x:Name="txtDatumInvoer" Height="23" HorizontalAlignment="Left" Width="100"  Margin="0,5" TextWrapping="Wrap" Text=""/>
+            <TextBox x:Name="txtUitersteDatumIn"  HorizontalAlignment="Left" Width="100"  Height="23"    TextWrapping="Wrap" Text=""/>
+        </StackPanel>
+        
+        <StackPanel Grid.Column="1" Grid.Row="1"   HorizontalAlignment="Left" Height="90" Width="300">
+            <TextBox x:Name="txtWerklijkeDatumIn"  Margin="0,10,0,0" Width="200" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap"  Text=""/>
+            <TextBox x:Name="txtBoeteBedrag"  Height="23"  HorizontalAlignment="Left" Width="100"   TextWrapping="Wrap" Text=""/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" Grid.Row="2"   HorizontalAlignment="Left" Height="90" Width="300">
+            <TextBox x:Name="txtinvoerBoeteVoldaan"  HorizontalAlignment="Left" Height="23" Width="100" TextWrapping="Wrap" Text=""/>
+            <TextBox x:Name="txtExemplaarId" Margin="0,5" Height="23" Width="100" HorizontalAlignment="Left" TextWrapping="Wrap" Text=""/>
+            <TextBox x:Name="txtLidnummer" Margin="0,5" Height="23" TextWrapping="Wrap" Width="100" HorizontalAlignment="Left" Text=""/>
+        </StackPanel>
+        <Button x:Name="btnOntelingTerug" Content="Onteling terug brengen " Grid.Column="2" HorizontalAlignment="Center"  Grid.Row="2" VerticalAlignment="Bottom" Margin="0,0,0,10" Width="150"/>
+    </Grid>
+</Page>

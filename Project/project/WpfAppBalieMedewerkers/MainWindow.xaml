@@ -1,0 +1,18 @@
+﻿<Window x:Class="WpfAppBalieMedewerkers.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAppBalieMedewerkers"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="1200">
+    <Grid>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Height="35" VerticalAlignment="Top" Margin="0,10,0,0">
+            <Button Content="Item" MinWidth="100" Margin="10,0,15,0" Click="Button_Click" />
+            <Button Content="Klanten" MinWidth="100" Margin="10,0,15,0.2" Click="Button_Click_1" />
+            <Button Content="Ontleningen" MinWidth="100" Margin="10,0,15,0" Click="Button_Click_3" />
+            <Button Content="Reservaties" MinWidth="100" Margin="10,0,15,0" Click="Button_Click_2" />
+        </StackPanel>
+        <Frame x:Name="Main" Margin="0,50,0,0" NavigationUIVisibility="Hidden"    ></Frame>
+    </Grid>
+</Window>
