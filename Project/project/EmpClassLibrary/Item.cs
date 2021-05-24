@@ -130,10 +130,7 @@ namespace EmpClassLibrary
             return $"{Titel}";
         }
 
-        public void VoegItem(string titel, string bes )
-        {
-
-        }
+       
 
         public void ItemAanpassen(int id, string titel, string coverFoto, string besch, string uitgeverij, int leeftijdV, int leeftijdT, string taal)
         {
@@ -145,8 +142,8 @@ namespace EmpClassLibrary
                 byte[] cover = File.ReadAllBytes(coverFoto);
                 comm.Parameters.AddWithValue("@id", id);
                 comm.Parameters.AddWithValue("@titel", titel);
-                comm.Parameters.AddWithValue("@titel", titel);
-                comm.Parameters.AddWithValue("@beschrijvingB", besch);
+                comm.Parameters.AddWithValue("@coverFoto", coverFoto);
+                comm.Parameters.AddWithValue("@beschrijving", besch);
                 comm.Parameters.AddWithValue("@uitgeverij", uitgeverij );
                 comm.Parameters.AddWithValue("@pleeftijdVan", leeftijdV);
                 comm.Parameters.AddWithValue("@LeeftijdTot", leeftijdT);
@@ -173,12 +170,12 @@ namespace EmpClassLibrary
             {
                 conn.Open();
                 SqlCommand comm = new SqlCommand(
-                    @"  update Item set titel=@titel, coverfoto=@coverFoto beschrijving=@beschrijving, uitgeverij=@uitgeverij, leeftijd_van=@leeftijdVan, leeftijd_tot=@LeeftijdTot,taal=@Taal where id = @Id ", conn);
+                    @"  insert into Item ( id,  titel,  beschrijving, uitgeverij, leeftijd_van, leeftijd_tot, taal) values (@id,@titel,@coverFoto,@beschrijving,@uitgeverij,@pleeftijdVan,@LeeftijdTot,@Taal)  ", conn);
                 byte[] cover = File.ReadAllBytes(coverFoto);
                 comm.Parameters.AddWithValue("@id", id);
                 comm.Parameters.AddWithValue("@titel", titel);
-                comm.Parameters.AddWithValue("@titel", titel);
-                comm.Parameters.AddWithValue("@beschrijvingB", besch);
+                comm.Parameters.AddWithValue("@coverFoto", coverFoto);
+                comm.Parameters.AddWithValue("@beschrijving", besch);
                 comm.Parameters.AddWithValue("@uitgeverij", uitgeverij);
                 comm.Parameters.AddWithValue("@pleeftijdVan", leeftijdV);
                 comm.Parameters.AddWithValue("@LeeftijdTot", leeftijdT);

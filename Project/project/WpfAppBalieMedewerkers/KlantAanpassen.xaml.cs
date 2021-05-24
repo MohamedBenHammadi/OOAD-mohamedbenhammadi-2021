@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using EmpClassLibrary;
 
 namespace WpfAppBalieMedewerkers
 {
@@ -20,9 +21,21 @@ namespace WpfAppBalieMedewerkers
     /// </summary>
     public partial class KlantAanpassen : Page
     {
-        public KlantAanpassen()
+        Klanten klantAanpassen;
+        int id;
+        public KlantAanpassen( Klanten klant, int id)
         {
             InitializeComponent();
+            this.id = id;
+            this.klantAanpassen = klant;
+        }
+
+        private void btnPasKlantToe_Click(object sender, RoutedEventArgs e)
+        {
+            Leden klant = new Leden();
+            klant.LidAanpassen(Convert.ToInt32(txtLidnummer.Text), txtVoornaamInvoer.Text, txtAchternaaminvoer.Text, dtbGeboorteDatum.DisplayDate, txtNummer.Text, txtStraatInvoer.Text, Convert.ToInt32(txtpostcode.Text), txtGemeente.Text, txtVervalDatum.DisplayDate ,txtGsmInvoer.Text);
+          
+           
         }
     }
 }

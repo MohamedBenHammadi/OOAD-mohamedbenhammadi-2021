@@ -48,7 +48,7 @@
 
 
         <StackPanel Grid.Column="1" Grid.Row="1"   HorizontalAlignment="Left" Height="90" Width="300">
-            <TextBox x:Name="txtGeboorteDatum"  Width="100" Margin="0,5" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap"  Text=""/>
+            <DatePicker x:Name="dtbGeboorteDatum"  Width="100" Margin="0,5" HorizontalAlignment="Left" Height="23"   Text=""/>
             <TextBox x:Name="txtStraatInvoer" Margin="0"  Height="23"  HorizontalAlignment="Left" Width="200"   TextWrapping="Wrap" Text=""/>
             <TextBox x:Name="txtNummer" Margin="0,10"  Height="23"  HorizontalAlignment="Left" Width="100"   TextWrapping="Wrap" Text=""/>
         </StackPanel>
@@ -56,9 +56,9 @@
         <StackPanel Grid.Column="1" Grid.Row="2"  HorizontalAlignment="Left" Height="120" Width="300">
             <TextBox x:Name="txtpostcode" Margin="0,0,0,10"   HorizontalAlignment="Left" Height="23" Width="100" TextWrapping="Wrap" Text=""/>
             <TextBox x:Name="txtGemeente"  Height="23" Width="100" HorizontalAlignment="Left" TextWrapping="Wrap" Text=""/>
-            <TextBox x:Name="txtVervalDatum" Margin="0,9" Height="23" TextWrapping="Wrap" Width="100" HorizontalAlignment="Left" Text=""/>
+            <DatePicker x:Name="txtVervalDatum" Margin="0,9" Height="23"  Width="120" HorizontalAlignment="Left" Text=""/>
             <TextBox x:Name="txtGsmInvoer"  Height="23" TextWrapping="Wrap" Width="100" HorizontalAlignment="Left" Text=""/>
         </StackPanel>
-        <Button x:Name="btnPasKlantToe" Content="Pas Klant toe" Grid.Column="2" HorizontalAlignment="Center"  Grid.Row="2" VerticalAlignment="Bottom" Margin="0,0,0,10" Width="90"/>
+        <Button x:Name="btnPasKlantToe" Content="Pas Klant toe" Grid.Column="2" HorizontalAlignment="Center"  Grid.Row="2" VerticalAlignment="Bottom" Margin="0,0,0,10" Width="90" Click="btnPasKlantToe_Click"/>
     </Grid>
 </Page>

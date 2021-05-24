@@ -32,6 +32,11 @@ namespace EmpClassLibrary
 
 
         //construcotr met info over de lid
+
+        public Leden()
+        {
+
+        }
         public Leden( int lidnummer, string vn, string achtn, string gsm, DateTime vrvldatum)
         {
             Lidnummer = lidnummer;
@@ -138,6 +143,63 @@ namespace EmpClassLibrary
             }
         }
 
+        public void LidAanpassen(int lidnummer, string voornaam, string achternaam, DateTime geboortedtm, string nummer, string straat, int postcode, string gemeente, DateTime vervaldatum, string gsm)
+        {
+            using (SqlConnection conn = new SqlConnection(connString))
+            {
+                conn.Open();
+                SqlCommand comm = new SqlCommand(
+                    @"  update Lid set lidnummer=@lidnummer, Voornaam=@voornaam , Achternaam=@achternaam,Geboortedatum =@geboortedatum, nummer=@nummer, straat = @straat postcode=@postcode,Gemeente=@gemeente, Vervaldatum_lidkaart=@vervaldatum, Gsm = @gsm  where lidnummer = @lidnummer ", conn);
+       
+                comm.Parameters.AddWithValue("@lidnummer", lidnummer);
+                comm.Parameters.AddWithValue("@voornaam", voornaam);
+                comm.Parameters.AddWithValue("@achternaam", achternaam);
+                comm.Parameters.AddWithValue("@geboortedatum", geboortedtm);
+                comm.Parameters.AddWithValue("@nummer", nummer);
+                comm.Parameters.AddWithValue("@straat", straat);
+                comm.Parameters.AddWithValue("@postcode", postcode);
+                comm.Parameters.AddWithValue("@gemeente", gemeente);
+                comm.Parameters.AddWithValue("@vervaldatum", vervaldatum);
+                comm.Parameters.AddWithValue("@gsm", gsm);
+                comm.ExecuteNonQuery();
+            }
+        }
+
+        public void Verwijderklant()
+        {
+            using (SqlConnection conn = new SqlConnection(connString))
+            {
+                conn.Open();
+                SqlCommand comm = new SqlCommand("delete from Lid where lidnummer = @par1", conn);
+                comm.Parameters.AddWithValue("@par1", Lidnummer);
+                comm.ExecuteNonQuery();
+            }
+        }
+
+
+
+
+        public void Voegklant(int lidnummer, string voornaam, string achternaam, DateTime geboortedtm, string nummer, string straat, int postcode, string gemeente, DateTime vervaldatum, string gsm)
+        {
+            using (SqlConnection conn = new SqlConnection(connString))
+            {
+                conn.Open();
+                SqlCommand comm = new SqlCommand(
+                    @"   insert into Lid (lidnummer,  Voornaam, Achternaam,Geboortedatum, nummer, Straat, postcode,Gemeente,Vervaldatum_lidkaart ) values (@lidnummer,@voornaam,@achternaam,@geboortedatum,@nummer,@straat ,@postcode,@gemeente, @vervaldatum, @gsm) ", conn);
+
+                comm.Parameters.AddWithValue("@lidnummer", lidnummer);
+                comm.Parameters.AddWithValue("@voornaam", voornaam);
+                comm.Parameters.AddWithValue("@achternaam", achternaam);
+                comm.Parameters.AddWithValue("@geboortedatum", geboortedtm);
+                comm.Parameters.AddWithValue("@nummer", nummer);
+                comm.Parameters.AddWithValue("@straat", straat);
+                comm.Parameters.AddWithValue("@postcode", postcode);
+                comm.Parameters.AddWithValue("@gemeente", gemeente);
+                comm.Parameters.AddWithValue("@vervaldatum", vervaldatum);
+                comm.Parameters.AddWithValue("@gsm", gsm);
+                comm.ExecuteNonQuery();
+            }
+        }
 
 
 

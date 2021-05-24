@@ -1,0 +1,9 @@
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\Project\project\WpfAppLeden\obj\Debug\WpfAppLeden.csprojAssemblyReference.cache
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\Project\project\WpfAppLeden\obj\Debug\CheckStock.g.cs
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\Project\project\WpfAppLeden\obj\Debug\LoginLeden.g.cs
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\Project\project\WpfAppLeden\obj\Debug\MainWindow.g.cs
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\Project\project\WpfAppLeden\obj\Debug\PageZoek.g.cs
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\Project\project\WpfAppLeden\obj\Debug\WindowZonderLogIn.g.cs
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\Project\project\WpfAppLeden\obj\Debug\App.g.cs
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\Project\project\WpfAppLeden\obj\Debug\WpfAppLeden_MarkupCompile.cache
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\Project\project\WpfAppLeden\obj\Debug\WpfAppLeden_MarkupCompile.lref

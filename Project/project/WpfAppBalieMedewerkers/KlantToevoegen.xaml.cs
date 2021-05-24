@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using EmpClassLibrary;
 
 namespace WpfAppBalieMedewerkers
 {
@@ -20,9 +21,19 @@ namespace WpfAppBalieMedewerkers
     /// </summary>
     public partial class KlantToevoegen : Page
     {
-        public KlantToevoegen()
+        Klanten klantToevoegen;
+        public KlantToevoegen(Klanten klant)
         {
             InitializeComponent();
+            this.klantToevoegen = klant;
         }
+
+        //private void btnVoegKlantToe_Click(object sender, RoutedEventArgs e)
+        //{
+        //    Leden klant = new Leden();
+        //    klant.Voegklant(Convert.ToInt32(txtLidnummer.Text), txtVoornaamInvoer.Text, txtAchternaaminvoer.Text, dbpGeboorteDatum.DisplayDate, txtNummer.Text, txtStraatInvoer.Text, Convert.ToInt32(txtpostcode.Text), txtGemeente.Text, dpVervalDatum.DisplayDate, txtGsmInvoer.Text);
+
+      
+        //}
     }
 }

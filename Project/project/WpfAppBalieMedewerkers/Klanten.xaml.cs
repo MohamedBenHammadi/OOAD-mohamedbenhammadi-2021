@@ -32,18 +32,23 @@ namespace WpfAppBalieMedewerkers
           
         }
 
-        private void btnToevoegen_Click(object sender, RoutedEventArgs e)
-        {
-            MainToevoegen.Content = new KlantToevoegen();
-            lblActie.Content = "Toevoegen";
+        //private void btnToevoegen_Click(object sender, RoutedEventArgs e)
+        //{
+        //    MainToevoegen.Content = new KlantToevoegen(this);
+        //    lblActie.Content = "Toevoegen";
             
-        }
+        //}
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            MainToevoegen.Content = new KlantAanpassen();
-            lblActie.Content = "Aanpassen";
-        }
+        //private void Button_Click(object sender, RoutedEventArgs e)
+        //{
+        //    ListBoxItem listbox = (ListBoxItem)wrpKlant.SelectedItem;
+        //    int id = Convert.ToInt32(listbox.Tag);
+
+        //    MainToevoegen.Content = new KlantAanpassen(this, id);
+        //    lblActie.Content = "Aanpassen";
+
+         
+        //}
 
 
 
@@ -91,6 +96,19 @@ namespace WpfAppBalieMedewerkers
             lblGemeente.Content = klant.Gemeente;
             lblVervalDatum.Content = klant.VervaldatumLidkaart;
             lblGsm.Content = klant.Gsm;
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            //ListBoxItem listbox = (ListBoxItem)wrpKlant.SelectedItem;
+            //int id = Convert.ToInt32(listbox.Tag);
+
+            //MessageBoxResult result = MessageBox.Show($"Ben je zeker dat je lid {lblVoornaam.Content} wilt verwijderen?", "verwijderen", MessageBoxButton.YesNo);
+            //if (result != MessageBoxResult.Yes) return;
+
+            //Leden lid = Leden.GetKlanttId(id);
+            //lid.Verwijderklant();
+            //LoadKlant(null);
         }
     }
 }
