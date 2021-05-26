@@ -28,12 +28,11 @@ namespace WpfAppBalieMedewerkers
             this.klantToevoegen = klant;
         }
 
-        //private void btnVoegKlantToe_Click(object sender, RoutedEventArgs e)
-        //{
-        //    Leden klant = new Leden();
-        //    klant.Voegklant(Convert.ToInt32(txtLidnummer.Text), txtVoornaamInvoer.Text, txtAchternaaminvoer.Text, dbpGeboorteDatum.DisplayDate, txtNummer.Text, txtStraatInvoer.Text, Convert.ToInt32(txtpostcode.Text), txtGemeente.Text, dpVervalDatum.DisplayDate, txtGsmInvoer.Text);
-
-      
-        //}
+        private void btnVoegKlantToe_Click_1(object sender, RoutedEventArgs e)
+        {
+            Leden klant = new Leden();
+            klant.Voegklant(Convert.ToInt32(txtLidnummer.Text), txtVoornaamInvoer.Text, txtAchternaaminvoer.Text, dbpGeboorteDatum.DisplayDate, txtNummer.Text, txtStraatInvoer.Text, Convert.ToInt32(txtpostcode.Text), txtGemeente.Text, dpVervalDatum.DisplayDate, txtGsmInvoer.Text);
+            klantToevoegen.LoadKlant(null);
+        }
     }
 }

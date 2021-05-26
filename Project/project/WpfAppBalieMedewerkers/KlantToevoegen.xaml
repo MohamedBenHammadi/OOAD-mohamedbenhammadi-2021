@@ -59,7 +59,7 @@
             <DatePicker x:Name="dpVervalDatum" Margin="0,9" Height="23"  Width="120" HorizontalAlignment="Left" Text=""/>
             <TextBox x:Name="txtGsmInvoer"  Height="23" TextWrapping="Wrap" Width="100" HorizontalAlignment="Left" Text=""/>
         </StackPanel>
-        <Button x:Name="btnVoegKlantToe" Content="Voeg Klant toe" Grid.Column="2" HorizontalAlignment="Center"  Grid.Row="2" VerticalAlignment="Bottom" Margin="0,0,0,10" Width="90" />
+        <Button x:Name="btnVoegKlantToe" Content="Voeg Klant toe" Grid.Column="2" HorizontalAlignment="Center"  Grid.Row="2" VerticalAlignment="Bottom" Margin="0,0,0,10" Width="90" Click="btnVoegKlantToe_Click_1" />
 
     </Grid>
 </Page>

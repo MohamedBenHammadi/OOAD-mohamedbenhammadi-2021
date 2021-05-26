@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,6 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using EmpClassLibrary;
 
 namespace WpfAppLeden
 {
@@ -19,9 +21,36 @@ namespace WpfAppLeden
     /// </summary>
     public partial class LoginLeden : Window
     {
+        static string connString = ConfigurationManager.AppSettings["connString"];
         public LoginLeden()
         {
             InitializeComponent();
+        }
+
+        private void btnLogIn_Click(object sender, RoutedEventArgs e)
+        {
+            string Lidnummer;
+
+            Lidnummer = txtBarcode.Text;
+
+            if (Leden.LoginLid(Lidnummer))
+            {
+                MainWindow venster = new MainWindow();
+                this.Close();
+                venster.Show();
+            }
+            else
+            {
+              
+                lblfoutmelding.Content = "lidnummer is niet correct";
+            }
+        }
+
+        private void BtnZonderLogIN_Click(object sender, RoutedEventArgs e)
+        {
+            WindowZonderLogIn venster = new WindowZonderLogIn();
+            this.Close();
+            venster.Show();
         }
     }
 }

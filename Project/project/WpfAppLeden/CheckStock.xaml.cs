@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using EmpClassLibrary;
 
 namespace WpfAppLeden
 {
@@ -23,6 +24,19 @@ namespace WpfAppLeden
         public CheckStock()
         {
             InitializeComponent();
+     
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            string idInvoer;
+
+            idInvoer = txtInvoer.Text;
+
+            lblVoorraad.Content = Exemplaar.CheckStock(Convert.ToInt32(idInvoer));
+           
+        }
+        
+   
     }
 }

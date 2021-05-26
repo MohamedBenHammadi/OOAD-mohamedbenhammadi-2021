@@ -20,15 +20,12 @@
             <RowDefinition  Height="*"></RowDefinition>
         </Grid.RowDefinitions>
 
-        <StackPanel Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" Width="200" >
-            <Label x:Name="lblid" Content="" HorizontalAlignment="Center" />
-            <Label x:Name="lblTitel" Content="" HorizontalAlignment="Right" />
-            <Label x:Name="lblBeschrijving" Content="" HorizontalAlignment="Right" />
-            <Label x:Name="lblCoverFoto" Content="" HorizontalAlignment="Right" />
-            <Label x:Name="lblLeeftijdVan" Content="" HorizontalAlignment="Right" />
-            <Label x:Name="lblLeeftijdTot" Content="" HorizontalAlignment="Right" />
-            <Label x:Name="lblTaal" Content="" HorizontalAlignment="Right" />
-
+        <StackPanel Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" Width="200" Margin="0,0,10,0" >
+            <Label x:Name="lblid" Content="" Width="40" Margin="15,0"    HorizontalAlignment="Left" />
+            <Label x:Name="lblTitel" Content="" Width="180" Margin="15,0"  HorizontalAlignment="Left" />
+            <ScrollViewer>
+                <TextBlock x:Name="txbBescharijving"  Width="170" Margin="10,0" Height="100"  HorizontalAlignment="Left" />
+            </ScrollViewer>
         </StackPanel>
 
 
@@ -37,18 +34,27 @@
             <Label Content="Id:" HorizontalAlignment="Left" />
             <Label Content="Titel:" HorizontalAlignment="Left"/>
             <Label Content="Beschrijving:" HorizontalAlignment="Left"/>
-            <Label Content="Coverfoto:" HorizontalAlignment="Left"/>
+          
+        </StackPanel>
+
+        <StackPanel  Grid.Column="0" Grid.Row="1" HorizontalAlignment="center" VerticalAlignment="Bottom" Height="100"  Width="90" Margin="0,0,0,50">
             <Label Content="Leeftijd van:" HorizontalAlignment="Left"/>
             <Label Content="Leeftijd tot:" HorizontalAlignment="Left"/>
             <Label Content="taal:" HorizontalAlignment="Left"/>
-
         </StackPanel>
+
+        <StackPanel  Grid.Column="1" Grid.Row="1" HorizontalAlignment="center" VerticalAlignment="Bottom" Height="100"  Width="160" Margin="0,0,0,50">
+            <Label x:Name="lblLeeftijdVan" Content=""  Width="30" Margin="10,0"   HorizontalAlignment="Left" />
+            <Label x:Name="lblLeeftijdTot" Content =""  Width="30" Margin="10,0"    HorizontalAlignment="Left" />
+            <Label x:Name="lblTaal" Content="" Width="30" Margin="10,0"    HorizontalAlignment="Left" />
+        </StackPanel>
+
 
         <Frame x:Name="MainToevoegen"  NavigationUIVisibility="Hidden" Grid.Row="1" Grid.Column="3"  ></Frame>
 
 
         <StackPanel Grid.Column="3" Height="40" HorizontalAlignment="Center" Orientation="Horizontal" VerticalAlignment="Center">
-            <Button x:Name="btnZoek" Content="Zoek" Margin="10,10,0,0"  Height="30" Width="60" VerticalAlignment="Top" Click="Button_Click_1"/>
+            <Button x:Name="btnZoek" Content="Zoek" Margin="10,10,0,0"  Height="30" Width="60" VerticalAlignment="Top" />
             <Button x:Name="btnCheck" Content="Check stock"  Margin="10,10,0,0" Click="btnCheck_Click" />
           
         </StackPanel>
@@ -58,5 +64,6 @@
         </ScrollViewer>
         <Label Content="Lijst van Item" Grid.Column="2" HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="20" FontWeight="Bold"/>
         <Label Content="Item info" HorizontalAlignment="Center"  VerticalAlignment="Center" Grid.ColumnSpan="2" Width="138" FontSize="20" FontWeight="Bold"/>
+        <Button x:Name="btnExit" Content="Terug naar login" Grid.Column="2" HorizontalAlignment="Center"   Grid.Row="2" VerticalAlignment="Center" Width="100" Click="btnExit_Click"/>
     </Grid>
 </Window>

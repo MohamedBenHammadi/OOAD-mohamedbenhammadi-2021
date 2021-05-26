@@ -48,21 +48,32 @@ namespace WpfAppBalieMedewerkers
             OpenFileDialog dialog = new OpenFileDialog();
             dialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
             dialog.Filter = "Afbeeldingen|.jpg;.png";
-            string chosenFileName;
+           
             if (dialog.ShowDialog() == true)
             {
-                chosenFileName = dialog.FileName;
-                txtFotoInvoer.Text = chosenFileName;
+                foto = dialog.FileName;
+           
             }
 
         }
 
         private void btnAanpassen_Click(object sender, RoutedEventArgs e)
         {
-            Item item1 = new Item();
-            item1.ItemAanpassen(Convert.ToInt32(txtIdInvoer.Text), txtTitelInvoer.Text, foto, txtBeschrijving.Text, txtUitgeverijInvoer.Text, Convert.ToInt32(txtLeeftijdVanInvoer.Text), Convert.ToInt32(txtLeeftijdTotInvoer.Text), txtTaalInvoer.Text);
 
-            //lblSucces.Content = "Item aangepast";
+            if (rdbJa.IsChecked == true)
+            {
+                Item item1 = new Item();
+                item1.ItemAanpassen(Convert.ToInt32(txtIdInvoer.Text), txtTitelInvoer.Text, foto, txtBeschrijving.Text, txtUitgeverijInvoer.Text, Convert.ToInt32(txtLeeftijdVanInvoer.Text), Convert.ToInt32(txtLeeftijdTotInvoer.Text), txtTaalInvoer.Text);
+                venster1.LoadItem(null);
+            } 
+            else if(rdvNeen.IsChecked == true)
+            {
+                Item item1 = new Item();
+                item1.ItemAanpassenZonderFoto(Convert.ToInt32(txtIdInvoer.Text), txtTitelInvoer.Text, txtBeschrijving.Text, txtUitgeverijInvoer.Text, Convert.ToInt32(txtLeeftijdVanInvoer.Text), Convert.ToInt32(txtLeeftijdTotInvoer.Text), txtTaalInvoer.Text);
+                venster1.LoadItem(null);
+            }
+           
+
         }
     }
 }

@@ -28,12 +28,27 @@ namespace WpfAppBalieMedewerkers
             InitializeComponent();
             this.id = id;
             this.klantAanpassen = klant;
+            Leden klanten = Leden.GetKlanttId(id);
+
+            txtLidnummer.Text = Convert.ToString(klanten.Lidnummer);
+            txtVoornaamInvoer.Text = klanten.Voornaam;
+            txtAchternaaminvoer.Text = klanten.Achternaam;
+            dtbGeboorteDatum.SelectedDate = klanten.Geboortedatum;
+            txtStraatInvoer.Text = klanten.Straat;
+            txtNummer.Text = klanten.Nummer;
+            txtpostcode.Text = Convert.ToString(klanten.Postcode);
+            txtGemeente.Text = klanten.Gemeente;
+            dprVervalDatum.SelectedDate = klanten.VervaldatumLidkaart;
+            txtGsmInvoer.Text = klanten.Gsm;
+
+
+
         }
 
         private void btnPasKlantToe_Click(object sender, RoutedEventArgs e)
         {
             Leden klant = new Leden();
-            klant.LidAanpassen(Convert.ToInt32(txtLidnummer.Text), txtVoornaamInvoer.Text, txtAchternaaminvoer.Text, dtbGeboorteDatum.DisplayDate, txtNummer.Text, txtStraatInvoer.Text, Convert.ToInt32(txtpostcode.Text), txtGemeente.Text, txtVervalDatum.DisplayDate ,txtGsmInvoer.Text);
+            klant.LidAanpassen(Convert.ToInt32(txtLidnummer.Text), txtVoornaamInvoer.Text, txtAchternaaminvoer.Text, dtbGeboorteDatum.DisplayDate, txtNummer.Text, txtStraatInvoer.Text, Convert.ToInt32(txtpostcode.Text), txtGemeente.Text, dprVervalDatum.DisplayDate ,txtGsmInvoer.Text);
           
            
         }

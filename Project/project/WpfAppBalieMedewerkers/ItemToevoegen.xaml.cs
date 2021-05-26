@@ -33,11 +33,11 @@ namespace WpfAppBalieMedewerkers
             OpenFileDialog dialog = new OpenFileDialog();
             dialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
             dialog.Filter = "Afbeeldingen|.jpg;.png";
-            string chosenFileName;
+          
             if (dialog.ShowDialog() == true)
             {
-                chosenFileName = dialog.FileName;
-                txtFotoInvoer.Text = chosenFileName;
+                foto = dialog.FileName;
+                txtFotoInvoer.Text = foto;
             }
         }
 

@@ -56,7 +56,7 @@
         <StackPanel Grid.Column="1" Grid.Row="2"  HorizontalAlignment="Left" Height="120" Width="300">
             <TextBox x:Name="txtpostcode" Margin="0,0,0,10"   HorizontalAlignment="Left" Height="23" Width="100" TextWrapping="Wrap" Text=""/>
             <TextBox x:Name="txtGemeente"  Height="23" Width="100" HorizontalAlignment="Left" TextWrapping="Wrap" Text=""/>
-            <DatePicker x:Name="txtVervalDatum" Margin="0,9" Height="23"  Width="120" HorizontalAlignment="Left" Text=""/>
+            <DatePicker x:Name="dprVervalDatum" Margin="0,9" Height="23"  Width="120" HorizontalAlignment="Left"/>
             <TextBox x:Name="txtGsmInvoer"  Height="23" TextWrapping="Wrap" Width="100" HorizontalAlignment="Left" Text=""/>
         </StackPanel>
         <Button x:Name="btnPasKlantToe" Content="Pas Klant toe" Grid.Column="2" HorizontalAlignment="Center"  Grid.Row="2" VerticalAlignment="Bottom" Margin="0,0,0,10" Width="90" Click="btnPasKlantToe_Click"/>

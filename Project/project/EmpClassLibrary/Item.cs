@@ -132,22 +132,42 @@ namespace EmpClassLibrary
 
        
 
-        public void ItemAanpassen(int id, string titel, string coverFoto, string besch, string uitgeverij, int leeftijdV, int leeftijdT, string taal)
+        public void ItemAanpassen(int id,string titel, string coverFoto, string besch, string uitgeverij, int leeftijdV, int leeftijdT, string taal)
         {
             using (SqlConnection conn = new SqlConnection(connString))
             {
                 conn.Open();
-                SqlCommand comm = new SqlCommand(
-                    @"  update Item set titel=@titel, coverfoto=@coverFoto beschrijving=@beschrijving, uitgeverij=@uitgeverij, leeftijd_van=@leeftijdVan, leeftijd_tot=@LeeftijdTot,taal=@Taal where id = @Id ", conn);
                 byte[] cover = File.ReadAllBytes(coverFoto);
-                comm.Parameters.AddWithValue("@id", id);
+                SqlCommand comm = new SqlCommand(
+                    @"  update Item set  titel=@titel, coverfoto=@coverFoto beschrijving=@beschrijving, uitgeverij=@uitgeverij, leeftijd_van=@leeftijdVan, leeftijd_tot=@LeeftijdTot,taal=@Taal where id = @Id ", conn);
+               
                 comm.Parameters.AddWithValue("@titel", titel);
-                comm.Parameters.AddWithValue("@coverFoto", coverFoto);
+                comm.Parameters.AddWithValue("@coverFoto", cover);
                 comm.Parameters.AddWithValue("@beschrijving", besch);
                 comm.Parameters.AddWithValue("@uitgeverij", uitgeverij );
                 comm.Parameters.AddWithValue("@pleeftijdVan", leeftijdV);
                 comm.Parameters.AddWithValue("@LeeftijdTot", leeftijdT);
                 comm.Parameters.AddWithValue("@Taal", taal);
+                comm.Parameters.AddWithValue("@id", id);
+                comm.ExecuteNonQuery();
+            }
+        }
+        public void ItemAanpassenZonderFoto(int id,string titel,  string besch, string uitgeverij, int leeftijdV, int leeftijdT, string taal)
+        {
+            using (SqlConnection conn = new SqlConnection(connString))
+            {
+                conn.Open();
+            
+                SqlCommand comm = new SqlCommand(
+                    @"  update Item set  titel=@titel, beschrijving=@beschrijving, uitgeverij=@uitgeverij, leeftijd_van=@leeftijdVan, leeftijd_tot=@LeeftijdTot,taal=@Taal where id = @Id ", conn);
+              
+                comm.Parameters.AddWithValue("@titel", titel);
+                comm.Parameters.AddWithValue("@beschrijving", besch);
+                comm.Parameters.AddWithValue("@uitgeverij", uitgeverij);
+                comm.Parameters.AddWithValue("@leeftijdVan", leeftijdV);
+                comm.Parameters.AddWithValue("@LeeftijdTot", leeftijdT);
+                comm.Parameters.AddWithValue("@Taal", taal);
+                comm.Parameters.AddWithValue("@id", id);
                 comm.ExecuteNonQuery();
             }
         }
@@ -186,9 +206,7 @@ namespace EmpClassLibrary
 
 
     }
-
-
-
+  
 
 
 

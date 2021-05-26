@@ -65,8 +65,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="LidkaarVernieuwen.xaml.cs">
+      <DependentUpon>LidkaarVernieuwen.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Reservatie.xaml.cs">
       <DependentUpon>Reservatie.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Zoeken.xaml.cs">
+      <DependentUpon>Zoeken.xaml</DependentUpon>
     </Compile>
     <Page Include="ItemAanpassen.xaml">
       <SubType>Designer</SubType>
@@ -89,6 +95,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="KlantToevoegen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LidkaarVernieuwen.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -138,6 +148,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Reservatie.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Zoeken.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

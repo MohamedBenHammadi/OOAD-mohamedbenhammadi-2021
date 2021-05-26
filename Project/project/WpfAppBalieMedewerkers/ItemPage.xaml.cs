@@ -120,8 +120,10 @@ namespace WpfAppBalieMedewerkers
             lblTaal.Content = item.Taal;
         }
 
-      
-
-
+        private void btnZoeken_Click(object sender, RoutedEventArgs e)
+        {
+            Zoeken venster = new Zoeken();
+            venster.Show();
+        }
     }
 }

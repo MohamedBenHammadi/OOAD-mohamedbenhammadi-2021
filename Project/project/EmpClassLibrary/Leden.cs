@@ -149,7 +149,7 @@ namespace EmpClassLibrary
             {
                 conn.Open();
                 SqlCommand comm = new SqlCommand(
-                    @"  update Lid set lidnummer=@lidnummer, Voornaam=@voornaam , Achternaam=@achternaam,Geboortedatum =@geboortedatum, nummer=@nummer, straat = @straat postcode=@postcode,Gemeente=@gemeente, Vervaldatum_lidkaart=@vervaldatum, Gsm = @gsm  where lidnummer = @lidnummer ", conn);
+                    @"  update Lid set lidnummer=@lidnummer, Voornaam=@voornaam , Achternaam=@achternaam,Geboortedatum =@geboortedatum, nummer=@nummer, straat = @straat, postcode =@postcode,Gemeente=@gemeente, Vervaldatum_lidkaart=@vervaldatum, Gsm = @gsm  where lidnummer = @lidnummer ", conn);
        
                 comm.Parameters.AddWithValue("@lidnummer", lidnummer);
                 comm.Parameters.AddWithValue("@voornaam", voornaam);
@@ -164,6 +164,21 @@ namespace EmpClassLibrary
                 comm.ExecuteNonQuery();
             }
         }
+        public void VervalDatumAanpassen(int id, DateTime vervaldatum)
+        {
+            using (SqlConnection conn = new SqlConnection(connString))
+            {
+                conn.Open();
+                SqlCommand comm = new SqlCommand(
+                    @"  update Lid set  Vervaldatum_lidkaart=@vervaldatum  where lidnummer = @lidnummer ", conn);
+
+               
+                comm.Parameters.AddWithValue("@vervaldatum", vervaldatum);
+                comm.Parameters.AddWithValue("@lidnummer", id);
+                comm.ExecuteNonQuery();
+            }
+        }
+
 
         public void Verwijderklant()
         {
@@ -185,7 +200,7 @@ namespace EmpClassLibrary
             {
                 conn.Open();
                 SqlCommand comm = new SqlCommand(
-                    @"   insert into Lid (lidnummer,  Voornaam, Achternaam,Geboortedatum, nummer, Straat, postcode,Gemeente,Vervaldatum_lidkaart ) values (@lidnummer,@voornaam,@achternaam,@geboortedatum,@nummer,@straat ,@postcode,@gemeente, @vervaldatum, @gsm) ", conn);
+                    @"   insert into Lid (lidnummer, Voornaam, Achternaam,Geboortedatum, nummer, Straat, postcode,Gemeente,Vervaldatum_lidkaart,gsm ) values (@lidnummer,@voornaam,@achternaam,@geboortedatum,@nummer,@straat ,@postcode,@gemeente, @vervaldatum, @gsm) ", conn);
 
                 comm.Parameters.AddWithValue("@lidnummer", lidnummer);
                 comm.Parameters.AddWithValue("@voornaam", voornaam);
@@ -201,6 +216,42 @@ namespace EmpClassLibrary
             }
         }
 
+        public static bool LoginLid(string lidnummer)
+        {
+
+            using (SqlConnection conn = new SqlConnection(connString))
+            {
+                conn.Open();
+                SqlCommand comn = new SqlCommand(" SELECT * FROM Lid WHERE lidnummer=@lidnummer ", conn);
+                comn.Parameters.AddWithValue("@lidnummer", lidnummer);
+                SqlDataReader reader = comn.ExecuteReader();
+
+                if (reader.HasRows)
+                {
+
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+
+            }
+        }
+        public void OntleenLid(int itemid, int lid)
+        {
+            Exemplaar exemplaar = Exemplaar.ExemplaarId(itemid);
+            using (SqlConnection conn = new SqlConnection(connString))
+            {
+                conn.Open();
+                SqlCommand comm = new SqlCommand("insert into  Ontlening (datum_uit, uiterste_datum_in, exemplaar_id, lid_lidnummer) output inserted.id values (@datumuit,@datumin,@exemplaarid,@lidnummer)", conn);
+                comm.Parameters.AddWithValue("@datumuit", DateTime.Now);
+                comm.Parameters.AddWithValue("@datumin", DateTime.Now.AddDays(30));
+                comm.Parameters.AddWithValue("@exemplaarid", itemid);
+                comm.Parameters.AddWithValue("@lidnummer", lid);
+                comm.ExecuteNonQuery();
+            }
+        }
 
 
 

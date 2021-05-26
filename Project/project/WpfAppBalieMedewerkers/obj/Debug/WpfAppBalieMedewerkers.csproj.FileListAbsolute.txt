@@ -43,3 +43,7 @@ C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\Project\project\WpfA
 C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\Project\project\WpfAppBalieMedewerkers\obj\Debug\OntelingTerugBrengen.baml
 C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\Project\project\WpfAppBalieMedewerkers\obj\Debug\OntelingWindow.baml
 C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\Project\project\WpfAppBalieMedewerkers\obj\Debug\Reservatie.baml
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\Project\project\WpfAppBalieMedewerkers\obj\Debug\LidkaarVernieuwen.g.cs
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\Project\project\WpfAppBalieMedewerkers\obj\Debug\LidkaarVernieuwen.baml
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\Project\project\WpfAppBalieMedewerkers\obj\Debug\Zoeken.g.cs
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\Project\project\WpfAppBalieMedewerkers\obj\Debug\Zoeken.baml

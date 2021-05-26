@@ -25,7 +25,7 @@
 
         <StackPanel Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left" Margin="0,10" Height="100" Width="80">
             <Label Content="id"/>
-            <Label Content="titel"/>
+            <Label Content="titel" Margin="0,25" />
         </StackPanel>
 
         <StackPanel Grid.Column="0" Grid.Row="1" Margin="0,10" HorizontalAlignment="Left" Height="100" Width="80">
@@ -42,15 +42,18 @@
         <StackPanel  Grid.Column="1" Grid.Row="0" Margin="0,10"  HorizontalAlignment="Left" Height="95" Width="300">
             <TextBox x:Name="txtIdInvoer" Height="23" HorizontalAlignment="Left" Width="100" TextWrapping="Wrap" Text=""/>
             <Label Content="Beschrijving:"  HorizontalAlignment="Right" VerticalAlignment ="Top"  />
-            <TextBox x:Name="txtTitelInvoer" Height="30" HorizontalAlignment="Left" Width="150"   TextWrapping="Wrap" Text=""/>
+            <TextBox x:Name="txtTitelInvoer" Height="30" HorizontalAlignment="Left" Width="150"    TextWrapping="Wrap" Text=""/>
         </StackPanel>
 
 
         <StackPanel Grid.Column="1" Grid.Row="1"   HorizontalAlignment="Left" Height="90" Width="300">
-            <TextBox x:Name="txtFotoInvoer"  Margin="0,10,0,0" Width="200" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" IsEnabled="False" Text=""/>
-            <Button x:Name="btnKiesFoto" Content="Kies hier je foto"   Width="100" Margin="0,5" Height="18" FontSize="10" Click="btnKiesFoto_Click"/>
+            <TextBox x:Name="txtFoto" IsEnabled="False"  Height="23"  HorizontalAlignment="Left" Width="191"   TextWrapping="Wrap" Text=""/>
+            <Button x:Name="btnKiesFoto" Content="Kies hier je foto"   Width="100" Margin="100,5" Height="18" FontSize="10" Click="btnKiesFoto_Click"/>
             <TextBox x:Name="txtUitgeverijInvoer"  Height="23"  HorizontalAlignment="Left" Width="100"   TextWrapping="Wrap" Text=""/>
         </StackPanel>
+
+        <CheckBox x:Name="rdbJa" Content="ja" Width="40" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,18,35"  Grid.Row="1" />
+        <CheckBox x:Name="rdvNeen" VerticalAlignment="Center" HorizontalAlignment="Right" Content="neen" Width="48"  Grid.Column="1" Margin="0,0,10,0" Grid.Row="1"/>
 
         <StackPanel Grid.Column="1" Grid.Row="2"   HorizontalAlignment="Left" Height="90" Width="300">
             <TextBox x:Name="txtLeeftijdVanInvoer"  HorizontalAlignment="Left" Height="23" Width="100" TextWrapping="Wrap" Text=""/>
