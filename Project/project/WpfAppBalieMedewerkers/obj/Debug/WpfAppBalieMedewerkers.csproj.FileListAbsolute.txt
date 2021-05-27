@@ -47,3 +47,6 @@ C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\Project\project\WpfA
 C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\Project\project\WpfAppBalieMedewerkers\obj\Debug\LidkaarVernieuwen.baml
 C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\Project\project\WpfAppBalieMedewerkers\obj\Debug\Zoeken.g.cs
 C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\Project\project\WpfAppBalieMedewerkers\obj\Debug\Zoeken.baml
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\Project\project\WpfAppBalieMedewerkers\obj\Debug\OntelingenPage.g.cs
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\Project\project\WpfAppBalieMedewerkers\obj\Debug\PageReser.g.cs
+C:\Users\mbenh\Documents\GitHub\OOAD-mohamedbenhammadi-2021\Project\project\WpfAppBalieMedewerkers\obj\Debug\ReservatiePage.g.cs

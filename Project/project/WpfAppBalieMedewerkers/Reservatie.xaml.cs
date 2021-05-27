@@ -35,7 +35,7 @@ namespace WpfAppBalieMedewerkers
         private void btnZoek_Click(object sender, RoutedEventArgs e)
         {
             lbxDataReservatie.Items.Clear();
-            List<Reservatie> reservaties = Reservatie.Toon(Convert.ToInt32(txtZoek.Text));
+            List<Reservatie> reservaties = Reservatie.(Convert.ToInt32(txtZoek.Text));
             foreach (Reservatie reservatie in reservaties)
             {
                 ListBoxItem listbox = new ListBoxItem();

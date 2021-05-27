@@ -74,9 +74,6 @@
     <Compile Include="Reservatie.xaml.cs">
       <DependentUpon>Reservatie.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ReservatiePage.xaml.cs">
-      <DependentUpon>ReservatiePage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Zoeken.xaml.cs">
       <DependentUpon>Zoeken.xaml</DependentUpon>
     </Compile>
@@ -158,10 +155,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Reservatie.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="ReservatiePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
