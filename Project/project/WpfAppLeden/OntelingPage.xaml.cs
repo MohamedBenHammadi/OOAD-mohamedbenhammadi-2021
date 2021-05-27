@@ -21,15 +21,19 @@ namespace WpfAppLeden
     /// </summary>
     public partial class OntelingPage : Page
     {
-        public OntelingPage()
+        MainWindow venster;
+        int klant;
+        public OntelingPage( MainWindow ontl, int id)
         {
+            this.venster = ontl;
+            this.klant = id;
             InitializeComponent();
             LijsOntelingen();
         }
 
         public void LijsOntelingen()
         {
-            lstOntelingen.Items.Clear();
+            //lstOntelingen.Items.Clear();
             List<Ontelening> ontlening = Ontelening.AllOnteleningen();
             foreach (Ontelening ontleningen in ontlening)
             {
@@ -53,5 +57,14 @@ namespace WpfAppLeden
             LijsOntelingen();
               
         }
+
+        //private void lstOntelingen_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        //{
+        //    ListBoxItem listbox = (ListBoxItem)lstOntelingen.SelectedItem;
+        //    if (listbox == null) return;
+        //    int id = (int)listbox.Tag;
+
+        //    Ontelening ontlening = Ontelening.OntelingID(id);
+        //}
     }
 }

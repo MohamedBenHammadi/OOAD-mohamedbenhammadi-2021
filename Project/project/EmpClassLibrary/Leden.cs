@@ -216,9 +216,8 @@ namespace EmpClassLibrary
             }
         }
 
-        public static bool LoginLid(string lidnummer)
+        public static bool LoginLid(int lidnummer)
         {
-
             using (SqlConnection conn = new SqlConnection(connString))
             {
                 conn.Open();
@@ -238,20 +237,9 @@ namespace EmpClassLibrary
 
             }
         }
-        public void OntleenLid(int itemid, int lid)
-        {
-            Exemplaar exemplaar = Exemplaar.ExemplaarId(itemid);
-            using (SqlConnection conn = new SqlConnection(connString))
-            {
-                conn.Open();
-                SqlCommand comm = new SqlCommand("insert into  Ontlening (datum_uit, uiterste_datum_in, exemplaar_id, lid_lidnummer) output inserted.id values (@datumuit,@datumin,@exemplaarid,@lidnummer)", conn);
-                comm.Parameters.AddWithValue("@datumuit", DateTime.Now);
-                comm.Parameters.AddWithValue("@datumin", DateTime.Now.AddDays(30));
-                comm.Parameters.AddWithValue("@exemplaarid", itemid);
-                comm.Parameters.AddWithValue("@lidnummer", lid);
-                comm.ExecuteNonQuery();
-            }
-        }
+
+
+       
 
 
 

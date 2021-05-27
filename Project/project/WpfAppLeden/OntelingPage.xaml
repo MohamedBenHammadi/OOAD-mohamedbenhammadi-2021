@@ -20,7 +20,7 @@
             <RowDefinition  Height="200"></RowDefinition>
             <RowDefinition  Height="*"></RowDefinition>
         </Grid.RowDefinitions>
-        <ListBox  x:Name="lstOntelingen" HorizontalAlignment="Left" Height="200"  Width="280" Grid.Row="1" VerticalAlignment="Top" />
+        <ListBox  x:Name="lstOntelingen" HorizontalAlignment="Left" Height="200"  Width="280" Grid.Row="1" VerticalAlignment="Top"  />
         <Label Content="Jouw lijst van ontelingen" HorizontalAlignment="Left" Margin="15"  VerticalAlignment="Center" FontWeight="Bold"/>
 
         <Button x:Name="btnTerugbrengen" Content="Onteling Terugbrengen" Grid.Column="1"  Margin="10,10,0,0"  Height="30" Width="130" VerticalAlignment="Center" Click="btnTerugbrengen_Click" />

@@ -21,7 +21,7 @@ namespace WpfAppLeden
     /// </summary>
     public partial class LoginLeden : Window
     {
-        static string connString = ConfigurationManager.AppSettings["connString"];
+      
         public LoginLeden()
         {
             InitializeComponent();
@@ -29,13 +29,13 @@ namespace WpfAppLeden
 
         private void btnLogIn_Click(object sender, RoutedEventArgs e)
         {
-            string Lidnummer;
+            int lidnummer;
 
-            Lidnummer = txtBarcode.Text;
+            lidnummer = Convert.ToInt32(txtBarcode.Text);
 
-            if (Leden.LoginLid(Lidnummer))
+            if (Leden.LoginLid(lidnummer))
             {
-                MainWindow venster = new MainWindow();
+                MainWindow venster = new MainWindow(this, lidnummer);
                 this.Close();
                 venster.Show();
             }

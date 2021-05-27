@@ -10,7 +10,7 @@
 
     <Grid Background="White">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="180"></ColumnDefinition>
+            <ColumnDefinition Width="280"></ColumnDefinition>
             <ColumnDefinition Width="*"></ColumnDefinition>
 
         </Grid.ColumnDefinitions>
@@ -19,9 +19,9 @@
             <RowDefinition  Height="200"></RowDefinition>
             <RowDefinition  Height="*"></RowDefinition>
         </Grid.RowDefinitions>
-        <ListBox  x:Name="lstOntelingen" HorizontalAlignment="Left" Height="200"  Width="180" Grid.Row="1" VerticalAlignment="Top" />
+        <ListBox  x:Name="lstReservatie" HorizontalAlignment="Left" Height="200"  Width="280" Grid.Row="1" VerticalAlignment="Top" SelectionChanged="lstReservatie_SelectionChanged" />
         <Label Content="Jouw lijst van Reservatie" HorizontalAlignment="Left" Margin="15"  VerticalAlignment="Center" FontWeight="Bold"/>
 
-        <Button x:Name="btnAnuleerReservering" Content="Reservatie anuleren" Grid.Column="1"  Margin="10,10,0,0"  Height="30" Width="130" VerticalAlignment="Center" />
+        <Button x:Name="btnAnuleerReservering" Content="Reservatie anuleren" Grid.Column="1"  Margin="10,10,0,0"  Height="30" Width="130" VerticalAlignment="Center" Click="btnAnuleerReservering_Click" />
     </Grid>
 </Page>

@@ -119,10 +119,26 @@ namespace EmpClassLibrary
             {
                 conn.Open();
                 SqlCommand comm = new SqlCommand("delete from Ontlening where id = @id", conn);
-                comm.Parameters.AddWithValue("@pid", Id);
+                comm.Parameters.AddWithValue("@id", Id);
                 comm.ExecuteNonQuery();
             }
         }
+
+        public void OntleenLid(int itemid, int lid)
+        {
+            //Exemplaar exemplaar = Exemplaar.ExemplaarId(itemid);
+            using (SqlConnection conn = new SqlConnection(connString))
+            {
+                conn.Open();
+                SqlCommand comm = new SqlCommand("insert into  Ontlening (datum_uit, uiterste_datum_in, exemplaar_id, lid_lidnummer) values (@datumuit,@datumin,@exemplaarid,@lidnummer)", conn);
+                comm.Parameters.AddWithValue("@datumuit", DateTime.Now);
+                comm.Parameters.AddWithValue("@datumin", DateTime.Now.AddMonths(1));
+                comm.Parameters.AddWithValue("@exemplaarid", 2);
+                comm.Parameters.AddWithValue("@lidnummer", 137);
+                comm.ExecuteNonQuery();
+            }
+        }
+
         //public static int AantalOntleningenId(int id)
         //{
         //     int aantalOnt;

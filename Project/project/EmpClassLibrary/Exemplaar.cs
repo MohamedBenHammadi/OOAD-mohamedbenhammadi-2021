@@ -57,21 +57,21 @@ namespace EmpClassLibrary
             
         }
 
-        public static Exemplaar ExemplaarId(int itemid)
-        {
-            using (SqlConnection conn = new SqlConnection(connString))
-            {
-                conn.Open();
-                SqlCommand comm = new SqlCommand("SELECT * FROM Exemplaar where item_id = @itemid", conn);
-                comm.Parameters.AddWithValue("@@itemid", itemid);
-                SqlDataReader reader = comm.ExecuteReader();
-                reader.Read();
+        //public static Exemplaar ExemplaarId(int itemid)
+        //{
+        //    using (SqlConnection conn = new SqlConnection(connString))
+        //    {
+        //        conn.Open();
+        //        SqlCommand comm = new SqlCommand("SELECT * FROM Exemplaar where item_id = @itemid", conn);
+        //        comm.Parameters.AddWithValue("@itemid", itemid);
+        //        SqlDataReader reader = comm.ExecuteReader();
+        //        reader.Read();
 
-                itemid = Convert.ToInt32(reader["item_id"]);
-                int nummer = Convert.ToInt32(reader["nummer"]);
-                return new Exemplaar(itemid, nummer);
-            }
-        }
+        //        itemid = Convert.ToInt32(reader["item_id"]);
+        //        int nummer = Convert.ToInt32(reader["nummer"]);
+        //        return new Exemplaar(itemid, nummer);
+        //    }
+        //}
 
 
 

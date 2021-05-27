@@ -21,15 +21,19 @@ namespace WpfAppLeden
     /// </summary>
     public partial class MainWindow : Window
     {
-
-      
-        public MainWindow()
+        LoginLeden lidnummer;
+        int nummer;
+        public MainWindow(LoginLeden led, int id1)
         {
             InitializeComponent();
             LoadItem(null);
+            
+            this.lidnummer = led;
+            this.nummer = id1;
+  
         }
 
-        LoginLeden lidnummer = new LoginLeden();
+    
         
         public void LoadItem(int? selectedId)
         {
@@ -67,10 +71,11 @@ namespace WpfAppLeden
             }
         }
 
+        int id;
         private void ItemClick(object sender, RoutedEventArgs e)
         {
             Button btn = (Button)sender;
-            int id = Convert.ToInt32(btn.Tag);
+            id = Convert.ToInt32(btn.Tag);
             Item item = Item.GetElementId(id);
 
             lblid.Content = item.Id;
@@ -80,25 +85,31 @@ namespace WpfAppLeden
             lblLeeftijdTot.Content = $"{item.LeeftijdTot}";
             lblTaal.Content = item.Taal;
         }
-
+      
         private void btnReserveren_Click(object sender, RoutedEventArgs e)
         {
-            MainToevoegen.Content = new ReserverenPage();
+            Leden klant = Leden.GetKlanttId(nummer);
+            Reservatie reservaties = new Reservatie();
+            Item item = Item.GetElementId(id);
+            reservaties.VoegReservatie(DateTime.Now, item.Id, nummer);
+            MainToevoegen.Content = new ReserverenPage(this,nummer);
         }
-        int id;
+       
         private void btnOntlene_Click(object sender, RoutedEventArgs e)
         {
-            
-            MainToevoegen.Content = new OntelingPage();
-            int nummer = Convert.ToInt32(lidnummer.txtBarcode.Text);
-            Leden lid = Leden.GetKlanttId(nummer);
-            lid.OntleenLid(id, lid.Lidnummer);
+
+            Ontelening onteling = new Ontelening();
+            onteling.OntleenLid(id, nummer);
+         
             LoadItem(null);
+            MainToevoegen.Content = new OntelingPage(this, nummer);
         }
 
         private void btnBoete_Click(object sender, RoutedEventArgs e)
         {
             
         }
+
+
     }
 }

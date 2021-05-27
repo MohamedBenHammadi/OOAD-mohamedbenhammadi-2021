@@ -27,34 +27,36 @@ namespace EmpClassLibrary
 
         }
 
-        public Reservatie(int id, DateTime dtmreservatie, int exemplaarid)
+        public Reservatie(int id, DateTime dtmreservatie, int exemplaarid, int lidnumr)
         {
             Id = id;
             Datumreservatie = dtmreservatie;
-            Exemplaarid = exemplaarid; 
+            Exemplaarid = exemplaarid;
+            Lidlidnummer = lidnumr;
         }
 
 
         public override string ToString()
         {
-            return $"{Datumreservatie}, {Exemplaarid}, {Lidlidnummer} ";
+            return $"{Datumreservatie.ToShortDateString()}, {Exemplaarid}, {Lidlidnummer} ";
         }
 
-        public static Reservatie ReservatieId(int id)
+        public static Reservatie ReservatieId(int reserid)
         {
             using (SqlConnection conn = new SqlConnection(connString))
             {
                 conn.Open();
                 SqlCommand comm = new SqlCommand("SELECT * FROM Reservatie where id = @id", conn);
-                comm.Parameters.AddWithValue("@id", id);
+                comm.Parameters.AddWithValue("@id", reserid);
                 SqlDataReader reader = comm.ExecuteReader();
                 reader.Read();
 
                 int id = Convert.ToInt32(reader["id"]);
                 DateTime datum_reservatie = Convert.ToDateTime(reader["datum_reservatie"]);
                 int exemplaarId = Convert.ToInt32(reader["exemplaar_id"]);
+                int lidnummer = Convert.ToInt32(reader["lid_lidnummer"]);
 
-                return new Reservatie(id, datum_reservatie, exemplaarId);
+                return new Reservatie(id, datum_reservatie, exemplaarId,lidnummer);
             }
         }
 
@@ -64,7 +66,7 @@ namespace EmpClassLibrary
             using (SqlConnection conn = new SqlConnection(connString))
             {
                 conn.Open();
-                SqlCommand comm = new SqlCommand("SELECT * FROM  Reservatie where lidnummer = @lidnummer", conn);
+                SqlCommand comm = new SqlCommand("SELECT * FROM  Reservatie where lid_lidnummer = @lidnummer", conn);
                 comm.Parameters.AddWithValue("@lidnummer", klantid);
                 SqlDataReader reader = comm.ExecuteReader();
 
@@ -73,9 +75,10 @@ namespace EmpClassLibrary
                     int id = Convert.ToInt32(reader["id"]);
                     DateTime datum_reservatie = Convert.ToDateTime(reader["datum_reservatie"]);
                     int exemplaarId = Convert.ToInt32(reader["exemplaar_id"]);
+                    int lidnummer = Convert.ToInt32(reader["lid_lidnummer"]);
 
 
-                    klant.Add(new Reservatie(id, datum_reservatie, exemplaarId));
+                    klant.Add(new Reservatie(id, datum_reservatie, exemplaarId, lidnummer));
                 }
             }
             return klant;
@@ -94,6 +97,17 @@ namespace EmpClassLibrary
                 comm.ExecuteScalar();
             }
         }
+        public void VerwijderReservatie()
+        {
+            using (SqlConnection conn = new SqlConnection(connString))
+            {
+                conn.Open();
+                SqlCommand comm = new SqlCommand("delete from Reservatie where id = @id", conn);
+                comm.Parameters.AddWithValue("@id", Id);
+                comm.ExecuteNonQuery();
+            }
+        }
+
 
     }
 }
