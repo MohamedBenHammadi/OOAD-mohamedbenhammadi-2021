@@ -1,12 +1,14 @@
-﻿<Window x:Class="WpfAppBalieMedewerkers.Reservatie"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:WpfAppBalieMedewerkers"
-        mc:Ignorable="d"
-        Title="Reservatie" Height="500" Width="900">
-    <Grid>
+﻿<Page x:Class="WpfAppBalieMedewerkers.ReservatiePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfAppBalieMedewerkers"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ReservatiePage">
+
+    <Grid Background="White">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="90"></ColumnDefinition>
             <ColumnDefinition Width="120"></ColumnDefinition>
@@ -50,9 +52,9 @@
         <Label Content="Lijst van Reservaties" Grid.Column="2" HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="20" FontWeight="Bold"/>
         <Label Content="Reservatie Info" HorizontalAlignment="Center"  VerticalAlignment="Center" Grid.ColumnSpan="2" Width="160" FontSize="20" FontWeight="Bold" />
         <Button x:Name="btnExit" Content="Terug naar home" Grid.Column="2"  Grid.Row="2" Height="20" Width="100" Click="btnExit_Click" />
-        <TextBox x:Name="txtZoek" Grid.Column="3" HorizontalAlignment="Left" Height="23" Margin="45,60,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="btnZoek" Content="Zoek" Grid.Column="3" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Top" Margin="80,60,0,0" Width="75" Click="btnZoek_Click"/>
+        <TextBox x:Name="txtZoek" Grid.Column="3" HorizontalAlignment="Left" Height="23" Margin="26,60,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btnZoek" Content="Zoek" Grid.Column="3" HorizontalAlignment="Right" Grid.Row="1" VerticalAlignment="Top" Margin="0,60,10,0" Width="75" Click="btnZoek_Click"/>
         <Label Content="Zoek via Lidnummer" Grid.Column="3" HorizontalAlignment="Center" Margin="20"  Grid.Row="1" VerticalAlignment="Top" FontWeight="Bold"/>
 
     </Grid>
-</Window>
+</Page>

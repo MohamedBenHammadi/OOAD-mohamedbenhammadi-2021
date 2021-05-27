@@ -10,38 +10,34 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 using EmpClassLibrary;
+
 
 namespace WpfAppBalieMedewerkers
 {
     /// <summary>
-    /// Interaction logic for Reservatie.xaml
+    /// Interaction logic for ReservatiePage.xaml
     /// </summary>
-    public partial class Reservatie : Window
+    public partial class ReservatiePage : Page
     {
-        public Reservatie()
+        public ReservatiePage()
         {
             InitializeComponent();
         }
 
-        private void btnExit_Click(object sender, RoutedEventArgs e)
-        {
-            MainWindow venster = new MainWindow();
-            venster.Show();
-            this.Close();
-        }
-
         private void btnZoek_Click(object sender, RoutedEventArgs e)
         {
+
             lbxDataReservatie.Items.Clear();
-            List<Reservatie> reservaties = Reservatie.Toon(Convert.ToInt32(txtZoek.Text));
+            List<Reservatie> reservati = Reservatie. Convert.ToInt32(txtZoek.Text));
             foreach (Reservatie reservatie in reservaties)
             {
                 ListBoxItem listbox = new ListBoxItem();
 
                 listbox.Content = reservatie.ToString();
-                listbox.Tag = reservatie.ID;
+                listbox.Tag = reservatie.;
                 lbxDataReservatie.Items.Add(listbox);
             }
         }

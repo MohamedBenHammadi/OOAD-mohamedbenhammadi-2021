@@ -68,8 +68,14 @@
     <Compile Include="LidkaarVernieuwen.xaml.cs">
       <DependentUpon>LidkaarVernieuwen.xaml</DependentUpon>
     </Compile>
+    <Compile Include="OntelingenPage.xaml.cs">
+      <DependentUpon>OntelingenPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Reservatie.xaml.cs">
       <DependentUpon>Reservatie.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ReservatiePage.xaml.cs">
+      <DependentUpon>ReservatiePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Zoeken.xaml.cs">
       <DependentUpon>Zoeken.xaml</DependentUpon>
@@ -139,6 +145,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="OntelingenPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="OntelingTerugBrengen.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -148,6 +158,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Reservatie.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ReservatiePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
