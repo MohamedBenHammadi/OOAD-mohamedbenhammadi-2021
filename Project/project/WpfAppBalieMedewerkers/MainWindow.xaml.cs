@@ -47,16 +47,14 @@ namespace WpfAppBalieMedewerkers
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            Reservatie venster = new Reservatie();
-            venster.Show();
-            this.Close();
+            Main.Content = new PageReservatie();
         }
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
-            OntelingWindow venster = new OntelingWindow();
-            venster.Show();
-            this.Close();
+
+            Main.Content = new OntelingWindow();
+            
             
         }
     }

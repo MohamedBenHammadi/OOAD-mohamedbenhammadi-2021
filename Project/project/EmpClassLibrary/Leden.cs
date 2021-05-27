@@ -37,7 +37,7 @@ namespace EmpClassLibrary
         {
 
         }
-        public Leden( int lidnummer, string vn, string achtn, string gsm, DateTime vrvldatum)
+        public Leden(int lidnummer, string vn, string achtn, string gsm, DateTime vrvldatum)
         {
             Lidnummer = lidnummer;
             Voornaam = vn;
@@ -48,7 +48,7 @@ namespace EmpClassLibrary
 
 
         // constructor met personelijke info van lid
-        public Leden(int lidnummer,string vn, string achtn, string gsm, DateTime gbrtdatum, string straat, string nmr, int pstcode, string gemeente, DateTime vrvldatum ) : this(lidnummer, vn, achtn, gsm, vrvldatum)
+        public Leden(int lidnummer, string vn, string achtn, string gsm, DateTime gbrtdatum, string straat, string nmr, int pstcode, string gemeente, DateTime vrvldatum) : this(lidnummer, vn, achtn, gsm, vrvldatum)
         {
             Geboortedatum = gbrtdatum;
             Straat = straat;
@@ -59,29 +59,6 @@ namespace EmpClassLibrary
         }
 
         //methoden
-
-        //public static List<Leden> GetLidByName(string naam)
-        //{
-        //    using (SqlConnection conn = new SqlConnection(connString))
-        //    {
-        //        conn.Open();
-        //        SqlCommand comm = new SqlCommand("SELECT * FROM Lid", conn);
-        //        SqlDataReader reader = comm.ExecuteReader();
-
-        //        while (reader.Read())
-        //        {
-        //            int lidnummer = Convert.ToInt32(reader["id"]);
-        //            string vvornaam = Convert.ToString(reader["voornaam"]);
-        //            string achternaam = Convert.ToString(reader["achternaam"]);
-        //            DateTime geboortedatum = Convert.ToInt32(reader["code_pasje"]);
-        //            string straat = Convert.ToString(reader["paswoord"]);
-        //            medewerker.Add(new Medewerker(id, naam, familienaam, telefoon, paswoord));
-        //        }
-
-        //    }
-        //    return medewerker;
-        //}
-
 
 
         public override string ToString()
@@ -112,7 +89,7 @@ namespace EmpClassLibrary
                     DateTime vervaldatum = Convert.ToDateTime(reader["Vervaldatum_lidkaart"]);
                     string gsm = Convert.ToString(reader["Gsm"]);
 
-                    klant.Add(new Leden(id, voornaam, achternaam, gsm, geboortedatum, straat, nummer, postcode, gemeente,vervaldatum));
+                    klant.Add(new Leden(id, voornaam, achternaam, gsm, geboortedatum, straat, nummer, postcode, gemeente, vervaldatum));
                 }
 
             }
@@ -150,7 +127,7 @@ namespace EmpClassLibrary
                 conn.Open();
                 SqlCommand comm = new SqlCommand(
                     @"  update Lid set lidnummer=@lidnummer, Voornaam=@voornaam , Achternaam=@achternaam,Geboortedatum =@geboortedatum, nummer=@nummer, straat = @straat, postcode =@postcode,Gemeente=@gemeente, Vervaldatum_lidkaart=@vervaldatum, Gsm = @gsm  where lidnummer = @lidnummer ", conn);
-       
+
                 comm.Parameters.AddWithValue("@lidnummer", lidnummer);
                 comm.Parameters.AddWithValue("@voornaam", voornaam);
                 comm.Parameters.AddWithValue("@achternaam", achternaam);
@@ -172,7 +149,7 @@ namespace EmpClassLibrary
                 SqlCommand comm = new SqlCommand(
                     @"  update Lid set  Vervaldatum_lidkaart=@vervaldatum  where lidnummer = @lidnummer ", conn);
 
-               
+
                 comm.Parameters.AddWithValue("@vervaldatum", vervaldatum);
                 comm.Parameters.AddWithValue("@lidnummer", id);
                 comm.ExecuteNonQuery();
@@ -239,8 +216,22 @@ namespace EmpClassLibrary
         }
 
 
-       
+        public int TotaleBoete()
+        {
+            using (SqlConnection conn = new SqlConnection(connString))
+            {
+                conn.Open();
+                SqlCommand comn = new SqlCommand(" SELECT dbo.ufBoete(@lid) as TotBoete ", conn);
+                comn.Parameters.AddWithValue("@lid", Lidnummer);
+                SqlDataReader reader = comn.ExecuteReader();
 
+                if (!reader.Read()) return 0;
+                int? boeteBedrag = reader["TotBoete"] == DBNull.Value ? null : (int?)Convert.ToInt32(reader["TotBoete"]);
+             
+                return Convert.ToInt32(boeteBedrag);
+
+            }
+        }
 
 
     }

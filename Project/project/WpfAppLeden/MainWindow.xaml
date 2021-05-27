@@ -8,7 +8,7 @@
         Title="MainWindow" Height="450" Width="900">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="90"></ColumnDefinition>
+            <ColumnDefinition Width="95"></ColumnDefinition>
             <ColumnDefinition Width="170"></ColumnDefinition>
             <ColumnDefinition Width="330"></ColumnDefinition>
             <ColumnDefinition Width="*"></ColumnDefinition>
@@ -23,9 +23,9 @@
         <StackPanel Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" Width="200" Margin="0,0,10,0" >
             <Label x:Name="lblid" Content="" Width="40" Margin="15,0"    HorizontalAlignment="Left" />
             <Label x:Name="lblTitel" Content="" Width="180" Margin="15,0"  HorizontalAlignment="Left" />
-            <ScrollViewer>
-                <TextBlock x:Name="txbBescharijving" TextWrapping="Wrap"   Width="170" Margin="17,0" Height="100"  HorizontalAlignment="Left" />
-            </ScrollViewer>
+
+            <TextBox x:Name="txbBescharijving" TextWrapping="Wrap" VerticalScrollBarVisibility="Visible"   Width="170" Margin="20,0" Height="100"  HorizontalAlignment="Left" />
+
         </StackPanel>
 
 
@@ -35,31 +35,33 @@
             <Label Content="Titel:" HorizontalAlignment="Left"/>
             <Label Content="Beschrijving:" HorizontalAlignment="Left"/>
 
+
         </StackPanel>
 
         <StackPanel  Grid.Column="0" Grid.Row="1" HorizontalAlignment="center" VerticalAlignment="Bottom" Height="100"  Width="90" Margin="0,0,0,50">
             <Label Content="Leeftijd van:" HorizontalAlignment="Left"/>
             <Label Content="Leeftijd tot:" HorizontalAlignment="Left"/>
             <Label Content="taal:" HorizontalAlignment="Left"/>
+            <Label Content="Totale boete lid" FontSize="11"/>
         </StackPanel>
 
-        <StackPanel  Grid.Column="1" Grid.Row="1" HorizontalAlignment="center" VerticalAlignment="Bottom" Height="100"  Width="160" Margin="0,0,0,50">
+        <StackPanel  Grid.Column="1" Grid.Row="1" HorizontalAlignment="center" VerticalAlignment="Bottom" Height="140"  Width="160" Margin="5,0,5,10">
             <Label x:Name="lblLeeftijdVan" Content=""  Width="30" Margin="10,0"   HorizontalAlignment="Left" />
             <Label x:Name="lblLeeftijdTot" Content =""  Width="30" Margin="10,0"    HorizontalAlignment="Left" />
             <Label x:Name="lblTaal" Content="" Width="30" Margin="10,0"    HorizontalAlignment="Left" />
+            <Label Name="lblTotaleBoete" Content=""/>
         </StackPanel>
         <Frame x:Name="MainToevoegen"  NavigationUIVisibility="Hidden" Grid.Row="1" Grid.Column="3"  ></Frame>
         <StackPanel Grid.Column="2" Height="40" HorizontalAlignment="Right" Orientation="Horizontal" Width="230" VerticalAlignment="Center"  Grid.ColumnSpan="2" >
             <Button x:Name="btnReserveren" Content="Reserveren"  Margin="10,10,0,0" Click="btnReserveren_Click"  />
             <Button x:Name="btnOntlene" Content="Ontlenen"  Margin="10,10,0,0" Click="btnOntlene_Click"   />
-            <Button x:Name="btnBoete" Content="Ontlenen"  Margin="10,10,0,0" Click="btnBoete_Click"   />
         </StackPanel>
 
         <ScrollViewer Grid.Row="1" Grid.Column="2" VerticalScrollBarVisibility="Auto">
             <WrapPanel x:Name="WrpLijst" Grid.Row="1" Grid.Column="2"></WrapPanel>
         </ScrollViewer>
         <Label Content="Lijst van Item" Grid.Column="2" HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="20" FontWeight="Bold"/>
-        <Label Content="Ontleningen" HorizontalAlignment="Center"  VerticalAlignment="Center" Grid.ColumnSpan="2" Width="138" FontSize="20" FontWeight="Bold"/>
-        <Button x:Name="btnExit" Content="Terug naar login" Grid.Column="2" HorizontalAlignment="Center"   Grid.Row="2" VerticalAlignment="Center" Width="100" />
+        <Label x:Name="lblHoofdtitel" Content="" HorizontalAlignment="Center"  VerticalAlignment="Center" Grid.ColumnSpan="2" Width="138" FontSize="20" FontWeight="Bold"/>
+        <Button x:Name="btnExit" Content="Terug naar login" Grid.Column="2" HorizontalAlignment="Center"   Grid.Row="2" VerticalAlignment="Center" Width="100" Click="btnExit_Click" />
     </Grid>
 </Window>

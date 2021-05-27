@@ -13,7 +13,7 @@ namespace EmpClassLibrary
     public class Item
     {
         // connectiestring
-       static string connString = ConfigurationManager.AppSettings["connString"];
+        static string connString = ConfigurationManager.AppSettings["connString"];
 
         public int Id { get; set; }
 
@@ -37,7 +37,7 @@ namespace EmpClassLibrary
         }
         public Item(string titel, BitmapImage coverfoto)
         {
-           
+
             Titel = titel;
             Coverfoto = coverfoto;
         }
@@ -56,7 +56,7 @@ namespace EmpClassLibrary
             LeeftijdTot = leeftijdTot;
             Taal = taal;
         }
-        public Item(int id, BitmapImage cover, string titel, string beschrijving, string uitgevrij, int leeftvan, int leeftijdtot, string taal )
+        public Item(int id, BitmapImage cover, string titel, string beschrijving, string uitgevrij, int leeftvan, int leeftijdtot, string taal)
         {
             Id = id;
             Coverfoto = cover;
@@ -86,6 +86,7 @@ namespace EmpClassLibrary
                 int leeftijdvan = Convert.ToInt32(reader["leeftijd_van"]);
                 int leeftijdTot = Convert.ToInt32(reader["leeftijd_tot"]);
                 string taal = Convert.ToString(reader["taal"]);
+
                 return new Item(id, titel, beschrijving, uitgeverij, leeftijdvan, leeftijdTot, taal);
             }
         }
@@ -117,9 +118,9 @@ namespace EmpClassLibrary
                     int leeftijdVan = Convert.ToInt32(reader["leeftijd_van"]);
                     int leeftijdTot = Convert.ToInt32(reader["leeftijd_tot"]);
                     string taal = Convert.ToString(reader["taal"]);
-                    items.Add(new Item(id,cover,titel,beschrijving,uitgeverij,leeftijdVan,leeftijdTot,taal));
+                    items.Add(new Item(id, cover, titel, beschrijving, uitgeverij, leeftijdVan, leeftijdTot, taal));
                 }
-               
+
 
             }
             return items;
@@ -130,9 +131,9 @@ namespace EmpClassLibrary
             return $"{Titel}";
         }
 
-       
 
-        public void ItemAanpassen(int id,string titel, string coverFoto, string besch, string uitgeverij, int leeftijdV, int leeftijdT, string taal)
+
+        public void ItemAanpassen(int id, string titel, string coverFoto, string besch, string uitgeverij, int leeftijdV, int leeftijdT, string taal)
         {
             using (SqlConnection conn = new SqlConnection(connString))
             {
@@ -140,11 +141,11 @@ namespace EmpClassLibrary
                 byte[] cover = File.ReadAllBytes(coverFoto);
                 SqlCommand comm = new SqlCommand(
                     @"  update Item set  titel=@titel, coverfoto=@coverFoto beschrijving=@beschrijving, uitgeverij=@uitgeverij, leeftijd_van=@leeftijdVan, leeftijd_tot=@LeeftijdTot,taal=@Taal where id = @Id ", conn);
-               
+
                 comm.Parameters.AddWithValue("@titel", titel);
                 comm.Parameters.AddWithValue("@coverFoto", cover);
                 comm.Parameters.AddWithValue("@beschrijving", besch);
-                comm.Parameters.AddWithValue("@uitgeverij", uitgeverij );
+                comm.Parameters.AddWithValue("@uitgeverij", uitgeverij);
                 comm.Parameters.AddWithValue("@pleeftijdVan", leeftijdV);
                 comm.Parameters.AddWithValue("@LeeftijdTot", leeftijdT);
                 comm.Parameters.AddWithValue("@Taal", taal);
@@ -152,15 +153,15 @@ namespace EmpClassLibrary
                 comm.ExecuteNonQuery();
             }
         }
-        public void ItemAanpassenZonderFoto(int id,string titel,  string besch, string uitgeverij, int leeftijdV, int leeftijdT, string taal)
+        public void ItemAanpassenZonderFoto(int id, string titel, string besch, string uitgeverij, int leeftijdV, int leeftijdT, string taal)
         {
             using (SqlConnection conn = new SqlConnection(connString))
             {
                 conn.Open();
-            
+
                 SqlCommand comm = new SqlCommand(
                     @"  update Item set  titel=@titel, beschrijving=@beschrijving, uitgeverij=@uitgeverij, leeftijd_van=@leeftijdVan, leeftijd_tot=@LeeftijdTot,taal=@Taal where id = @Id ", conn);
-              
+
                 comm.Parameters.AddWithValue("@titel", titel);
                 comm.Parameters.AddWithValue("@beschrijving", besch);
                 comm.Parameters.AddWithValue("@uitgeverij", uitgeverij);
@@ -206,7 +207,7 @@ namespace EmpClassLibrary
 
 
     }
-  
+
 
 
 

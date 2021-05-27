@@ -33,14 +33,14 @@ namespace WpfAppBalieMedewerkers
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             lblActie.Content = "Toevoegen";
-           MainToevoegen.Content = new ItemToevoegen();
+            MainToevoegen.Content = new ItemToevoegen();
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             lblActie.Content = "Aanpassen";
             int id = Convert.ToInt32(lblid.Content);
-            MainToevoegen.Content = new ItemAanpassen(this,id);
+            MainToevoegen.Content = new ItemAanpassen(this, id);
 
 
         }
@@ -56,18 +56,18 @@ namespace WpfAppBalieMedewerkers
 
             int id = Convert.ToInt32(lblid.Content);
 
-                //frmAction.Content = "";
-                Button btn = (Button)sender;
-                //if (lblId.Content == "") return;
 
-                MessageBoxResult result = MessageBox.Show($"Ben je zeker dat je het boek {lblTitel.Content} wil verwijderen?", "verwijderen", MessageBoxButton.YesNo);
-                if (result != MessageBoxResult.Yes) return;
+            Button btn = (Button)sender;
 
-                Item item = Item.GetElementId(id);
-                item.VerwijderItem();
+
+            MessageBoxResult result = MessageBox.Show($"U zal het boek {lblTitel.Content}  verwijderen?", "verwijderen", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+            if (result != MessageBoxResult.Yes) return;
+
+            Item item = Item.GetElementId(id);
+            item.VerwijderItem();
             LoadItem(null);
-         
-            //lblpaginaTitel.Content = "Item verwijdert";
+
+
         }
 
 
@@ -82,7 +82,7 @@ namespace WpfAppBalieMedewerkers
                 Button btn = new Button();
                 btn.Name = $"btn{i + 1}";
                 btn.Tag = items.Id;
-                
+
                 btn.Background = new SolidColorBrush(Colors.White);
                 btn.BorderBrush = Brushes.White;
                 btn.Click += new RoutedEventHandler(ItemClick);
@@ -90,20 +90,20 @@ namespace WpfAppBalieMedewerkers
                 StackPanel stack = new StackPanel();
 
                 Image cover = new Image();
-                cover.Width = 60;
+                cover.Width = 70;
                 cover.Height = 90;
                 cover.Source = items.Coverfoto;
 
                 Label lblInvoer = new Label();
                 lblInvoer.Content = items.ToString();
-                lblInvoer.Width = 180;
+                lblInvoer.Width = 160;
                 lblInvoer.HorizontalContentAlignment = HorizontalAlignment.Center;
 
                 stack.Children.Add(cover);
                 stack.Children.Add(lblInvoer);
                 btn.Content = stack;
                 WrpLijst.Children.Add(btn);
-                
+
             }
         }
 
@@ -115,7 +115,7 @@ namespace WpfAppBalieMedewerkers
 
             lblid.Content = item.Id;
             lblTitel.Content = item.Titel;
-            lblLeeftijdVan.Content = $"{item.LeeftijdVan}" ;
+            lblLeeftijdVan.Content = $"{item.LeeftijdVan}";
             lblLeeftijdTot.Content = $"{item.LeeftijdTot}";
             lblTaal.Content = item.Taal;
         }

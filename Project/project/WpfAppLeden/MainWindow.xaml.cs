@@ -30,11 +30,13 @@ namespace WpfAppLeden
             
             this.lidnummer = led;
             this.nummer = id1;
-  
+            Leden lid = Leden.GetKlanttId(nummer);
+            lblTotaleBoete.Content = lid.TotaleBoete();
+
         }
 
-    
-        
+
+
         public void LoadItem(int? selectedId)
         {
             WrpLijst.Children.Clear();
@@ -54,13 +56,13 @@ namespace WpfAppLeden
                 StackPanel stack = new StackPanel();
 
                 Image cover = new Image();
-                cover.Width = 60;
+                cover.Width = 70;
                 cover.Height = 90;
                 cover.Source = items.Coverfoto;
 
                 Label lblInvoer = new Label();
                 lblInvoer.Content = items.ToString();
-                lblInvoer.Width = 180;
+                lblInvoer.Width = 150;
                 lblInvoer.HorizontalContentAlignment = HorizontalAlignment.Center;
 
                 stack.Children.Add(cover);
@@ -93,6 +95,7 @@ namespace WpfAppLeden
             Item item = Item.GetElementId(id);
             reservaties.VoegReservatie(DateTime.Now, item.Id, nummer);
             MainToevoegen.Content = new ReserverenPage(this,nummer);
+            lblHoofdtitel.Content = "Reserveren";
         }
        
         private void btnOntlene_Click(object sender, RoutedEventArgs e)
@@ -100,16 +103,17 @@ namespace WpfAppLeden
 
             Ontelening onteling = new Ontelening();
             onteling.OntleenLid(id, nummer);
-         
+            lblHoofdtitel.Content = "Ontlenen";
             LoadItem(null);
             MainToevoegen.Content = new OntelingPage(this, nummer);
         }
 
-        private void btnBoete_Click(object sender, RoutedEventArgs e)
+     
+        private void btnExit_Click(object sender, RoutedEventArgs e)
         {
-            
+            LoginLeden venster = new LoginLeden();
+            this.Close();
+            venster.Show();
         }
-
-
     }
 }

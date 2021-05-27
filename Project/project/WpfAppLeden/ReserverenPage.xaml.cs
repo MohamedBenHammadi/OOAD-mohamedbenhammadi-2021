@@ -37,10 +37,10 @@ namespace WpfAppLeden
             ListBoxItem lisbox = (ListBoxItem)lstReservatie.SelectedItem;
             int id = Convert.ToInt32(lisbox.Tag);
             Reservatie reservatie = Reservatie.ReservatieId(id);
-            MessageBoxResult result = MessageBox.Show($"Ben je zeker dat je jouw reservatie wilt annuleren?", "Annuleren?", MessageBoxButton.YesNo);
+            MessageBoxResult result = MessageBox.Show($"Opgepast u zal de reservatie Annuleren?", "Annuleren?", MessageBoxButton.YesNo, MessageBoxImage.Warning);
             if (result != MessageBoxResult.Yes) return;
             reservatie.VerwijderReservatie();
-           Reservaties();
+            Reservaties();
       
         }
 
@@ -60,13 +60,6 @@ namespace WpfAppLeden
             
         }
 
-        private void lstReservatie_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            //ListBoxItem listbox = (ListBoxItem)lstReservatie.SelectedItem;
-            //if (listbox == null) return;
-            //int id = (int)listbox.Tag;
-            //Reservaties();
-            //Reservatie reservatie = Reservatie.ReservatieId(id);
-        }
+   
     }
 }

@@ -60,6 +60,7 @@
             <TextBox x:Name="txtGsmInvoer"  Height="23" TextWrapping="Wrap" Width="100" HorizontalAlignment="Left" Text=""/>
         </StackPanel>
         <Button x:Name="btnVoegKlantToe" Content="Voeg Klant toe" Grid.Column="2" HorizontalAlignment="Center"  Grid.Row="2" VerticalAlignment="Bottom" Margin="0,0,0,10" Width="90" Click="btnVoegKlantToe_Click_1" />
+        <Label Content="" x:Name="lbSucces" Grid.Column="2" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center"/>
 
     </Grid>
 </Page>

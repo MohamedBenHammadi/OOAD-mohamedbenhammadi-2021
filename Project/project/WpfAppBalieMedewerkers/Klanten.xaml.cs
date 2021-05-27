@@ -26,13 +26,13 @@ namespace WpfAppBalieMedewerkers
             LoadKlant(null);
         }
 
-      
+
         public void LoadKlant(int? selectedId)
         {
             wrpKlant.Items.Clear();
             List<Leden> klant = Leden.LijstLeden();
-       
-            foreach (Leden klanten in klant )
+
+            foreach (Leden klanten in klant)
             {
 
                 ListBoxItem listbox = new ListBoxItem();
@@ -42,14 +42,14 @@ namespace WpfAppBalieMedewerkers
                 listbox.IsSelected = selectedId == klanten.Lidnummer;
 
                 wrpKlant.Items.Add(listbox);
-               
+
 
             }
 
             wrpKlant.BorderBrush = Brushes.White;
         }
 
-   
+
 
         private void wrpKlant_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -77,7 +77,7 @@ namespace WpfAppBalieMedewerkers
             ListBoxItem listbox = (ListBoxItem)wrpKlant.SelectedItem;
             int id = Convert.ToInt32(listbox.Tag);
 
-            MessageBoxResult result = MessageBox.Show($"Ben je zeker dat je lid {lblVoornaam.Content} wilt verwijderen?", "verwijderen", MessageBoxButton.YesNo);
+            MessageBoxResult result = MessageBox.Show($"Opgespast! wilt u  lid {lblVoornaam.Content} verwijderen?", "verwijderen", MessageBoxButton.YesNo, MessageBoxImage.Warning);
             if (result != MessageBoxResult.Yes) return;
 
             Leden lid = Leden.GetKlanttId(id);

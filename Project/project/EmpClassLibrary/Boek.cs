@@ -16,12 +16,12 @@ namespace EmpClassLibrary
 
         public string Isbn { get; set; }
 
-        public int Aantalpaginas  { get; set; }
+        public int Aantalpaginas { get; set; }
 
         public int Auteurd { get; set; }
 
 
-      public Boek(int id, string isbn, int aantalpaginas)
+        public Boek(int id, string isbn, int aantalpaginas)
         {
             Id = id;
             Isbn = isbn;
@@ -29,7 +29,7 @@ namespace EmpClassLibrary
         }
 
 
-        public Boek(int id, string isbn, int aantalpaginas, int auteurId) : this(id,isbn,aantalpaginas)
+        public Boek(int id, string isbn, int aantalpaginas, int auteurId) : this(id, isbn, aantalpaginas)
         {
             Auteurd = auteurId;
         }

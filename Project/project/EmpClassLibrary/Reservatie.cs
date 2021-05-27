@@ -10,6 +10,7 @@ namespace EmpClassLibrary
 {
     public class Reservatie
     {
+
         static string connString = ConfigurationManager.AppSettings["connString"];
 
         public int Id { get; set; }
@@ -38,7 +39,7 @@ namespace EmpClassLibrary
 
         public override string ToString()
         {
-            return $"{Datumreservatie.ToShortDateString()}, {Exemplaarid}, {Lidlidnummer} ";
+            return $" datum reserveratie{Datumreservatie.ToShortDateString()}, exemplaar id: {Exemplaarid}, lidnummer: {Lidlidnummer} ";
         }
 
         public static Reservatie ReservatieId(int reserid)
@@ -56,7 +57,7 @@ namespace EmpClassLibrary
                 int exemplaarId = Convert.ToInt32(reader["exemplaar_id"]);
                 int lidnummer = Convert.ToInt32(reader["lid_lidnummer"]);
 
-                return new Reservatie(id, datum_reservatie, exemplaarId,lidnummer);
+                return new Reservatie(id, datum_reservatie, exemplaarId, lidnummer);
             }
         }
 
@@ -108,6 +109,27 @@ namespace EmpClassLibrary
             }
         }
 
+        public static List<Reservatie> LijsReservatieZonderId()
+        {
+            List<Reservatie> reservaties = new List<Reservatie>();
+            using (SqlConnection conn = new SqlConnection(connString))
+            {
+                conn.Open();
+                SqlCommand comm = new SqlCommand("SELECT * FROM Reservatie", conn);
+                SqlDataReader reader = comm.ExecuteReader();
 
+                while (reader.Read())
+                {
+                    int id = Convert.ToInt32(reader["id"]);
+                    DateTime datum_reservatie = Convert.ToDateTime(reader["datum_reservatie"]);
+                    int exemplaarId = Convert.ToInt32(reader["exemplaar_id"]);
+                    int lidnummer = Convert.ToInt32(reader["lid_lidnummer"]);
+
+                    reservaties.Add(new Reservatie(id, datum_reservatie, exemplaarId, lidnummer));
+                }
+
+            }
+            return reservaties;
+        }
     }
 }

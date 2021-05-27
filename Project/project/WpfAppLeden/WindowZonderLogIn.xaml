@@ -8,7 +8,7 @@
         Title="WindowZonderLogIn" Height="450" Width="900">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="90"></ColumnDefinition>
+            <ColumnDefinition Width="85"></ColumnDefinition>
             <ColumnDefinition Width="170"></ColumnDefinition>
             <ColumnDefinition Width="350"></ColumnDefinition>
             <ColumnDefinition Width="*"></ColumnDefinition>
@@ -23,9 +23,9 @@
         <StackPanel Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" Width="200" Margin="0,0,10,0" >
             <Label x:Name="lblid" Content="" Width="40" Margin="15,0"    HorizontalAlignment="Left" />
             <Label x:Name="lblTitel" Content="" Width="180" Margin="15,0"  HorizontalAlignment="Left" />
-            <ScrollViewer>
-                <TextBlock x:Name="txbBescharijving"  Width="170" Margin="10,0" Height="100"  HorizontalAlignment="Left" />
-            </ScrollViewer>
+          
+                <TextBox x:Name="txbBescharijving" Margin="25,0"  Width="155" Height="100" TextWrapping="Wrap" VerticalScrollBarVisibility="Visible"   HorizontalAlignment="Left" />
+       
         </StackPanel>
 
 

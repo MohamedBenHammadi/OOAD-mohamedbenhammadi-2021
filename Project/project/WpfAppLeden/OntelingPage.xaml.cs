@@ -46,25 +46,20 @@ namespace WpfAppLeden
 
         private void btnTerugbrengen_Click(object sender, RoutedEventArgs e)
         {
+
             ListBoxItem listbox = (ListBoxItem)lstOntelingen.SelectedItem;
             int id = Convert.ToInt32(listbox.Tag);
 
-            MessageBoxResult result = MessageBox.Show($"Ben je zeker dat je jouw boek wilt terugbrengen?", "Terugbrengen?", MessageBoxButton.YesNo);
+            MessageBoxResult result = MessageBox.Show($"Opgepast u zal de uw boek ontlenen?", "ontlenen?", MessageBoxButton.YesNo, MessageBoxImage.Warning);
             if (result != MessageBoxResult.Yes) return;
 
             Ontelening ontlening = Ontelening.OntelingID(id);
             ontlening.OntleningTerug();
+            lstOntelingen.Items.Clear();
             LijsOntelingen();
               
         }
 
-        //private void lstOntelingen_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        //{
-        //    ListBoxItem listbox = (ListBoxItem)lstOntelingen.SelectedItem;
-        //    if (listbox == null) return;
-        //    int id = (int)listbox.Tag;
-
-        //    Ontelening ontlening = Ontelening.OntelingID(id);
-        //}
+        
     }
 }

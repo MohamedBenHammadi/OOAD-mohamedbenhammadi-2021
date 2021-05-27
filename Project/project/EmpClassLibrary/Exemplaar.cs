@@ -40,39 +40,22 @@ namespace EmpClassLibrary
         public static int CheckStock(int id)
         {
 
-                int aantal = 0;
+            int aantal = 0;
 
-                using (SqlConnection conn = new SqlConnection(connString))
-                {
-                    conn.Open();
-                    SqlCommand comm = new SqlCommand("spCheckStock", conn);
-                    comm.CommandType = CommandType.StoredProcedure;
+            using (SqlConnection conn = new SqlConnection(connString))
+            {
+                conn.Open();
+                SqlCommand comm = new SqlCommand("spCheckStock", conn);
+                comm.CommandType = CommandType.StoredProcedure;
 
-                    comm.Parameters.AddWithValue("@item_id", id);
-                    SqlDataReader reader = comm.ExecuteReader();
+                comm.Parameters.AddWithValue("@item_id", id);
+                SqlDataReader reader = comm.ExecuteReader();
                 reader.Close();
-                    aantal = (Int32)comm.ExecuteScalar();
-                }
-                return aantal;
-            
+                aantal = (Int32)comm.ExecuteScalar();
+            }
+            return aantal;
+
         }
-
-        //public static Exemplaar ExemplaarId(int itemid)
-        //{
-        //    using (SqlConnection conn = new SqlConnection(connString))
-        //    {
-        //        conn.Open();
-        //        SqlCommand comm = new SqlCommand("SELECT * FROM Exemplaar where item_id = @itemid", conn);
-        //        comm.Parameters.AddWithValue("@itemid", itemid);
-        //        SqlDataReader reader = comm.ExecuteReader();
-        //        reader.Read();
-
-        //        itemid = Convert.ToInt32(reader["item_id"]);
-        //        int nummer = Convert.ToInt32(reader["nummer"]);
-        //        return new Exemplaar(itemid, nummer);
-        //    }
-        //}
-
 
 
     }

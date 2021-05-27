@@ -43,6 +43,7 @@ namespace WpfAppBalieMedewerkers
 
         private void brnVoegToe_Click(object sender, RoutedEventArgs e)
         {
+            lblSucces.Content = "item toegevoegd";
             Item item = new Item();
             item.VoegItem(Convert.ToInt32(txtIdInvoer.Text),txtTitelInvoer.Text, foto, txtBeschrijvingInvoer.Text, txtUitgeverijInvoer.Text, Convert.ToInt32(txtLeeftijdVanInvoer.Text), Convert.ToInt32(txtLeeftijdTotInvoer.Text), txtTaalInvoer.Text);;
         }

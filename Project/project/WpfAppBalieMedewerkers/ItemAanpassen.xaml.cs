@@ -65,14 +65,17 @@ namespace WpfAppBalieMedewerkers
                 Item item1 = new Item();
                 item1.ItemAanpassen(Convert.ToInt32(txtIdInvoer.Text), txtTitelInvoer.Text, foto, txtBeschrijving.Text, txtUitgeverijInvoer.Text, Convert.ToInt32(txtLeeftijdVanInvoer.Text), Convert.ToInt32(txtLeeftijdTotInvoer.Text), txtTaalInvoer.Text);
                 venster1.LoadItem(null);
+                lblSucces.Content = "Item aangepast";
             } 
             else if(rdvNeen.IsChecked == true)
             {
                 Item item1 = new Item();
                 item1.ItemAanpassenZonderFoto(Convert.ToInt32(txtIdInvoer.Text), txtTitelInvoer.Text, txtBeschrijving.Text, txtUitgeverijInvoer.Text, Convert.ToInt32(txtLeeftijdVanInvoer.Text), Convert.ToInt32(txtLeeftijdTotInvoer.Text), txtTaalInvoer.Text);
                 venster1.LoadItem(null);
+                lblSucces.Content = "Item aangepast";
             }
            
+
 
         }
     }

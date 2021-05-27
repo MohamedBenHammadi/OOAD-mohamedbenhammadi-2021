@@ -13,14 +13,14 @@ namespace EmpClassLibrary
         // connectiestring
         static string connString = ConfigurationManager.AppSettings["connString"];
 
-      
+
 
         public int Id { get; set; }
         public DateTime DatumUit { get; set; }
 
         public DateTime UiterstedatumIn { get; set; }
 
-        public DateTime WerkelijkeDatumIn { get; set; }
+        public DateTime? WerkelijkeDatumIn { get; set; }
 
         public int? BoeteBedrag { get; set; }
 
@@ -37,9 +37,9 @@ namespace EmpClassLibrary
         {
 
         }
-        
 
-        public Ontelening(int id,DateTime dtmut, DateTime uitD, DateTime werkelijkeD, int? boete, DateTime? boeteVol, int exmplrId, int lidid)
+
+        public Ontelening(int id, DateTime dtmut, DateTime uitD, DateTime? werkelijkeD, int? boete, DateTime? boeteVol, int exmplrId, int lidid)
         {
             Id = id;
             DatumUit = dtmut;
@@ -74,9 +74,9 @@ namespace EmpClassLibrary
                     int id = Convert.ToInt32(reader["id"]);
                     DateTime datumUit = Convert.ToDateTime(reader["datum_uit"]);
                     DateTime uitersteDatumIn = Convert.ToDateTime(reader["uiterste_datum_in"]);
-                    DateTime WrkelijkeDatumIn = Convert.ToDateTime(reader["werkelijke_datum_in"]);
-                    int?  boeteBedrag = reader["boete_bedrag"] == DBNull.Value ? null : (int?)Convert.ToInt32(reader["boete_bedrag"]);
-                    DateTime? boeteVoldaan = reader["boete_voldaan_op"] == DBNull.Value ? null : (DateTime?)Convert.ToDateTime(reader["boete_voldaan_op"]);
+                    DateTime? WrkelijkeDatumIn = reader["werkelijke_datum_in"] == DBNull.Value ? null : (DateTime?)Convert.ToDateTime(reader["werkelijke_datum_in"]);
+                    int? boeteBedrag = reader["boete_bedrag"] == DBNull.Value ? null : (int?)Convert.ToInt32(reader["boete_bedrag"]);
+                    DateTime? boeteVoldaan = reader["boete_voldoen_op"] == DBNull.Value ? null : (DateTime?)Convert.ToDateTime(reader["boete_voldoen_op"]);
                     int exemplaarid = Convert.ToInt32(reader["exemplaar_id"]);
                     int lidnummer = Convert.ToInt32(reader["lid_lidnummer"]);
 
@@ -92,7 +92,7 @@ namespace EmpClassLibrary
             using (SqlConnection conn = new SqlConnection(connString))
             {
                 conn.Open();
-                SqlCommand comm = new SqlCommand("SELECT * FROM Ontlening lid_lidnummer = @lidnummer", conn);
+                SqlCommand comm = new SqlCommand("SELECT * FROM Ontlening where lid_lidnummer=@lidnummer", conn);
                 comm.Parameters.AddWithValue("@lidnummer", lidId);
                 SqlDataReader reader = comm.ExecuteReader();
 
@@ -101,9 +101,9 @@ namespace EmpClassLibrary
                     int id = Convert.ToInt32(reader["id"]);
                     DateTime datumUit = Convert.ToDateTime(reader["datum_uit"]);
                     DateTime uitersteDatumIn = Convert.ToDateTime(reader["uiterste_datum_in"]);
-                    DateTime WrkelijkeDatumIn = Convert.ToDateTime(reader["werkelijke_datum_in"]);
+                    DateTime? WrkelijkeDatumIn = reader["werkelijke_datum_in"] == DBNull.Value ? null : (DateTime?)Convert.ToDateTime(reader["werkelijke_datum_in"]);
                     int? boeteBedrag = reader["boete_bedrag"] == DBNull.Value ? null : (int?)Convert.ToInt32(reader["boete_bedrag"]);
-                    DateTime? boeteVoldaan = reader["boete_voldaan_op"] == DBNull.Value ? null : (DateTime?)Convert.ToDateTime(reader["boete_voldaan_op"]);
+                    DateTime? boeteVoldaan = reader["boete_voldoen_op"] == DBNull.Value ? null : (DateTime?)Convert.ToDateTime(reader["boete_voldoen_op"]);
                     int exemplaarid = Convert.ToInt32(reader["exemplaar_id"]);
                     int lidnummer = Convert.ToInt32(reader["lid_lidnummer"]);
 
@@ -115,7 +115,7 @@ namespace EmpClassLibrary
 
         public static Ontelening OntelingID(int id)
         {
-           
+
             using (SqlConnection conn = new SqlConnection(connString))
             {
                 conn.Open();
@@ -125,18 +125,18 @@ namespace EmpClassLibrary
 
                 reader.Read();
 
-                    id = Convert.ToInt32(reader["id"]);
-                    DateTime datumUit = Convert.ToDateTime(reader["datum_uit"]);
-                    DateTime uitersteDatumIn = Convert.ToDateTime(reader["uiterste_datum_in"]);
-                    DateTime WrkelijkeDatumIn = Convert.ToDateTime(reader["werkelijke_datum_in"]);
-                    int? boeteBedrag = reader["boete_bedrag"] == DBNull.Value ? null : (int?)Convert.ToInt32(reader["boete_bedrag"]);
-                    DateTime? boeteVoldaan = reader["boete_voldaan_op"] == DBNull.Value ? null : (DateTime?)Convert.ToDateTime(reader["boete_voldaan_op"]);
-                    int exemplaarid = Convert.ToInt32(reader["exemplaar_id"]);
-                    int lidnummer = Convert.ToInt32(reader["lid_lidnummer"]);
+                id = Convert.ToInt32(reader["id"]);
+                DateTime datumUit = Convert.ToDateTime(reader["datum_uit"]);
+                DateTime uitersteDatumIn = Convert.ToDateTime(reader["uiterste_datum_in"]);
+                DateTime? WrkelijkeDatumIn = reader["werkelijke_datum_in"] == DBNull.Value ? null : (DateTime?)Convert.ToDateTime(reader["werkelijke_datum_in"]);
+                int? boeteBedrag = reader["boete_bedrag"] == DBNull.Value ? null : (int?)Convert.ToInt32(reader["boete_bedrag"]);
+                DateTime? boeteVoldaan = reader["boete_voldoen_op"] == DBNull.Value ? null : (DateTime?)Convert.ToDateTime(reader["boete_voldoen_op"]);
+                int exemplaarid = Convert.ToInt32(reader["exemplaar_id"]);
+                int lidnummer = Convert.ToInt32(reader["lid_lidnummer"]);
 
                 return new Ontelening(id, datumUit, uitersteDatumIn, WrkelijkeDatumIn, boeteBedrag, boeteVoldaan, exemplaarid, lidnummer);
             }
-           
+
         }
 
         public void OntleningTerug()
@@ -165,23 +165,7 @@ namespace EmpClassLibrary
             }
         }
 
-        //public static int AantalOntleningenId(int id)
-        //{
-        //     int aantalOnt;
 
-        //    using (SqlConnection conn = new SqlConnection(connString))
-        //    {
-        //        conn.Open();
-        //        SqlCommand comm = new SqlCommand("SELECT count(exemplaar_id) FROM Ontlening where exemplaar_id = @exemplaarId group by exemplaar_id", conn);
-        //        comm.Parameters.AddWithValue(" @exemplaarId", id);
-        //        //if (aantalOnt == null)
-        //        //{
-        //        //    comm.ExecuteScalar();
-        //        //}
-        //        //aantalOnt = comm.ExecuteScalar() == null ? 0 : (Int32)comm.ExecuteScalar();
-        //    }
-        //    //return aantalOnt;
-        //}
 
     }
 }

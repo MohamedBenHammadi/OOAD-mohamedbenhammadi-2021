@@ -64,13 +64,13 @@ namespace WpfAppLeden
                 StackPanel stack = new StackPanel();
 
                 Image cover = new Image();
-                cover.Width = 60;
+                cover.Width = 70;
                 cover.Height = 90;
                 cover.Source = items.Coverfoto;
 
                 Label lblInvoer = new Label();
                 lblInvoer.Content = items.ToString();
-                lblInvoer.Width = 180;
+                lblInvoer.Width = 160;
                 lblInvoer.HorizontalContentAlignment = HorizontalAlignment.Center;
 
                 stack.Children.Add(cover);
