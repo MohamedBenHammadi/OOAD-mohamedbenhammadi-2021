@@ -39,7 +39,7 @@ namespace EmpClassLibrary
 
         public override string ToString()
         {
-            return $" datum reserveratie{Datumreservatie.ToShortDateString()}, exemplaar id: {Exemplaarid}, lidnummer: {Lidlidnummer} ";
+            return $" datum reserveratie: {Datumreservatie.ToShortDateString()}, exemplaar id: {Exemplaarid}, lidnummer: {Lidlidnummer} ";
         }
 
         public static Reservatie ReservatieId(int reserid)
