@@ -9,6 +9,6 @@
 
 ## Applicatie voor baliemedewerker
 * De medewerker kan de items bekijken/toevoegen /aanpassen en verwijderen, 
-* De medewerker kan de ontleningen en reservaties bekijken en annuleren door een lidnummer op te zoeken, kan ook de lidkaart vernieuwen, en boetes kwijschelden.
+* De medewerker kan de ontleningen en reservaties bekijken en annuleren door een lidnummer op te zoeken, kan ook de lidkaart vernieuwen, en boetes kwijschelden. De medewerker kan alle klanten zien, aanpassen, verwijderen, toevoegen. 
 
 
