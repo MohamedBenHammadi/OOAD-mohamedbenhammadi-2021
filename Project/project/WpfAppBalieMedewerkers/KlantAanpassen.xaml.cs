@@ -50,6 +50,16 @@ namespace WpfAppBalieMedewerkers
             Leden klant = new Leden();
             klant.LidAanpassen(Convert.ToInt32(txtLidnummer.Text), txtVoornaamInvoer.Text, txtAchternaaminvoer.Text, dtbGeboorteDatum.DisplayDate, txtNummer.Text, txtStraatInvoer.Text, Convert.ToInt32(txtpostcode.Text), txtGemeente.Text, dprVervalDatum.DisplayDate ,txtGsmInvoer.Text);
 
+            txtLidnummer.Clear();
+            txtVoornaamInvoer.Clear();
+            txtAchternaaminvoer.Clear();
+            txtStraatInvoer.Clear();
+            txtNummer.Clear();
+            txtpostcode.Clear();
+            txtGemeente.Clear();
+            txtGsmInvoer.Clear();
+
+
             lbSucces.Content = "klant aangepast";
         }
     }

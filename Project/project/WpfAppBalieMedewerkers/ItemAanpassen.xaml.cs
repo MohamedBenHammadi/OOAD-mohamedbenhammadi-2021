@@ -66,17 +66,45 @@ namespace WpfAppBalieMedewerkers
                 item1.ItemAanpassen(Convert.ToInt32(txtIdInvoer.Text), txtTitelInvoer.Text, foto, txtBeschrijving.Text, txtUitgeverijInvoer.Text, Convert.ToInt32(txtLeeftijdVanInvoer.Text), Convert.ToInt32(txtLeeftijdTotInvoer.Text), txtTaalInvoer.Text);
                 venster1.LoadItem(null);
                 lblSucces.Content = "Item aangepast";
-            } 
+                btnAanpassen.IsEnabled = true;
+                txtIdInvoer.Clear();
+                txtTitelInvoer.Clear();
+                txtBeschrijving.Clear();
+                txtUitgeverijInvoer.Clear();
+                txtLeeftijdVanInvoer.Clear();
+                txtLeeftijdTotInvoer.Clear();
+                txtTaalInvoer.Clear();
+
+            }
             else if(rdvNeen.IsChecked == true)
             {
                 Item item1 = new Item();
                 item1.ItemAanpassenZonderFoto(Convert.ToInt32(txtIdInvoer.Text), txtTitelInvoer.Text, txtBeschrijving.Text, txtUitgeverijInvoer.Text, Convert.ToInt32(txtLeeftijdVanInvoer.Text), Convert.ToInt32(txtLeeftijdTotInvoer.Text), txtTaalInvoer.Text);
                 venster1.LoadItem(null);
+                btnAanpassen.IsEnabled = true;
                 lblSucces.Content = "Item aangepast";
+                txtIdInvoer.Clear();
+                txtTitelInvoer.Clear();
+                txtBeschrijving.Clear();
+                txtUitgeverijInvoer.Clear();
+                txtLeeftijdVanInvoer.Clear();
+                txtLeeftijdTotInvoer.Clear();
+                txtTaalInvoer.Clear();
             }
            
 
 
+        }
+
+        private void rdbJa_Checked(object sender, RoutedEventArgs e)
+        {
+            btnAanpassen.IsEnabled = true;
+
+        }
+
+        private void rd_Checked(object sender, RoutedEventArgs e)
+        {
+            btnAanpassen.IsEnabled = true;
         }
     }
 }

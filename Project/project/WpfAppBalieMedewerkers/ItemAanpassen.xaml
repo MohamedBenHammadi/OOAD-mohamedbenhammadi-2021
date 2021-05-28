@@ -52,15 +52,15 @@
             <TextBox x:Name="txtUitgeverijInvoer"  Height="23"  HorizontalAlignment="Left" Width="100"   TextWrapping="Wrap" Text=""/>
         </StackPanel>
 
-        <CheckBox x:Name="rdbJa" Content="ja" Width="40" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,18,35"  Grid.Row="1" />
-        <CheckBox x:Name="rdvNeen" VerticalAlignment="Center" HorizontalAlignment="Right" Content="neen" Width="48"  Grid.Column="1" Margin="0,0,10,0" Grid.Row="1"/>
+        <CheckBox x:Name="rdbJa" Content="ja" Width="40" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,18,35"  Grid.Row="1" Checked=" rd_Checked" />
+        <CheckBox x:Name="rdvNeen" VerticalAlignment="Center" HorizontalAlignment="Right" Content="neen" Width="48"  Grid.Column="1" Margin="0,0,10,0" Grid.Row="1" Checked=" rd_Checked"/>
 
         <StackPanel Grid.Column="1" Grid.Row="2"   HorizontalAlignment="Left" Height="90" Width="300">
             <TextBox x:Name="txtLeeftijdVanInvoer"  HorizontalAlignment="Left" Height="23" Width="100" TextWrapping="Wrap" Text=""/>
             <TextBox x:Name="txtLeeftijdTotInvoer" Margin="0,5" Height="23" Width="100" HorizontalAlignment="Left" TextWrapping="Wrap" Text=""/>
             <TextBox x:Name="txtTaalInvoer" Margin="0,5" Height="23" TextWrapping="Wrap" Width="100" HorizontalAlignment="Left" Text=""/>
         </StackPanel>
-        <Button x:Name="btnAanpassen" Content="Pas Item toe" Grid.Column="2" HorizontalAlignment="Center"  Grid.Row="2" VerticalAlignment="Bottom" Margin="0,0,0,10" Width="90" Click="btnAanpassen_Click"/>
+        <Button x:Name="btnAanpassen" IsEnabled="False" Content="Pas Item toe" Grid.Column="2" HorizontalAlignment="Center"  Grid.Row="2" VerticalAlignment="Bottom" Margin="0,0,0,10" Width="90" Click="btnAanpassen_Click"/>
         <TextBox x:Name="txtBeschrijving" VerticalScrollBarVisibility="Hidden" HorizontalAlignment="Center" TextWrapping="Wrap" Text="" Width="200" VerticalAlignment="Center" Height="80" Grid.Column="2" />
         <Label Content="" x:Name="lblSucces" Grid.Column="2" HorizontalAlignment="Center"  Grid.Row="1" VerticalAlignment="Center"/>
 
