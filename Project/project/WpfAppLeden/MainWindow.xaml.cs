@@ -30,8 +30,8 @@ namespace WpfAppLeden
             
             this.lidnummer = led;
             this.nummer = id1;
-            Leden lid = Leden.GetKlanttId(nummer);
-            lblTotaleBoete.Content = lid.TotaleBoete();
+            Lid lid = Lid.GetKlanttId(nummer);
+            lblTotaleBoete.Content = lid.TotaleBoete() +"euro";
 
         }
 
@@ -79,7 +79,8 @@ namespace WpfAppLeden
             Button btn = (Button)sender;
             id = Convert.ToInt32(btn.Tag);
             Item item = Item.GetElementId(id);
-
+            btnReserveren.IsEnabled = true;
+            btnOntlene.IsEnabled = true;
             lblid.Content = item.Id;
             lblTitel.Content = item.Titel;
             txbBescharijving.Text = item.Beschrijving;
@@ -90,7 +91,7 @@ namespace WpfAppLeden
       
         private void btnReserveren_Click(object sender, RoutedEventArgs e)
         {
-            Leden klant = Leden.GetKlanttId(nummer);
+            Lid klant = Lid.GetKlanttId(nummer);
             Reservatie reservaties = new Reservatie();
             Item item = Item.GetElementId(id);
             reservaties.VoegReservatie(DateTime.Now, item.Id, nummer);

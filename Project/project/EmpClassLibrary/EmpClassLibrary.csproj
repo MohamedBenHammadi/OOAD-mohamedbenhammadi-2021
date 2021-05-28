@@ -50,7 +50,7 @@
     <Compile Include="Boek.cs" />
     <Compile Include="Exemplaar.cs" />
     <Compile Include="Item.cs" />
-    <Compile Include="Leden.cs" />
+    <Compile Include="Lid.cs" />
     <Compile Include="Medewerker.cs" />
     <Compile Include="Ontelening.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

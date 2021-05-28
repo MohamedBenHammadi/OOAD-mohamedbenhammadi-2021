@@ -34,14 +34,14 @@ namespace WpfAppBalieMedewerkers
             this.venster = klanten;
             this.id = id;
 
-            Leden klant = Leden.GetKlanttId(id);
+            Lid klant = Lid.GetKlanttId(id);
 
             dprVervalDatum.SelectedDate = klant.VervaldatumLidkaart;
         }
 
         private void btnPasVervaldatum_Click(object sender, RoutedEventArgs e)
         {
-            Leden klant = new Leden();
+            Lid klant = new Lid();
             klant.VervalDatumAanpassen(id, dprVervalDatumNieuw.DisplayDate);
          
             venster.LoadKlant(null);

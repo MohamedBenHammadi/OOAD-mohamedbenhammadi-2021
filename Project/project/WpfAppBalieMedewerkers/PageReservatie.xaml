@@ -52,5 +52,6 @@
         <TextBox x:Name="txtZoek" Grid.Column="3" HorizontalAlignment="Center" Height="23" Margin="10,60,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <Button x:Name="btnZoek" Content="Zoek" Grid.Column="3" HorizontalAlignment="Right" Grid.Row="1" VerticalAlignment="Top" Margin="0,60,40,0" Width="75" Click="btnZoek_Click"/>
         <Label Content="Zoek via Lidnummer" Grid.Column="3" HorizontalAlignment="Center" Margin="20"  Grid.Row="1" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label x:Name="lblError" Content="" Grid.Column="3" HorizontalAlignment="Center" Margin="100"  Grid.Row="1" VerticalAlignment="Top"/>
     </Grid>
 </Page>

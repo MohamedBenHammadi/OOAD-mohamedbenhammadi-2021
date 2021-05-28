@@ -27,8 +27,8 @@
             <DatePicker x:Name="dprWerkelijkeDatum"  HorizontalAlignment="Left" />
             <Label x:Name="lblBoeteBedrag"  Width="40" Margin="10,0" Content="" HorizontalAlignment="Left" />
             <DatePicker x:Name="dprBoeteVoldaan"  HorizontalAlignment="Left" />
-            <Label x:Name="lblExemplaarId" Content=""  Width="40" Margin="10,0" HorizontalAlignment="Left" />
-            <Label x:Name="lblLidnummer" Width="40" Margin="10,0" Content="" HorizontalAlignment="Left" />
+            <Label x:Name="lblExemplaarId" Content=""  Width="40" Margin="10,8" HorizontalAlignment="Left" />
+            <Label x:Name="lblLidnummer" Width="40" Margin="10,0,0,0" Content="" HorizontalAlignment="Left" />
         </StackPanel>
 
 
@@ -39,7 +39,7 @@
             <Label Content="Uiterste datum in:" HorizontalAlignment="Left"/>
             <Label Content="Werkelijke datum in:" HorizontalAlignment="Left" FontSize="10"/>
             <Label Content="Boete Bedrag:" HorizontalAlignment="Left"/>
-            <Label Content="Boete voldaan op:" HorizontalAlignment="Left"/>
+            <Label Content="Boete voldaan:" HorizontalAlignment="Left"/>
             <Label Content="exemplaar_id:" HorizontalAlignment="Left"/>
             <Label Content="Lid_nummer:" HorizontalAlignment="Left"/>
         </StackPanel>
@@ -61,5 +61,6 @@
         <TextBox x:Name="txtZoek" Grid.Column="3" HorizontalAlignment="Center" Height="23" Margin="10,60,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <Button x:Name="btnZoek" Content="Zoek" Grid.Column="3" HorizontalAlignment="Right" Grid.Row="1" VerticalAlignment="Top" Margin="0,60,60,0" Width="75" Click="btnZoek_Click"/>
         <Label Content="Zoek via Lidnummer" Grid.Column="3" HorizontalAlignment="Center" Margin="20"  Grid.Row="1" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label x:Name="lblEror" Content="" Grid.Column="3" HorizontalAlignment="Left" Margin="86.8,115,0,0" Grid.Row="1" VerticalAlignment="Top"/>
     </Grid>
 </Page>

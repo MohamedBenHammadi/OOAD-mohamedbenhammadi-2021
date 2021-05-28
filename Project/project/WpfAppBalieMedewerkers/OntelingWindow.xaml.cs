@@ -24,6 +24,7 @@ namespace WpfAppBalieMedewerkers
         {
             InitializeComponent();
             Ontleningen();
+            lbxDataOntleningen.BorderBrush = Brushes.White;
         }
 
        
@@ -47,6 +48,8 @@ namespace WpfAppBalieMedewerkers
         private void btnZoek_Click(object sender, RoutedEventArgs e)
         {
             lbxDataOntleningen.Items.Clear();
+            ListBoxItem lst = (ListBoxItem)lbxDataOntleningen.SelectedItem;
+          
             int id = Convert.ToInt32(txtZoek.Text);
             List<Ontelening> ontleningen = Ontelening.OntelingIdAll(id);
 
@@ -66,7 +69,7 @@ namespace WpfAppBalieMedewerkers
             foreach (Ontelening ontleing in ontleningen)
             {
                 ListBoxItem lisbox = new ListBoxItem();
-
+               
                 lisbox.Content = ontleing.ToString();
                 lisbox.Tag = ontleing.Id;
                 lbxDataOntleningen.Items.Add(lisbox);
@@ -76,7 +79,10 @@ namespace WpfAppBalieMedewerkers
         private void lbxDataOntleningen_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             ListBoxItem lst = (ListBoxItem)lbxDataOntleningen.SelectedItem;
-            if (lst == null) return;
+            if (lst == null) {
+        
+                return;
+            }
             int id = Convert.ToInt32(lst.Tag);
 
             Ontelening ont = Ontelening.OntelingID(id);

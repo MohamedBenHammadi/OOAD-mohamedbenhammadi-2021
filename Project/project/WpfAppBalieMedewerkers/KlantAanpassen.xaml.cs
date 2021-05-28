@@ -28,7 +28,7 @@ namespace WpfAppBalieMedewerkers
             InitializeComponent();
             this.id = id;
             this.klantAanpassen = klant;
-            Leden klanten = Leden.GetKlanttId(id);
+            Lid klanten = Lid.GetKlanttId(id);
 
             txtLidnummer.Text = Convert.ToString(klanten.Lidnummer);
             txtVoornaamInvoer.Text = klanten.Voornaam;
@@ -47,7 +47,7 @@ namespace WpfAppBalieMedewerkers
 
         private void btnPasKlantToe_Click(object sender, RoutedEventArgs e)
         {
-            Leden klant = new Leden();
+            Lid klant = new Lid();
             klant.LidAanpassen(Convert.ToInt32(txtLidnummer.Text), txtVoornaamInvoer.Text, txtAchternaaminvoer.Text, dtbGeboorteDatum.DisplayDate, txtNummer.Text, txtStraatInvoer.Text, Convert.ToInt32(txtpostcode.Text), txtGemeente.Text, dprVervalDatum.DisplayDate ,txtGsmInvoer.Text);
 
             txtLidnummer.Clear();

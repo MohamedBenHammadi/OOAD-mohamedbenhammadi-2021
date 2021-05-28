@@ -33,7 +33,7 @@ namespace WpfAppLeden
 
             lidnummer = Convert.ToInt32(txtBarcode.Text);
 
-            if (Leden.LoginLid(lidnummer))
+            if (Lid.LoginLid(lidnummer))
             {
                 MainWindow venster = new MainWindow(this, lidnummer);
                 this.Close();

@@ -24,11 +24,17 @@ namespace WpfAppBalieMedewerkers
         public PageReservatie()
         {
             InitializeComponent();
+            ReservatieLaaden();
+            lbxDataReservatie.BorderBrush = Brushes.White;
+
+
         }
 
         private void btnZoek_Click(object sender, RoutedEventArgs e)
         {
             lbxDataReservatie.Items.Clear();
+            ListBoxItem lst = (ListBoxItem)lbxDataReservatie.SelectedItem;
+            
             List<Reservatie> reservaties = Reservatie.LijstReservatie(Convert.ToInt32(txtZoek.Text));
             foreach (Reservatie reservatie in reservaties)
             {
@@ -43,6 +49,7 @@ namespace WpfAppBalieMedewerkers
         {
             lbxDataReservatie.Items.Clear();
             List<Reservatie> reservatie = Reservatie.LijsReservatieZonderId();
+            lbxDataReservatie.BorderBrush = Brushes.White;
             foreach (Reservatie reser in reservatie)
             {
                 ListBoxItem lisbox = new ListBoxItem();
@@ -69,7 +76,11 @@ namespace WpfAppBalieMedewerkers
         private void lbxDataReservatie_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             ListBoxItem lst = (ListBoxItem)lbxDataReservatie.SelectedItem;
-            if (lst == null) return;
+            if (lst == null)
+            {
+            
+                return;
+            }
             int id = Convert.ToInt32(lst.Tag);
 
             Reservatie reser = Reservatie.ReservatieId(id);

@@ -152,7 +152,7 @@ namespace EmpClassLibrary
 
         public void OntleenLid(int itemid, int lid)
         {
-            //Exemplaar exemplaar = Exemplaar.ExemplaarId(itemid);
+
             using (SqlConnection conn = new SqlConnection(connString))
             {
                 conn.Open();
@@ -165,6 +165,16 @@ namespace EmpClassLibrary
             }
         }
 
+        public void BoeteKwijschelden()
+        {
+            using (SqlConnection conn = new SqlConnection(connString))
+            {
+                conn.Open();
+                SqlCommand comm = new SqlCommand(@"UPDATE Ontlening SET boete_bedrag = 0 where id= @id", conn);
+                comm.Parameters.AddWithValue("@id", Id);
+                comm.ExecuteNonQuery();
+            }
+        }
 
 
     }

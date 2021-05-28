@@ -21,7 +21,7 @@ namespace WpfAppBalieMedewerkers
     /// </summary>
     public partial class Zoeken : Window
     {
-        private List<Leden> item ;
+        private List<Lid> item ;
         public Zoeken()
         {
             InitializeComponent();

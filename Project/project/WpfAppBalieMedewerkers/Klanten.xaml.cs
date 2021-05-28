@@ -30,9 +30,9 @@ namespace WpfAppBalieMedewerkers
         public void LoadKlant(int? selectedId)
         {
             wrpKlant.Items.Clear();
-            List<Leden> klant = Leden.LijstLeden();
+            List<Lid> klant = Lid.LijstLeden();
 
-            foreach (Leden klanten in klant)
+            foreach (Lid klanten in klant)
             {
 
                 ListBoxItem listbox = new ListBoxItem();
@@ -58,7 +58,7 @@ namespace WpfAppBalieMedewerkers
             int id = Convert.ToInt32(lst.Tag);
 
 
-            Leden klant = Leden.GetKlanttId(id);
+            Lid klant = Lid.GetKlanttId(id);
 
             lblidnummer.Content = klant.Lidnummer;
             lblVoornaam.Content = klant.Voornaam;
@@ -80,7 +80,7 @@ namespace WpfAppBalieMedewerkers
             MessageBoxResult result = MessageBox.Show($"Opgespast! wilt u  lid {lblVoornaam.Content} verwijderen?", "verwijderen", MessageBoxButton.YesNo, MessageBoxImage.Warning);
             if (result != MessageBoxResult.Yes) return;
 
-            Leden lid = Leden.GetKlanttId(id);
+            Lid lid = Lid.GetKlanttId(id);
             lid.Verwijderklant();
             LoadKlant(null);
         }
@@ -110,6 +110,15 @@ namespace WpfAppBalieMedewerkers
         {
             Zoeken venster = new Zoeken();
             venster.Show();
+        }
+
+        private void btnBoete_Click(object sender, RoutedEventArgs e)
+        {
+            ListBoxItem listbox = (ListBoxItem)wrpKlant.SelectedItem;
+            int id = Convert.ToInt32(listbox.Tag);
+            Ontelening ont = Ontelening.OntelingID(id);
+            ont.BoeteKwijschelden();
+
         }
     }
 }

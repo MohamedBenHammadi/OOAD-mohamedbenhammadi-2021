@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace EmpClassLibrary
 {
-    public class Leden
+    public class Lid
     {
 
         static string connString = ConfigurationManager.AppSettings["connString"];
@@ -33,11 +33,11 @@ namespace EmpClassLibrary
 
         //construcotr met info over de lid
 
-        public Leden()
+        public Lid()
         {
 
         }
-        public Leden(int lidnummer, string vn, string achtn, string gsm, DateTime vrvldatum)
+        public Lid(int lidnummer, string vn, string achtn, string gsm, DateTime vrvldatum)
         {
             Lidnummer = lidnummer;
             Voornaam = vn;
@@ -48,7 +48,7 @@ namespace EmpClassLibrary
 
 
         // constructor met personelijke info van lid
-        public Leden(int lidnummer, string vn, string achtn, string gsm, DateTime gbrtdatum, string straat, string nmr, int pstcode, string gemeente, DateTime vrvldatum) : this(lidnummer, vn, achtn, gsm, vrvldatum)
+        public Lid(int lidnummer, string vn, string achtn, string gsm, DateTime gbrtdatum, string straat, string nmr, int pstcode, string gemeente, DateTime vrvldatum) : this(lidnummer, vn, achtn, gsm, vrvldatum)
         {
             Geboortedatum = gbrtdatum;
             Straat = straat;
@@ -67,9 +67,9 @@ namespace EmpClassLibrary
         }
 
 
-        public static List<Leden> LijstLeden()
+        public static List<Lid> LijstLeden()
         {
-            List<Leden> klant = new List<Leden>();
+            List<Lid> klant = new List<Lid>();
             using (SqlConnection conn = new SqlConnection(connString))
             {
                 conn.Open();
@@ -89,14 +89,14 @@ namespace EmpClassLibrary
                     DateTime vervaldatum = Convert.ToDateTime(reader["Vervaldatum_lidkaart"]);
                     string gsm = Convert.ToString(reader["Gsm"]);
 
-                    klant.Add(new Leden(id, voornaam, achternaam, gsm, geboortedatum, straat, nummer, postcode, gemeente, vervaldatum));
+                    klant.Add(new Lid(id, voornaam, achternaam, gsm, geboortedatum, straat, nummer, postcode, gemeente, vervaldatum));
                 }
 
             }
             return klant;
         }
 
-        public static Leden GetKlanttId(int id)
+        public static Lid GetKlanttId(int id)
         {
             using (SqlConnection conn = new SqlConnection(connString))
             {
@@ -116,7 +116,7 @@ namespace EmpClassLibrary
                 string gemeente = Convert.ToString(reader["Gemeente"]);
                 DateTime vervaldatum = Convert.ToDateTime(reader["Vervaldatum_lidkaart"]);
                 string gsm = Convert.ToString(reader["Gsm"]);
-                return new Leden(id, voornaam, achternaam, gsm, geboortedatum, straat, nummer, postcode, gemeente, vervaldatum);
+                return new Lid(id, voornaam, achternaam, gsm, geboortedatum, straat, nummer, postcode, gemeente, vervaldatum);
             }
         }
 
@@ -228,6 +228,23 @@ namespace EmpClassLibrary
                 if (!reader.Read()) return 0;
                 int? boeteBedrag = reader["TotBoete"] == DBNull.Value ? null : (int?)Convert.ToInt32(reader["TotBoete"]);
              
+                return Convert.ToInt32(boeteBedrag);
+
+            }
+        }
+
+        public int BoeteKwijtschelden()
+        {
+            using (SqlConnection conn = new SqlConnection(connString))
+            {
+                conn.Open();
+                SqlCommand comn = new SqlCommand(" SELECT dbo.ufBoete(@lid) as TotBoete ", conn);
+                comn.Parameters.AddWithValue("@lid", Lidnummer);
+                SqlDataReader reader = comn.ExecuteReader();
+
+                if (!reader.Read()) return 0;
+                int? boeteBedrag = reader["TotBoete"] == DBNull.Value ? null : (int?)Convert.ToInt32(reader["TotBoete"]);
+
                 return Convert.ToInt32(boeteBedrag);
 
             }
